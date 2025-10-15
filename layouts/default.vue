@@ -1,8 +1,11 @@
 <template>
-  <slot></slot>
+  <ClientOnly>
+    <ion-app>
+      <slot></slot>
+    </ion-app>
+  </ClientOnly>
 </template>
 
 <script setup lang="ts">
-// Layout simples que apenas renderiza o conteúdo
-// As páginas já têm IonPage e estrutura completa
+import { IonApp } from '@ionic/vue'
 </script>

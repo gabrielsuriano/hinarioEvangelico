@@ -71,6 +71,25 @@ const router = useRouter()
 const searchText = ref('')
 const showSearchbar = ref(false)
 
+// SEO: Metadados para lista de hinos
+useHead({
+  title: 'Hinos - Hinário Evangélico Metodista',
+  meta: [
+    {
+      name: 'description',
+      content: 'Explore os hinos do Hinário Evangélico Metodista. Busque por título, número ou autor.'
+    },
+    {
+      property: 'og:title',
+      content: 'Hinos - Hinário Evangélico Metodista'
+    },
+    {
+      property: 'og:description',
+      content: 'Explore os hinos do Hinário Evangélico Metodista'
+    }
+  ]
+})
+
 const filteredHymns = computed(() => {
   if (!searchText.value) {
     return hymnalStore.hymns

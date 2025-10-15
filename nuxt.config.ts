@@ -1,11 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  ssr: false,
 
-  modules: [
-    '@pinia/nuxt',
-  ],
+  modules: ['@pinia/nuxt'],
+
+  vite: {
+    css: {
+      preprocessorOptions: {}
+    }
+  },
 
   css: [
     '@ionic/vue/css/core.css',
@@ -40,4 +43,4 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: '2024-10-14',
-})
+} as any)

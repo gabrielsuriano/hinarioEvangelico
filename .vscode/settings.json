@@ -1,0 +1,8 @@
+{
+  "vue.server.hybridMode": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "vue.codeActions.enabled": true,
+  "vue.complete.casing.props": "autoKebab",
+  "vue.complete.casing.tags": "autoPascal"
+}

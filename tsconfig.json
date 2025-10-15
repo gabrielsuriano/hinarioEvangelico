@@ -1,6 +1,14 @@
 {
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
-    "strict": true
+    "strict": true,
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "noEmit": true
+  },
+  "vueCompilerOptions": {
+    "target": 3.5,
+    "globalTypesPath": "./node_modules/@vue/runtime-dom"
   }
 }

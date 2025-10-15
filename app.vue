@@ -1,14 +1,10 @@
 <template>
-  <ion-app>
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
-  </ion-app>
+  <div>
+    <NuxtPage />
+  </div>
 </template>
 
 <script setup lang="ts">
-import { IonApp } from '@ionic/vue'
-
 const hymnalStore = useHymnalStore()
 
 onMounted(async () => {

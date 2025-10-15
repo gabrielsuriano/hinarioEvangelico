@@ -70,6 +70,21 @@ const router = useRouter()
 const searchText = ref('')
 const showSearchbar = ref(false)
 
+// SEO: Metadados para lista de antifonas
+useHead({
+  title: 'Antifonas - Hinário Evangélico Metodista',
+  meta: [
+    {
+      name: 'description',
+      content: 'Explore as antifonas do Hinário Evangélico Metodista. Textos litúrgicos para adoração.'
+    },
+    {
+      property: 'og:title',
+      content: 'Antifonas - Hinário Evangélico Metodista'
+    }
+  ]
+})
+
 const filteredAntiphons = computed(() => {
   if (!searchText.value) {
     return hymnalStore.antiphons

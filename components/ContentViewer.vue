@@ -11,7 +11,7 @@
     <div class="body" :style="{ fontSize: fontSize + 'px' }">
       <template v-if="isStructuredContent">
         <SongItem
-          v-for="(item, index) in content.items"
+          v-for="(item, index) in structuredItems"
           :key="index"
           :type="item.type"
         >
@@ -19,7 +19,7 @@
         </SongItem>
       </template>
       <template v-else>
-        <div v-for="(line, index) in content.items" :key="index" class="line">
+        <div v-for="(line, index) in stringItems" :key="index" class="line">
           {{ line }}
         </div>
       </template>
@@ -45,6 +45,14 @@ const isStructuredContent = computed(() => {
     props.content.items.length > 0 &&
     typeof props.content.items[0] === 'object'
   )
+})
+
+const structuredItems = computed(() => {
+  return isStructuredContent.value ? (props.content.items as SONG_ITEM[]) : []
+})
+
+const stringItems = computed(() => {
+  return !isStructuredContent.value ? (props.content.items as string[]) : []
 })
 
 const getTypeLabel = () => {

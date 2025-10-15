@@ -67,6 +67,7 @@ import {
   actionSheetController,
 } from '@ionic/vue'
 import { heart, heartOutline, ellipsisVertical, add, remove, text, arrowBack } from 'ionicons/icons'
+import type { Content } from '~/types/hymnal'
 
 const route = useRoute()
 const router = useRouter()
@@ -77,13 +78,60 @@ const goBack = () => {
   router.back()
 }
 
-const content = computed(() => hymnalStore.getContentById(id))
+// Carrega dados no servidor para SSR
+const { data: hymnalData } = await useFetch('/api/hymnal')
 
-watch(content, (newContent) => {
-  if (newContent) {
-    hymnalStore.setCurrentContent(newContent)
+// Busca o conteúdo específico para SSR
+const content = computed(() => {
+  const data = hymnalData.value as any
+  if (data?.contents) {
+    return data.contents.find((item: any) => item.id === id)
   }
-}, { immediate: true })
+  return null
+})
+
+// SEO: Metadados dinâmicos para SSR
+useHead(() => ({
+  title: content.value?.title 
+    ? `${content.value.title} - Hinário Evangélico` 
+    : 'Hinário Evangélico',
+  meta: [
+    {
+      name: 'description',
+      content: content.value?.title 
+        ? `Hino ${content.value.number}: ${content.value.title}${content.value.author ? ' - ' + content.value.author : ''}` 
+        : 'Hinário Evangélico Metodista'
+    },
+    {
+      name: 'keywords',
+      content: content.value?.title 
+        ? `hino ${content.value.number}, ${content.value.title}, hinário metodista, hinário evangélico${content.value.author ? ', ' + content.value.author : ''}` 
+        : 'hinário, metodista, evangélico'
+    },
+    {
+      property: 'og:title',
+      content: content.value?.title 
+        ? `${content.value.title} - Hinário Evangélico` 
+        : 'Hinário Evangélico'
+    },
+    {
+      property: 'og:description',
+      content: content.value?.title 
+        ? `Hino ${content.value.number}: ${content.value.title}` 
+        : 'Hinário Evangélico Metodista'
+    },
+    {
+      property: 'og:type',
+      content: 'article'
+    }
+  ]
+}))
+
+onMounted(() => {
+  if (content.value) {
+    hymnalStore.setCurrentContent(content.value as Content)
+  }
+})
 
 const presentActionSheet = async () => {
   const actionSheet = await actionSheetController.create({

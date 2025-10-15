@@ -70,6 +70,21 @@ const router = useRouter()
 const searchText = ref('')
 const showSearchbar = ref(false)
 
+// SEO: Metadados para lista de ritos
+useHead({
+  title: 'Ritos - Hinário Evangélico Metodista',
+  meta: [
+    {
+      name: 'description',
+      content: 'Explore os ritos litúrgicos do Hinário Evangélico Metodista. Batismo, Santa Ceia e mais.'
+    },
+    {
+      property: 'og:title',
+      content: 'Ritos - Hinário Evangélico Metodista'
+    }
+  ]
+})
+
 const filteredRituals = computed(() => {
   if (!searchText.value) {
     return hymnalStore.rituals
