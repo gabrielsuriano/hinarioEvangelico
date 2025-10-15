@@ -1,0 +1,28 @@
+{
+  "name": "hinario-evangelico",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@ionic/vue": "^8.3.0",
+    "@ionic/vue-router": "^8.3.0",
+    "ionicons": "^7.4.0",
+    "nuxt": "^3.13.0",
+    "pinia": "^2.2.7",
+    "pinia-plugin-persistedstate": "^3.2.3",
+    "vue": "^3.4.38",
+    "vue-router": "^4.4.3"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@pinia/nuxt": "^0.5.5",
+    "typescript": "^5.5.4"
+  }
+}
