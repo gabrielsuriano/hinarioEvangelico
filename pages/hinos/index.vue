@@ -158,8 +158,11 @@ const filteredHymns = computed(() => {
         if (typeof item === 'string') {
           return item.toLowerCase().includes(search)
         }
-        if (typeof item === 'object' && item.text) {
-          return item.text.toLowerCase().includes(search)
+        if (typeof item === 'object' && item.lines && Array.isArray(item.lines)) {
+          // Busca em cada linha do item
+          return item.lines.some((line: string) => 
+            line.toLowerCase().includes(search)
+          )
         }
         return false
       })
