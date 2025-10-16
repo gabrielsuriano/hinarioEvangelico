@@ -1,57 +1,50 @@
 <template>
-  <ClientOnly>
-    <ion-page>
-      <ion-header>
-        <ion-toolbar color="primary">
-          <ion-title>Hinário Evangélico Metodista</ion-title>
-          <ion-buttons slot="end">
-            <ion-button @click="presentActionSheet">
-              <ion-icon slot="icon-only" :icon="settings"></ion-icon>
-            </ion-button>
-          </ion-buttons>
-        </ion-toolbar>
-      </ion-header>
+  <ion-page>
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Hinário Evangélico Metodista</ion-title>
+        <ion-buttons slot="end">
+          <ion-button @click="presentActionSheet">
+            <ion-icon slot="icon-only" :icon="settings"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
 
-      <ion-content :fullscreen="true">
-        <ion-list lines="full">
-          <ion-item button @click="navigateTo('/hinos')">
-            <ion-icon slot="start" :icon="musicalNotesOutline"></ion-icon>
-            <ion-label>
-              <h2>Hinos</h2>
-              <p>{{ hymnalStore.hymns.length }} hinos disponíveis</p>
-            </ion-label>
-            <ion-icon slot="end" :icon="chevronForward"></ion-icon>
-          </ion-item>
+    <ion-content :fullscreen="true">
+      <ion-list lines="full">
+        <ion-item button @click="navigateTo('/hinos')">
+          <ion-icon slot="start" :icon="musicalNotesOutline"></ion-icon>
+          <ion-label>
+            <h2>Hinos</h2>
+            <p>{{ hymnalStore.hymns.length }} hinos disponíveis</p>
+          </ion-label>
+          <ion-icon slot="end" :icon="chevronForward"></ion-icon>
+        </ion-item>
 
-          <ion-item button @click="navigateTo('/antifonas')">
-            <ion-icon slot="start" :icon="prismOutline"></ion-icon>
-            <ion-label>
-              <h2>Antifonas</h2>
-              <p>{{ hymnalStore.antiphons.length }} antifonas disponíveis</p>
-            </ion-label>
-            <ion-icon slot="end" :icon="chevronForward"></ion-icon>
-          </ion-item>
+        <ion-item button @click="navigateTo('/antifonas')">
+          <ion-icon slot="start" :icon="prismOutline"></ion-icon>
+          <ion-label>
+            <h2>Antifonas</h2>
+            <p>{{ hymnalStore.antiphons.length }} antifonas disponíveis</p>
+          </ion-label>
+          <ion-icon slot="end" :icon="chevronForward"></ion-icon>
+        </ion-item>
 
-          <ion-item button @click="navigateTo('/ritos')">
-            <ion-icon slot="start" :icon="bookOutline"></ion-icon>
-            <ion-label>
-              <h2>Ritos</h2>
-              <p>{{ hymnalStore.rituals.length }} ritos disponíveis</p>
-            </ion-label>
-            <ion-icon slot="end" :icon="chevronForward"></ion-icon>
-          </ion-item>
-        </ion-list>
-      </ion-content>
-    </ion-page>
-  </ClientOnly>
+        <ion-item button @click="navigateTo('/ritos')">
+          <ion-icon slot="start" :icon="bookOutline"></ion-icon>
+          <ion-label>
+            <h2>Ritos</h2>
+            <p>{{ hymnalStore.rituals.length }} ritos disponíveis</p>
+          </ion-label>
+          <ion-icon slot="end" :icon="chevronForward"></ion-icon>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-page>
 </template>
 
 <script setup lang="ts">
-// Desabilita SSR apenas nesta página para evitar erros de hidratação do Ionic
-definePageMeta({
-  ssr: false
-})
-
 import {
   IonPage,
   IonHeader,

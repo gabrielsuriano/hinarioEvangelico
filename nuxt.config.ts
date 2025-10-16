@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  ssr: true, // SSR habilitado globalmente, mas podemos desabilitar por página
+  ssr: false, // SSR desabilitado - Ionic não funciona bem com SSR
 
   modules: ['@pinia/nuxt'],
 
