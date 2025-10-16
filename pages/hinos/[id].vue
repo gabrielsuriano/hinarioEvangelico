@@ -33,9 +33,14 @@
             <div
               v-for="(item, index) in content.items"
               :key="index"
-              :class="['hymn-line', `type-${item.type.toLowerCase()}`]"
+              :class="['hymn-verse', `type-${item.type.toLowerCase()}`]"
             >
-              {{ item.text }}
+              <div v-if="shouldShowVerseNumber(item, index)" class="verse-number">
+                [{{ getVerseNumber(item, index) }}]
+              </div>
+              <div v-for="(line, lineIndex) in item.lines" :key="lineIndex" class="hymn-line">
+                {{ line }}
+              </div>
             </div>
           </template>
           <template v-else>
@@ -138,6 +143,59 @@ onMounted(() => {
   }
 })
 
+// Conta quantos refrões existem no hino
+const chorusCount = computed(() => {
+  if (!content.value || !Array.isArray(content.value.items)) return 0
+  return (content.value.items as any[]).filter(
+    (item) => item.type === 'CHORUS'
+  ).length
+})
+
+// Determina se deve mostrar o número da estrofe
+const shouldShowVerseNumber = (item: any, index: number) => {
+  // Sempre mostra para VERSE
+  if (item.type === 'VERSE') return true
+  
+  // Para CHORUS, só mostra se houver mais de um refrão
+  if (item.type === 'CHORUS') return chorusCount.value > 1
+  
+  // PRE_CHORUS e BRIDGE também mostram
+  if (item.type === 'PRE_CHORUS' || item.type === 'BRIDGE') return true
+  
+  return false
+}
+
+// Calcula o número da estrofe baseado no tipo
+const getVerseNumber = (item: any, index: number) => {
+  if (!content.value || !Array.isArray(content.value.items)) return '1'
+  
+  const items = content.value.items as any[]
+  
+  // Conta quantas estrofes do mesmo tipo já apareceram antes
+  let count = 0
+  for (let i = 0; i < index; i++) {
+    if (items[i].type === item.type) {
+      count++
+    }
+  }
+  
+  const number = count + 1
+  
+  // Adiciona sigla conforme o tipo
+  switch (item.type) {
+    case 'VERSE':
+      return number.toString()
+    case 'CHORUS':
+      return `C${number}`
+    case 'PRE_CHORUS':
+      return `PC${number}`
+    case 'BRIDGE':
+      return `B${number}`
+    default:
+      return number.toString()
+  }
+}
+
 const presentActionSheet = async () => {
   const actionSheet = await actionSheetController.create({
     header: 'Opções',
@@ -199,8 +257,19 @@ const presentActionSheet = async () => {
   line-height: 1.8;
 }
 
+.hymn-verse {
+  margin-bottom: 1.5rem;
+}
+
+.verse-number {
+  font-weight: bold;
+  color: var(--ion-color-primary);
+  margin-bottom: 0.5rem;
+  font-size: 0.9em;
+}
+
 .hymn-line {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.3rem;
 }
 
 .type-verse {
