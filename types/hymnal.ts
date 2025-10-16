@@ -13,7 +13,7 @@ export enum SONG_STRUCTURE {
 }
 
 export type SONG_ITEM = {
-  text: string
+  lines: string[]
   type: SONG_STRUCTURE
 }
 

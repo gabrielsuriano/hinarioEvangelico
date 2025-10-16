@@ -15,7 +15,9 @@
           :key="index"
           :type="item.type"
         >
-          {{ item.text }}
+          <div v-for="(line, lineIndex) in item.lines" :key="lineIndex" class="line">
+            {{ line }}
+          </div>
         </SongItem>
       </template>
       <template v-else>
