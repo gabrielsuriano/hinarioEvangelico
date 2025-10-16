@@ -24,6 +24,7 @@ export default defineNuxtConfig({
     '@ionic/vue/css/flex-utils.css',
     '@ionic/vue/css/display.css',
     '@ionic/vue/css/ionic.bundle.css',
+    '~/assets/css/theme.css',
   ],
 
   app: {

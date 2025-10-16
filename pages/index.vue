@@ -4,6 +4,9 @@
       <ion-toolbar color="primary">
         <ion-title>Hinário Evangélico Metodista</ion-title>
         <ion-buttons slot="end">
+          <ion-button @click="toggleTheme">
+            <ion-icon slot="icon-only" :icon="themeStore.isDark ? sunny : moon"></ion-icon>
+          </ion-button>
           <ion-button @click="presentActionSheet">
             <ion-icon slot="icon-only" :icon="settings"></ion-icon>
           </ion-button>
@@ -59,13 +62,19 @@ import {
   IonButton,
   actionSheetController,
 } from '@ionic/vue'
-import { musicalNotesOutline, prismOutline, bookOutline, chevronForward, settings, add, remove, text } from 'ionicons/icons'
+import { musicalNotesOutline, prismOutline, bookOutline, chevronForward, settings, add, remove, text, moon, sunny } from 'ionicons/icons'
+import { useThemeStore } from '~/stores/theme'
 
 const hymnalStore = useHymnalStore()
+const themeStore = useThemeStore()
 const router = useRouter()
 
 const navigateTo = (path: string) => {
   router.push(path)
+}
+
+const toggleTheme = () => {
+  themeStore.toggleTheme()
 }
 
 const presentActionSheet = async () => {
@@ -107,10 +116,6 @@ const presentActionSheet = async () => {
 </script>
 
 <style scoped>
-ion-content {
-  --background: #f5f5f5;
-}
-
 ion-list {
   padding: 0 !important;
   width: 100% !important;
@@ -119,8 +124,6 @@ ion-list {
 }
 
 ion-item {
-  --background: white;
-  --border-color: #dedede;
   --padding-start: 16px;
   --padding-end: 16px;
   --inner-padding-end: 8px;
@@ -155,12 +158,11 @@ ion-label h2 {
   font-size: 1.1em !important;
   font-weight: 600 !important;
   margin: 0 0 6px 0 !important;
-  color: #000 !important;
 }
 
 ion-label p {
   font-size: 0.9em !important;
   margin: 0 !important;
-  color: #666 !important;
+  opacity: 0.7;
 }
 </style>

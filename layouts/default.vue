@@ -1,9 +1,7 @@
 <template>
-  <ClientOnly>
-    <ion-app>
-      <slot></slot>
-    </ion-app>
-  </ClientOnly>
+  <ion-app>
+    <slot></slot>
+  </ion-app>
 </template>
 
 <script setup lang="ts">

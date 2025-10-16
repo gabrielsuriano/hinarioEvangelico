@@ -4,6 +4,9 @@
       <ion-toolbar color="primary">
         <ion-title>Antifonas</ion-title>
         <ion-buttons slot="end">
+          <ion-button @click="toggleTheme">
+            <ion-icon slot="icon-only" :icon="themeStore.isDark ? sunny : moon"></ion-icon>
+          </ion-button>
           <ion-button @click="presentActionSheet">
             <ion-icon slot="icon-only" :icon="settings"></ion-icon>
           </ion-button>
@@ -63,12 +66,18 @@ import {
   IonButton,
   actionSheetController,
 } from '@ionic/vue'
-import { heart, heartOutline, settings, add, remove, text } from 'ionicons/icons'
+import { heart, heartOutline, settings, add, remove, text, moon, sunny } from 'ionicons/icons'
+import { useThemeStore } from '~/stores/theme'
 import type { Content } from '~/types/hymnal'
 
 const hymnalStore = useHymnalStore()
+const themeStore = useThemeStore()
 const router = useRouter()
 const searchText = ref('')
+
+const toggleTheme = () => {
+  themeStore.toggleTheme()
+}
 
 const presentActionSheet = async () => {
   const actionSheet = await actionSheetController.create({
