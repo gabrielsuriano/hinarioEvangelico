@@ -63,7 +63,12 @@ const hymnalStore = useHymnalStore()
 const id = route.params.id as string
 
 const goBack = () => {
-  router.back()
+  // Tenta voltar no histórico, se não houver histórico vai para a lista de ritos
+  if (window.history.length > 1) {
+    router.back()
+  } else {
+    router.push('/ritos')
+  }
 }
 
 // Carrega dados no servidor para SSR

@@ -1,49 +1,51 @@
 <template>
-  <ion-page>
-    <ion-header>
-      <ion-toolbar color="primary">
-        <ion-title>Ritos</ion-title>
-        <ion-buttons slot="end">
-          <ion-button @click="presentActionSheet">
-            <ion-icon slot="icon-only" :icon="settings"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-      <ion-toolbar>
-        <ion-searchbar
-          v-model="searchText"
-          placeholder="Buscar por título ou texto..."
-          animated
-          @ionClear="searchText = ''"
-        ></ion-searchbar>
-      </ion-toolbar>
-    </ion-header>
+  <ClientOnly>
+    <ion-page>
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Ritos</ion-title>
+          <ion-buttons slot="end">
+            <ion-button @click="presentActionSheet">
+              <ion-icon slot="icon-only" :icon="settings"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+        <ion-toolbar>
+          <ion-searchbar
+            v-model="searchText"
+            placeholder="Buscar por título ou texto..."
+            animated
+            @ionClear="searchText = ''"
+          ></ion-searchbar>
+        </ion-toolbar>
+      </ion-header>
 
-    <ion-content :fullscreen="true">
-      <ion-list v-if="filteredRituals.length > 0">
-        <ion-item
-          v-for="ritual in filteredRituals"
-          :key="ritual.id"
-          button
-          @click="navigateToRitual(ritual.id)"
-        >
-          <ion-label :style="{ fontSize: hymnalStore.fontSize + 'px' }">
-            <h2>{{ ritual.number }}. {{ ritual.title }}</h2>
-          </ion-label>
-          <ion-icon
-            slot="end"
-            :icon="hymnalStore.isFavorite(ritual.id) ? heart : heartOutline"
-            :color="hymnalStore.isFavorite(ritual.id) ? 'danger' : ''"
-            @click.stop="hymnalStore.toggleFavorite(ritual.id)"
-          ></ion-icon>
-        </ion-item>
-      </ion-list>
+      <ion-content :fullscreen="true">
+        <ion-list v-if="filteredRituals.length > 0">
+          <ion-item
+            v-for="ritual in filteredRituals"
+            :key="ritual.id"
+            button
+            @click="navigateToRitual(ritual.id)"
+          >
+            <ion-label :style="{ fontSize: hymnalStore.fontSize + 'px' }">
+              <h2>{{ ritual.number }}. {{ ritual.title }}</h2>
+            </ion-label>
+            <ion-icon
+              slot="end"
+              :icon="hymnalStore.isFavorite(ritual.id) ? heart : heartOutline"
+              :color="hymnalStore.isFavorite(ritual.id) ? 'danger' : ''"
+              @click.stop="hymnalStore.toggleFavorite(ritual.id)"
+            ></ion-icon>
+          </ion-item>
+        </ion-list>
 
-      <ion-text v-else class="ion-padding">
-        <p class="ion-text-center">Nenhum rito encontrado.</p>
-      </ion-text>
-    </ion-content>
-  </ion-page>
+        <ion-text v-else class="ion-padding">
+          <p class="ion-text-center">Nenhum rito encontrado.</p>
+        </ion-text>
+      </ion-content>
+    </ion-page>
+  </ClientOnly>
 </template>
 
 <script setup lang="ts">

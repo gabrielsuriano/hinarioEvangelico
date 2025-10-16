@@ -2,6 +2,8 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
+  ssr: true, // SSR habilitado globalmente, mas podemos desabilitar por página
+
   modules: ['@pinia/nuxt'],
 
   vite: {
@@ -21,6 +23,7 @@ export default defineNuxtConfig({
     '@ionic/vue/css/text-transformation.css',
     '@ionic/vue/css/flex-utils.css',
     '@ionic/vue/css/display.css',
+    '@ionic/vue/css/ionic.bundle.css',
   ],
 
   app: {
