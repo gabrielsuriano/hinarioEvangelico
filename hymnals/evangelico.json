@@ -45,7 +45,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-002",
@@ -93,7 +95,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-003",
@@ -180,7 +184,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-004",
@@ -237,7 +243,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Adapt.Rev. João Marques da Mota Sobrinho"
+      "author": [
+        "Adapt.Rev. João Marques da Mota Sobrinho"
+      ]
     },
     {
       "id": "hino-005",
@@ -294,7 +302,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Joseph Jones"
+      "author": [
+        "Joseph Jones"
+      ]
     },
     {
       "id": "hino-006",
@@ -336,7 +346,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-007",
@@ -375,7 +387,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Joseph Mohr"
+      "author": [
+        "Rev. Joseph Mohr"
+      ]
     },
     {
       "id": "hino-008",
@@ -420,7 +434,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. James Theodore Houston"
+      "author": [
+        "Rev. James Theodore Houston"
+      ]
     },
     {
       "id": "hino-009",
@@ -462,7 +478,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. José Gonçalves Pacheco"
+      "author": [
+        "Rev. José Gonçalves Pacheco"
+      ]
     },
     {
       "id": "hino-010",
@@ -510,7 +528,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Antonio de Campos Gonçalves"
+      "author": [
+        "Rev. Antonio de Campos Gonçalves"
+      ]
     },
     {
       "id": "hino-011",
@@ -565,7 +585,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Robert Hawkey Moreton"
+      "author": [
+        "Rev. Robert Hawkey Moreton"
+      ]
     },
     {
       "id": "hino-012",
@@ -594,7 +616,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Guaraci Silveira"
+      "author": [
+        "Guaraci Silveira"
+      ]
     },
     {
       "id": "hino-013",
@@ -657,7 +681,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. Joaõ Gomes da Rocha"
+      "author": [
+        "Dr. Joaõ Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-014",
@@ -718,7 +744,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Otoniel Mota"
+      "author": [
+        "Rev. Otoniel Mota"
+      ]
     },
     {
       "id": "hino-016",
@@ -749,7 +777,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Blanche Lício"
+      "author": [
+        "Blanche Lício"
+      ]
     },
     {
       "id": "hino-017",
@@ -814,7 +844,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr.Ismael de França Campos"
+      "author": [
+        "Dr.Ismael de França Campos"
+      ]
     },
     {
       "id": "hino-018",
@@ -856,7 +888,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-019",
@@ -913,7 +947,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Robert Hawkey Moreton"
+      "author": [
+        "Rev. Robert Hawkey Moreton"
+      ]
     },
     {
       "id": "hino-020",
@@ -959,7 +995,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Robert Hawkey Moreton"
+      "author": [
+        "Rev. Robert Hawkey Moreton"
+      ]
     },
     {
       "id": "hino-021",
@@ -1001,7 +1039,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "James R. Murray"
+      "author": [
+        "James R. Murray"
+      ]
     },
     {
       "id": "hino-022",
@@ -1061,7 +1101,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Aleck Watson"
+      "author": [
+        "Aleck Watson"
+      ]
     },
     {
       "id": "hino-023",
@@ -1106,7 +1148,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. José Gonçalves Pacheco"
+      "author": [
+        "Rev. José Gonçalves Pacheco"
+      ]
     },
     {
       "id": "hino-024",
@@ -1142,7 +1186,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Domingos José Ferreira"
+      "author": [
+        "Domingos José Ferreira"
+      ]
     },
     {
       "id": "hino-025",
@@ -1187,7 +1233,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Bispo Egmont Machado Krischke"
+      "author": [
+        "Bispo Egmont Machado Krischke"
+      ]
     },
     {
       "id": "hino-026",
@@ -1228,7 +1276,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Antonio Jose Milan"
+      "author": [
+        "Antonio Jose Milan"
+      ]
     },
     {
       "id": "hino-027",
@@ -1303,7 +1353,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-028",
@@ -1338,7 +1390,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Rafael Camacho"
+      "author": [
+        "Rev. Rafael Camacho"
+      ]
     },
     {
       "id": "hino-029",
@@ -1386,7 +1440,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Antonio de Campos Gonçalves"
+      "author": [
+        "Rev. Antonio de Campos Gonçalves"
+      ]
     },
     {
       "id": "hino-030",
@@ -1428,7 +1484,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Marques da Mota Sodrinho"
+      "author": [
+        "Rev. João Marques da Mota Sodrinho"
+      ]
     },
     {
       "id": "hino-031",
@@ -1473,7 +1531,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Antonio J. dos Santos Neves"
+      "author": [
+        "Antonio J. dos Santos Neves"
+      ]
     },
     {
       "id": "hino-032",
@@ -1518,7 +1578,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-033",
@@ -1572,7 +1634,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-034",
@@ -1607,7 +1671,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Major Guilherme Luís dos Santos Ferreira"
+      "author": [
+        "Major Guilherme Luís dos Santos Ferreira"
+      ]
     },
     {
       "id": "hino-035",
@@ -1643,7 +1709,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Robert Hawkey Moreton"
+      "author": [
+        "Rev. Robert Hawkey Moreton"
+      ]
     },
     {
       "id": "hino-036",
@@ -1700,7 +1768,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-037",
@@ -1754,7 +1824,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-038",
@@ -1803,7 +1875,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-039",
@@ -1851,7 +1925,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Antonio de Campos Gonçalves"
+      "author": [
+        "Rev. Antonio de Campos Gonçalves"
+      ]
     },
     {
       "id": "hino-040",
@@ -1886,7 +1962,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Manoel Antonio de Menezes"
+      "author": [
+        "Rev. Manoel Antonio de Menezes"
+      ]
     },
     {
       "id": "hino-041",
@@ -1922,7 +2000,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-042",
@@ -1973,7 +2053,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-043",
@@ -2062,7 +2144,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-045",
@@ -2122,7 +2206,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Marques da Mota Sobrinho"
+      "author": [
+        "Rev. João Marques da Mota Sobrinho"
+      ]
     },
     {
       "id": "hino-046",
@@ -2144,7 +2230,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-047",
@@ -2216,7 +2304,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-048",
@@ -2252,7 +2342,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Law"
+      "author": [
+        "Rev. João Law"
+      ]
     },
     {
       "id": "hino-049",
@@ -2309,7 +2401,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Marques da Mota Sobrinho"
+      "author": [
+        "Rev. João Marques da Mota Sobrinho"
+      ]
     },
     {
       "id": "hino-050",
@@ -2354,7 +2448,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Alfredo Henrique da Silva"
+      "author": [
+        "Rev. Alfredo Henrique da Silva"
+      ]
     },
     {
       "id": "hino-051",
@@ -2399,7 +2495,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-052",
@@ -2447,7 +2545,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Manoel B. Silvestre"
+      "author": [
+        "Rev. Manoel B. Silvestre"
+      ]
     },
     {
       "id": "hino-053",
@@ -2495,7 +2595,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Stuart Edmund McNair"
+      "author": [
+        "Stuart Edmund McNair"
+      ]
     },
     {
       "id": "hino-054",
@@ -2565,7 +2667,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Ricardo Holden"
+      "author": [
+        "Rev. Ricardo Holden"
+      ]
     },
     {
       "id": "hino-055",
@@ -2618,7 +2722,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-056",
@@ -2666,7 +2772,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. Joaõ Gomes da Rocha"
+      "author": [
+        "Dr. Joaõ Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-057",
@@ -2717,7 +2825,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-058",
@@ -2778,7 +2888,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sara poulton Kalley"
+      "author": [
+        "Sara poulton Kalley"
+      ]
     },
     {
       "id": "hino-059",
@@ -2827,7 +2939,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-060",
@@ -2872,7 +2986,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Salomão Luís Ginsburg"
+      "author": [
+        "Rev. Salomão Luís Ginsburg"
+      ]
     },
     {
       "id": "hino-061",
@@ -2917,7 +3033,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Marques da Mota Sobrinho"
+      "author": [
+        "Rev. João Marques da Mota Sobrinho"
+      ]
     },
     {
       "id": "hino-062",
@@ -2970,7 +3088,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Marques da Mota Sobrinho"
+      "author": [
+        "Rev. João Marques da Mota Sobrinho"
+      ]
     },
     {
       "id": "hino-063",
@@ -3012,7 +3132,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. John Boyle"
+      "author": [
+        "Rev. John Boyle"
+      ]
     },
     {
       "id": "hino-064",
@@ -3054,7 +3176,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-065",
@@ -3108,7 +3232,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-066",
@@ -3156,7 +3282,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-067",
@@ -3198,7 +3326,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-068",
@@ -3249,7 +3379,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-069",
@@ -3288,7 +3420,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Antonio J. dos Santos Neves"
+      "author": [
+        "Antonio J. dos Santos Neves"
+      ]
     },
     {
       "id": "hino-070",
@@ -3324,7 +3458,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-071",
@@ -3372,7 +3508,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "REv. Manoel Antonio de Menezes"
+      "author": [
+        "REv. Manoel Antonio de Menezes"
+      ]
     },
     {
       "id": "hino-072",
@@ -3435,7 +3573,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-073",
@@ -3480,7 +3620,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. James Theodore Houston"
+      "author": [
+        "Rev. James Theodore Houston"
+      ]
     },
     {
       "id": "hino-074",
@@ -3533,7 +3675,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "J. Costa"
+      "author": [
+        "J. Costa"
+      ]
     },
     {
       "id": "hino-075",
@@ -3581,7 +3725,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-076",
@@ -3634,7 +3780,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Joaõ Marques da Mota Sobrinho"
+      "author": [
+        "Rev. Joaõ Marques da Mota Sobrinho"
+      ]
     },
     {
       "id": "hino-077",
@@ -3697,7 +3845,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. John Boyle"
+      "author": [
+        "Rev. John Boyle"
+      ]
     },
     {
       "id": "hino-078",
@@ -3745,7 +3895,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. Ismael de França Campos"
+      "author": [
+        "Dr. Ismael de França Campos"
+      ]
     },
     {
       "id": "hino-079",
@@ -3798,7 +3950,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Manoel da Silveira Porto Filho"
+      "author": [
+        "Rev. Manoel da Silveira Porto Filho"
+      ]
     },
     {
       "id": "hino-080",
@@ -3843,7 +3997,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-081",
@@ -3888,7 +4044,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-082",
@@ -3945,7 +4103,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Justus Henri Nelson"
+      "author": [
+        "Rev. Justus Henri Nelson"
+      ]
     },
     {
       "id": "hino-083",
@@ -3963,7 +4123,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-084",
@@ -3981,7 +4143,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-085",
@@ -4000,7 +4164,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Guaraci Silveira"
+      "author": [
+        "Guaraci Silveira"
+      ]
     },
     {
       "id": "hino-086",
@@ -4020,7 +4186,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-087",
@@ -4039,7 +4207,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-088",
@@ -4075,7 +4245,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Manoel Antonio de Menezes"
+      "author": [
+        "Rev. Manoel Antonio de Menezes"
+      ]
     },
     {
       "id": "hino-089",
@@ -4094,7 +4266,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. James Theodore Houston"
+      "author": [
+        "Rev. James Theodore Houston"
+      ]
     },
     {
       "id": "hino-090",
@@ -4113,7 +4287,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-091",
@@ -4161,7 +4337,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "SarahPoulton Kalley"
+      "author": [
+        "SarahPoulton Kalley"
+      ]
     },
     {
       "id": "hino-092",
@@ -4197,7 +4375,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "REv. Antonio de Campos Gonçalves"
+      "author": [
+        "REv. Antonio de Campos Gonçalves"
+      ]
     },
     {
       "id": "hino-093",
@@ -4256,7 +4436,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Manoel da Silveira Porto Filho"
+      "author": [
+        "Rev. Manoel da Silveira Porto Filho"
+      ]
     },
     {
       "id": "hino-094",
@@ -4301,7 +4483,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-095",
@@ -4343,7 +4527,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-096",
@@ -4370,7 +4556,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-097",
@@ -4408,7 +4596,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-098",
@@ -4456,7 +4646,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Jerônimo Gueiros"
+      "author": [
+        "Rev. Jerônimo Gueiros"
+      ]
     },
     {
       "id": "hino-099",
@@ -4513,7 +4705,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-100",
@@ -4609,7 +4803,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. James Theodore Houston"
+      "author": [
+        "Rev. James Theodore Houston"
+      ]
     },
     {
       "id": "hino-102",
@@ -4645,7 +4841,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Sírio Joel de Morais"
+      "author": [
+        "Rev. Sírio Joel de Morais"
+      ]
     },
     {
       "id": "hino-103",
@@ -4687,7 +4885,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-104",
@@ -4732,7 +4932,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "REv. João Gomes da Rocha"
+      "author": [
+        "REv. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-105",
@@ -4813,7 +5015,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Robert Hawkey Moreton"
+      "author": [
+        "Rev. Robert Hawkey Moreton"
+      ]
     },
     {
       "id": "hino-106",
@@ -4856,7 +5060,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-107",
@@ -4901,7 +5107,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-108",
@@ -4936,7 +5144,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-109",
@@ -4981,7 +5191,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-110",
@@ -5025,7 +5237,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Padre Antonio Pereira de Souza Caldas"
+      "author": [
+        "Padre Antonio Pereira de Souza Caldas"
+      ]
     },
     {
       "id": "hino-111",
@@ -5069,7 +5283,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. James Theodore Houston"
+      "author": [
+        "Rev. James Theodore Houston"
+      ]
     },
     {
       "id": "hino-112",
@@ -5114,7 +5330,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Marques da Mota Sobrinho"
+      "author": [
+        "Rev. João Marques da Mota Sobrinho"
+      ]
     },
     {
       "id": "hino-113",
@@ -5150,7 +5368,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. James Theodore Houston"
+      "author": [
+        "Rev. James Theodore Houston"
+      ]
     },
     {
       "id": "hino-114",
@@ -5213,7 +5433,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-115",
@@ -5258,7 +5480,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Joseph Jones"
+      "author": [
+        "Joseph Jones"
+      ]
     },
     {
       "id": "hino-116",
@@ -5303,7 +5527,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Aninimo"
+      "author": [
+        "Aninimo"
+      ]
     },
     {
       "id": "hino-117",
@@ -5348,7 +5574,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-118",
@@ -5393,7 +5621,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-119",
@@ -5450,7 +5680,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-120",
@@ -5540,7 +5772,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Justus Henri Nelson"
+      "author": [
+        "Rev. Justus Henri Nelson"
+      ]
     },
     {
       "id": "hino-122",
@@ -5605,7 +5839,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-123",
@@ -5647,7 +5883,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-124",
@@ -5700,7 +5938,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-125",
@@ -5735,7 +5975,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Jerônimo Gueiros"
+      "author": [
+        "Rev. Jerônimo Gueiros"
+      ]
     },
     {
       "id": "hino-126",
@@ -5780,7 +6022,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-127",
@@ -5825,7 +6069,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-128",
@@ -5852,7 +6098,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-129",
@@ -5897,7 +6145,10 @@
           "type": "VERSE"
         }
       ],
-      "author": "Do Hinário Laudate Deum, de J.C. Mota"
+      "author": [
+        "Do Hinário Laudate Deum",
+        "de J.C. Mota"
+      ]
     },
     {
       "id": "hino-130",
@@ -5942,7 +6193,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Justus Henri Nelson"
+      "author": [
+        "Rev. Justus Henri Nelson"
+      ]
     },
     {
       "id": "hino-131",
@@ -5973,7 +6226,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Blanche Lício"
+      "author": [
+        "Blanche Lício"
+      ]
     },
     {
       "id": "hino-132",
@@ -6018,7 +6273,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Antonio de Campo Gonçalves"
+      "author": [
+        "Rev. Antonio de Campo Gonçalves"
+      ]
     },
     {
       "id": "hino-133",
@@ -6054,7 +6311,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "João Wilson Faustini"
+      "author": [
+        "João Wilson Faustini"
+      ]
     },
     {
       "id": "hino-134",
@@ -6090,7 +6349,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-135",
@@ -6138,7 +6399,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Antonio de Campo Gonçalves"
+      "author": [
+        "Rev. Antonio de Campo Gonçalves"
+      ]
     },
     {
       "id": "hino-136",
@@ -6180,7 +6443,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Robert Hawkey Moreton"
+      "author": [
+        "Rev. Robert Hawkey Moreton"
+      ]
     },
     {
       "id": "hino-137",
@@ -6213,7 +6478,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Antonio de Campo Gonçalves"
+      "author": [
+        "Rev. Antonio de Campo Gonçalves"
+      ]
     },
     {
       "id": "hino-138",
@@ -6248,7 +6515,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-139",
@@ -6302,7 +6571,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Major Guilherme Luis dos Santos Ferreira"
+      "author": [
+        "Major Guilherme Luis dos Santos Ferreira"
+      ]
     },
     {
       "id": "hino-140",
@@ -6355,7 +6626,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-141",
@@ -6382,7 +6655,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-142",
@@ -6430,7 +6705,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Jerônimo Gueiros"
+      "author": [
+        "Rev. Jerônimo Gueiros"
+      ]
     },
     {
       "id": "hino-143",
@@ -6487,7 +6764,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Bispo Salomão Ferraz"
+      "author": [
+        "Bispo Salomão Ferraz"
+      ]
     },
     {
       "id": "hino-144",
@@ -6535,7 +6814,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Robert Hawkey Moreton"
+      "author": [
+        "Rev. Robert Hawkey Moreton"
+      ]
     },
     {
       "id": "hino-145",
@@ -6592,7 +6873,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Manoel Antonio de Menezes"
+      "author": [
+        "Rev. Manoel Antonio de Menezes"
+      ]
     },
     {
       "id": "hino-146",
@@ -6628,7 +6911,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Manoel Antonio de Menezes"
+      "author": [
+        "Rev. Manoel Antonio de Menezes"
+      ]
     },
     {
       "id": "hino-147",
@@ -6682,7 +6967,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-148",
@@ -6736,7 +7023,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Marques da Mota Sobrinho"
+      "author": [
+        "Rev. João Marques da Mota Sobrinho"
+      ]
     },
     {
       "id": "hino-149",
@@ -6778,7 +7067,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "George Benjamin Nind"
+      "author": [
+        "George Benjamin Nind"
+      ]
     },
     {
       "id": "hino-150",
@@ -6841,7 +7132,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-151",
@@ -6886,7 +7179,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Antonio Ferreira de Campos"
+      "author": [
+        "Antonio Ferreira de Campos"
+      ]
     },
     {
       "id": "hino-152",
@@ -6940,7 +7235,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-153",
@@ -6994,7 +7291,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-154",
@@ -7012,7 +7311,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Luisa Agnes Wright"
+      "author": [
+        "Luisa Agnes Wright"
+      ]
     },
     {
       "id": "hino-155",
@@ -7048,7 +7349,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Robert Hawkey Moreton"
+      "author": [
+        "Rev. Robert Hawkey Moreton"
+      ]
     },
     {
       "id": "hino-156",
@@ -7093,7 +7396,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Bispo Salomão Ferraz"
+      "author": [
+        "Bispo Salomão Ferraz"
+      ]
     },
     {
       "id": "hino-157",
@@ -7182,7 +7487,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-159",
@@ -7218,7 +7525,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-160",
@@ -7236,7 +7545,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-161",
@@ -7254,7 +7565,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-162",
@@ -7276,7 +7589,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Roberto Reid Kalley"
+      "author": [
+        "Roberto Reid Kalley"
+      ]
     },
     {
       "id": "hino-163",
@@ -7319,7 +7634,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Antonio de Campo Gonçalves"
+      "author": [
+        "Rev. Antonio de Campo Gonçalves"
+      ]
     },
     {
       "id": "hino-164",
@@ -7362,7 +7679,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-165",
@@ -7416,7 +7735,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-166",
@@ -7452,7 +7773,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-167",
@@ -7500,7 +7823,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-168",
@@ -7535,7 +7860,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Alfredo Henrique da Silva"
+      "author": [
+        "Rev. Alfredo Henrique da Silva"
+      ]
     },
     {
       "id": "hino-169",
@@ -7570,7 +7897,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-170",
@@ -7612,7 +7941,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-171",
@@ -7673,7 +8004,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-172",
@@ -7730,7 +8063,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-173",
@@ -7766,7 +8101,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Antonio de Campo Gonçalves"
+      "author": [
+        "Rev. Antonio de Campo Gonçalves"
+      ]
     },
     {
       "id": "hino-174",
@@ -7801,7 +8138,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-175",
@@ -7849,7 +8188,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Stuart Edmund McNair"
+      "author": [
+        "Stuart Edmund McNair"
+      ]
     },
     {
       "id": "hino-176",
@@ -7891,7 +8232,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-177",
@@ -7945,7 +8288,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-178",
@@ -7998,7 +8343,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Leônidas P. G. da Silva"
+      "author": [
+        "Rev. Leônidas P. G. da Silva"
+      ]
     },
     {
       "id": "hino-179",
@@ -8034,7 +8381,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Jerônimo Gueiros"
+      "author": [
+        "Rev. Jerônimo Gueiros"
+      ]
     },
     {
       "id": "hino-180",
@@ -8080,7 +8429,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. William E. Entzminger"
+      "author": [
+        "Rev. William E. Entzminger"
+      ]
     },
     {
       "id": "hino-181",
@@ -8125,7 +8476,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-182",
@@ -8199,7 +8552,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-183",
@@ -8244,7 +8599,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Salomão Luis Ginsburg"
+      "author": [
+        "Rev. Salomão Luis Ginsburg"
+      ]
     },
     {
       "id": "hino-184",
@@ -8298,7 +8655,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-185",
@@ -8343,7 +8702,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-186",
@@ -8388,7 +8749,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-187",
@@ -8435,7 +8798,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Maria da Glória Loureiro de Andrade"
+      "author": [
+        "Maria da Glória Loureiro de Andrade"
+      ]
     },
     {
       "id": "hino-188",
@@ -8480,7 +8845,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Robert Hawkey Moreton"
+      "author": [
+        "Rev. Robert Hawkey Moreton"
+      ]
     },
     {
       "id": "hino-189",
@@ -8525,7 +8892,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-190",
@@ -8560,7 +8929,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Ricardo Holden"
+      "author": [
+        "Rev. Ricardo Holden"
+      ]
     },
     {
       "id": "hino-191",
@@ -8614,7 +8985,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Jerônimo Gueiros"
+      "author": [
+        "Rev. Jerônimo Gueiros"
+      ]
     },
     {
       "id": "hino-192",
@@ -8649,7 +9022,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Ricardo Holden"
+      "author": [
+        "Rev. Ricardo Holden"
+      ]
     },
     {
       "id": "hino-193",
@@ -8703,7 +9078,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-194",
@@ -8756,7 +9133,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Otoniel Mota"
+      "author": [
+        "Rev. Otoniel Mota"
+      ]
     },
     {
       "id": "hino-195",
@@ -8801,7 +9180,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Law"
+      "author": [
+        "Rev. João Law"
+      ]
     },
     {
       "id": "hino-196",
@@ -8849,7 +9230,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Ricardo Holden"
+      "author": [
+        "Rev. Ricardo Holden"
+      ]
     },
     {
       "id": "hino-197",
@@ -8876,7 +9259,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "J. Costa"
+      "author": [
+        "J. Costa"
+      ]
     },
     {
       "id": "hino-198",
@@ -8921,7 +9306,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-199",
@@ -8992,7 +9379,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Jerônimo Gueiros"
+      "author": [
+        "Rev. Jerônimo Gueiros"
+      ]
     },
     {
       "id": "hino-201",
@@ -9034,7 +9423,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Sírio Joel de Morais"
+      "author": [
+        "Rev. Sírio Joel de Morais"
+      ]
     },
     {
       "id": "hino-202",
@@ -9088,7 +9479,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "John J. Ransom"
+      "author": [
+        "John J. Ransom"
+      ]
     },
     {
       "id": "hino-203",
@@ -9146,7 +9539,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "A.J. Rodrigues da Silva"
+      "author": [
+        "A.J. Rodrigues da Silva"
+      ]
     },
     {
       "id": "hino-204",
@@ -9166,7 +9561,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-205",
@@ -9214,7 +9611,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Robert Hawkey Moreton"
+      "author": [
+        "Rev. Robert Hawkey Moreton"
+      ]
     },
     {
       "id": "hino-206",
@@ -9279,7 +9678,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "J.Eduardo Von Hafe"
+      "author": [
+        "J.Eduardo Von Hafe"
+      ]
     },
     {
       "id": "hino-207",
@@ -9314,7 +9715,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Marques da Mota Sobrinho"
+      "author": [
+        "Rev. João Marques da Mota Sobrinho"
+      ]
     },
     {
       "id": "hino-208",
@@ -9375,7 +9778,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Robert Hawkey Moreton"
+      "author": [
+        "Rev. Robert Hawkey Moreton"
+      ]
     },
     {
       "id": "hino-209",
@@ -9432,7 +9837,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Myron Augusto Clark"
+      "author": [
+        "Myron Augusto Clark"
+      ]
     },
     {
       "id": "hino-210",
@@ -9474,7 +9881,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-211",
@@ -9523,7 +9932,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Antonio de Campo Gonçalves"
+      "author": [
+        "Rev. Antonio de Campo Gonçalves"
+      ]
     },
     {
       "id": "hino-212",
@@ -9565,7 +9976,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Marques da Mota Sobrinho"
+      "author": [
+        "Rev. João Marques da Mota Sobrinho"
+      ]
     },
     {
       "id": "hino-213",
@@ -9630,7 +10043,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-214",
@@ -9675,7 +10090,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Otoniel Mota"
+      "author": [
+        "Rev. Otoniel Mota"
+      ]
     },
     {
       "id": "hino-215",
@@ -9736,7 +10153,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-216",
@@ -9793,7 +10212,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-217",
@@ -9882,7 +10303,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Joseph Jones"
+      "author": [
+        "Joseph Jones"
+      ]
     },
     {
       "id": "hino-219",
@@ -9926,7 +10349,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-220",
@@ -9979,7 +10404,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-221",
@@ -10022,7 +10449,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-222",
@@ -10080,7 +10509,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Robert Hawkey Moreton"
+      "author": [
+        "Rev. Robert Hawkey Moreton"
+      ]
     },
     {
       "id": "hino-223",
@@ -10143,7 +10574,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "João Diener"
+      "author": [
+        "João Diener"
+      ]
     },
     {
       "id": "hino-224",
@@ -10200,7 +10633,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-225",
@@ -10245,7 +10680,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-226",
@@ -10299,7 +10736,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Marques da Mota Sobrinho"
+      "author": [
+        "Rev. João Marques da Mota Sobrinho"
+      ]
     },
     {
       "id": "hino-227",
@@ -10344,7 +10783,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Alfredo Henrique da Silva"
+      "author": [
+        "Rev. Alfredo Henrique da Silva"
+      ]
     },
     {
       "id": "hino-228",
@@ -10392,7 +10833,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-229",
@@ -10437,7 +10880,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-230",
@@ -10479,7 +10924,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-231",
@@ -10523,7 +10970,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. F. Caetano Borges da Silva"
+      "author": [
+        "Rev. F. Caetano Borges da Silva"
+      ]
     },
     {
       "id": "hino-232",
@@ -10574,7 +11023,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Salomão Luis Ginsburg"
+      "author": [
+        "Rev. Salomão Luis Ginsburg"
+      ]
     },
     {
       "id": "hino-233",
@@ -10609,7 +11060,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-234",
@@ -10653,7 +11106,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Joseph Jones"
+      "author": [
+        "Joseph Jones"
+      ]
     },
     {
       "id": "hino-235",
@@ -10689,7 +11144,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-236",
@@ -10747,7 +11204,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "João Diener"
+      "author": [
+        "João Diener"
+      ]
     },
     {
       "id": "hino-237",
@@ -10801,7 +11260,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-238",
@@ -10865,7 +11326,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-239",
@@ -10970,7 +11433,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-241",
@@ -11018,7 +11483,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-242",
@@ -11063,7 +11530,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Manoel Antonio de Menezes"
+      "author": [
+        "Rev. Manoel Antonio de Menezes"
+      ]
     },
     {
       "id": "hino-243",
@@ -11126,7 +11595,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Salomão Luis Ginsburg"
+      "author": [
+        "Rev. Salomão Luis Ginsburg"
+      ]
     },
     {
       "id": "hino-244",
@@ -11144,7 +11615,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-245",
@@ -11189,7 +11662,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-246",
@@ -11250,7 +11725,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Manoel da Silveira Porto Filho"
+      "author": [
+        "Rev. Manoel da Silveira Porto Filho"
+      ]
     },
     {
       "id": "hino-247",
@@ -11304,7 +11781,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-248",
@@ -11352,7 +11831,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Robert Hawkey Moreton"
+      "author": [
+        "Rev. Robert Hawkey Moreton"
+      ]
     },
     {
       "id": "hino-249",
@@ -11397,7 +11878,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-250",
@@ -11450,7 +11933,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-251",
@@ -11495,7 +11980,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-252",
@@ -11549,7 +12036,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. John Boyle"
+      "author": [
+        "Rev. John Boyle"
+      ]
     },
     {
       "id": "hino-253",
@@ -11603,7 +12092,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-254",
@@ -11660,7 +12151,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Marques da Mota Sobrinho"
+      "author": [
+        "Rev. João Marques da Mota Sobrinho"
+      ]
     },
     {
       "id": "hino-255",
@@ -11708,7 +12201,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Antonio de Campo Gonçalves"
+      "author": [
+        "Rev. Antonio de Campo Gonçalves"
+      ]
     },
     {
       "id": "hino-256",
@@ -11753,7 +12248,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Bispo Egmont Machado Krischke"
+      "author": [
+        "Bispo Egmont Machado Krischke"
+      ]
     },
     {
       "id": "hino-257",
@@ -11807,7 +12304,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-258",
@@ -11852,7 +12351,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-259",
@@ -11900,7 +12401,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-260",
@@ -11954,7 +12457,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-261",
@@ -11999,7 +12504,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-262",
@@ -12044,7 +12551,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-263",
@@ -12089,7 +12598,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-264",
@@ -12134,7 +12645,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-265",
@@ -12188,7 +12701,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Justus Henri Nelson"
+      "author": [
+        "Rev. Justus Henri Nelson"
+      ]
     },
     {
       "id": "hino-266",
@@ -12233,7 +12748,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Manoel Antonio de Menezes"
+      "author": [
+        "Rev. Manoel Antonio de Menezes"
+      ]
     },
     {
       "id": "hino-267",
@@ -12281,7 +12798,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-268",
@@ -12329,7 +12848,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Ricardo Holden"
+      "author": [
+        "Rev. Ricardo Holden"
+      ]
     },
     {
       "id": "hino-269",
@@ -12393,7 +12914,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-270",
@@ -12454,7 +12977,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Antonio Almeida"
+      "author": [
+        "Rev. Antonio Almeida"
+      ]
     },
     {
       "id": "hino-271",
@@ -12502,7 +13027,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Antonio Ferreira de Campos"
+      "author": [
+        "Antonio Ferreira de Campos"
+      ]
     },
     {
       "id": "hino-272",
@@ -12563,7 +13090,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Otoniel Mota"
+      "author": [
+        "Rev. Otoniel Mota"
+      ]
     },
     {
       "id": "hino-273",
@@ -12598,7 +13127,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-274",
@@ -12652,7 +13183,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Law"
+      "author": [
+        "Rev. João Law"
+      ]
     },
     {
       "id": "hino-275",
@@ -12701,7 +13234,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Lourenço de Souza"
+      "author": [
+        "Lourenço de Souza"
+      ]
     },
     {
       "id": "hino-276",
@@ -12746,7 +13281,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Ricardo Holden"
+      "author": [
+        "Rev. Ricardo Holden"
+      ]
     },
     {
       "id": "hino-277",
@@ -12800,7 +13337,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Padre Antonio Pereira de Sousa Caldas"
+      "author": [
+        "Padre Antonio Pereira de Sousa Caldas"
+      ]
     },
     {
       "id": "hino-278",
@@ -12879,7 +13418,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-279",
@@ -12915,7 +13456,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-280",
@@ -13004,7 +13547,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-282",
@@ -13049,7 +13594,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Salomão Luis Ginsburg"
+      "author": [
+        "Rev. Salomão Luis Ginsburg"
+      ]
     },
     {
       "id": "hino-283",
@@ -13110,7 +13657,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Salomão Luis Ginsburg"
+      "author": [
+        "Rev. Salomão Luis Ginsburg"
+      ]
     },
     {
       "id": "hino-284",
@@ -13171,7 +13720,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Antonio de Campo Gonçalves"
+      "author": [
+        "Rev. Antonio de Campo Gonçalves"
+      ]
     },
     {
       "id": "hino-285",
@@ -13228,7 +13779,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-286",
@@ -13293,7 +13846,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Justus Henri Nelson"
+      "author": [
+        "Rev. Justus Henri Nelson"
+      ]
     },
     {
       "id": "hino-287",
@@ -13354,7 +13909,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Jerônimo Gueiros"
+      "author": [
+        "Rev. Jerônimo Gueiros"
+      ]
     },
     {
       "id": "hino-288",
@@ -13390,7 +13947,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-289",
@@ -13435,7 +13994,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Alfredo Henrique da Silva"
+      "author": [
+        "Rev. Alfredo Henrique da Silva"
+      ]
     },
     {
       "id": "hino-290",
@@ -13483,7 +14044,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-291",
@@ -13547,7 +14110,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-292",
@@ -13592,7 +14157,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Blanche Lício"
+      "author": [
+        "Blanche Lício"
+      ]
     },
     {
       "id": "hino-293",
@@ -13640,7 +14207,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Antonio de Campo Gonçalves"
+      "author": [
+        "Rev. Antonio de Campo Gonçalves"
+      ]
     },
     {
       "id": "hino-294",
@@ -13685,7 +14254,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Antonio de Campo Gonçalves"
+      "author": [
+        "Rev. Antonio de Campo Gonçalves"
+      ]
     },
     {
       "id": "hino-295",
@@ -13739,7 +14310,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Justus Henri Nelson"
+      "author": [
+        "Rev. Justus Henri Nelson"
+      ]
     },
     {
       "id": "hino-296",
@@ -13784,7 +14357,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Benjamim Rufino Duarte"
+      "author": [
+        "Rev. Benjamim Rufino Duarte"
+      ]
     },
     {
       "id": "hino-297",
@@ -13837,7 +14412,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Marques da Mota Sobrinho"
+      "author": [
+        "Rev. João Marques da Mota Sobrinho"
+      ]
     },
     {
       "id": "hino-298",
@@ -13879,7 +14456,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Manoel de Arruda Camargo"
+      "author": [
+        "Manoel de Arruda Camargo"
+      ]
     },
     {
       "id": "hino-299",
@@ -13927,7 +14506,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. James Theodore Houston"
+      "author": [
+        "Rev. James Theodore Houston"
+      ]
     },
     {
       "id": "hino-300",
@@ -13975,7 +14556,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-301",
@@ -14023,7 +14606,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-302",
@@ -14077,7 +14662,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Robert Hawkey Moreton"
+      "author": [
+        "Rev. Robert Hawkey Moreton"
+      ]
     },
     {
       "id": "hino-303",
@@ -14134,7 +14721,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Marques da Mota Sobrinho"
+      "author": [
+        "Rev. João Marques da Mota Sobrinho"
+      ]
     },
     {
       "id": "hino-304",
@@ -14182,7 +14771,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Ricardo Holden"
+      "author": [
+        "Rev. Ricardo Holden"
+      ]
     },
     {
       "id": "hino-305",
@@ -14227,7 +14818,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-306",
@@ -14284,7 +14877,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-307",
@@ -14345,7 +14940,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-308",
@@ -14399,7 +14996,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-309",
@@ -14473,7 +15072,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Ricardo Holden"
+      "author": [
+        "Rev. Ricardo Holden"
+      ]
     },
     {
       "id": "hino-310",
@@ -14508,7 +15109,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "J. Costa"
+      "author": [
+        "J. Costa"
+      ]
     },
     {
       "id": "hino-311",
@@ -14564,7 +15167,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-312",
@@ -14616,7 +15221,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. José Augusto dos Santos e Silva"
+      "author": [
+        "Rev. José Augusto dos Santos e Silva"
+      ]
     },
     {
       "id": "hino-313",
@@ -14673,7 +15280,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Manoel Antonio de Menezes"
+      "author": [
+        "Rev. Manoel Antonio de Menezes"
+      ]
     },
     {
       "id": "hino-314",
@@ -14727,7 +15336,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-315",
@@ -14781,7 +15392,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Salomão Luis Ginsburg"
+      "author": [
+        "Rev. Salomão Luis Ginsburg"
+      ]
     },
     {
       "id": "hino-316",
@@ -14803,7 +15416,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Marques da Mota Sobrinho"
+      "author": [
+        "Rev. João Marques da Mota Sobrinho"
+      ]
     },
     {
       "id": "hino-317",
@@ -14848,7 +15463,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-318",
@@ -14922,7 +15539,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Marques da Mota Sobrinho"
+      "author": [
+        "Rev. João Marques da Mota Sobrinho"
+      ]
     },
     {
       "id": "hino-319",
@@ -14967,7 +15586,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-320",
@@ -15009,7 +15630,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-321",
@@ -15044,7 +15667,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-322",
@@ -15082,7 +15707,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-323",
@@ -15139,7 +15766,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-324",
@@ -15184,7 +15813,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Joseph Jones"
+      "author": [
+        "Joseph Jones"
+      ]
     },
     {
       "id": "hino-325",
@@ -15229,7 +15860,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-326",
@@ -15265,7 +15898,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-327",
@@ -15310,7 +15945,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Salomão Luis Ginsburg"
+      "author": [
+        "Rev. Salomão Luis Ginsburg"
+      ]
     },
     {
       "id": "hino-328",
@@ -15355,7 +15992,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Benjamim Rufino Duarte"
+      "author": [
+        "Rev. Benjamim Rufino Duarte"
+      ]
     },
     {
       "id": "hino-329",
@@ -15416,7 +16055,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Padre Antonio Pereira de Sousa Caldas"
+      "author": [
+        "Padre Antonio Pereira de Sousa Caldas"
+      ]
     },
     {
       "id": "hino-330",
@@ -15477,7 +16118,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-331",
@@ -15526,7 +16169,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-332",
@@ -15574,7 +16219,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Raul Gonçalves"
+      "author": [
+        "Raul Gonçalves"
+      ]
     },
     {
       "id": "hino-333",
@@ -15622,7 +16269,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-334",
@@ -15696,7 +16345,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-335",
@@ -15750,7 +16401,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-336",
@@ -15804,7 +16457,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-337",
@@ -15861,7 +16516,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-338",
@@ -15932,7 +16589,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Elisa Rivers Smart"
+      "author": [
+        "Elisa Rivers Smart"
+      ]
     },
     {
       "id": "hino-339",
@@ -15991,7 +16650,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-340",
@@ -16048,7 +16709,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-341",
@@ -16091,7 +16754,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "George Benjamin Nind"
+      "author": [
+        "George Benjamin Nind"
+      ]
     },
     {
       "id": "hino-342",
@@ -16154,7 +16819,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. William E. Entzminger"
+      "author": [
+        "Rev. William E. Entzminger"
+      ]
     },
     {
       "id": "hino-343",
@@ -16221,7 +16888,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Domingos José Ferreira"
+      "author": [
+        "Domingos José Ferreira"
+      ]
     },
     {
       "id": "hino-344",
@@ -16279,7 +16948,9 @@
           "type": "CHORUS"
         }
       ],
-      "author": "Eleanor Allen Schroll"
+      "author": [
+        "Eleanor Allen Schroll"
+      ]
     },
     {
       "id": "hino-345",
@@ -16336,7 +17007,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Domingos José Ferreira"
+      "author": [
+        "Domingos José Ferreira"
+      ]
     },
     {
       "id": "hino-346",
@@ -16388,7 +17061,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Alfredo Henrique da Silva"
+      "author": [
+        "Rev. Alfredo Henrique da Silva"
+      ]
     },
     {
       "id": "hino-347",
@@ -16451,7 +17126,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Cecília R. Siqueira"
+      "author": [
+        "Cecília R. Siqueira"
+      ]
     },
     {
       "id": "hino-348",
@@ -16508,7 +17185,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-349",
@@ -16556,7 +17235,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-350",
@@ -16604,7 +17285,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-351",
@@ -16657,7 +17340,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Ricardo Holden"
+      "author": [
+        "Rev. Ricardo Holden"
+      ]
     },
     {
       "id": "hino-352",
@@ -16705,7 +17390,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Antonio J. dos Santos Neves"
+      "author": [
+        "Antonio J. dos Santos Neves"
+      ]
     },
     {
       "id": "hino-353",
@@ -16753,7 +17440,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Júlio César Ribeiro"
+      "author": [
+        "Júlio César Ribeiro"
+      ]
     },
     {
       "id": "hino-354",
@@ -16798,7 +17487,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Júlio César Ribeiro"
+      "author": [
+        "Júlio César Ribeiro"
+      ]
     },
     {
       "id": "hino-355",
@@ -16846,7 +17537,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Marques da Mota Sobrinho"
+      "author": [
+        "Rev. João Marques da Mota Sobrinho"
+      ]
     },
     {
       "id": "hino-356",
@@ -16877,7 +17570,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Marques da Mota Sobrinho"
+      "author": [
+        "Rev. João Marques da Mota Sobrinho"
+      ]
     },
     {
       "id": "hino-357",
@@ -16913,7 +17608,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Antonio de Campo Gonçalves"
+      "author": [
+        "Rev. Antonio de Campo Gonçalves"
+      ]
     },
     {
       "id": "hino-358",
@@ -16948,7 +17645,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Robert Hawkey Moreton"
+      "author": [
+        "Rev. Robert Hawkey Moreton"
+      ]
     },
     {
       "id": "hino-359",
@@ -17009,7 +17708,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Roberto Reid Kalley"
+      "author": [
+        "Roberto Reid Kalley"
+      ]
     },
     {
       "id": "hino-360",
@@ -17072,7 +17773,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-361",
@@ -17117,7 +17820,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. James Theodore Houston"
+      "author": [
+        "Rev. James Theodore Houston"
+      ]
     },
     {
       "id": "hino-362",
@@ -17162,7 +17867,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-363",
@@ -17205,7 +17912,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Robert Hawkey Moreton"
+      "author": [
+        "Rev. Robert Hawkey Moreton"
+      ]
     },
     {
       "id": "hino-364",
@@ -17266,7 +17975,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-365",
@@ -17314,7 +18025,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-366",
@@ -17362,7 +18075,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Mary Wardiaw"
+      "author": [
+        "Mary Wardiaw"
+      ]
     },
     {
       "id": "hino-367",
@@ -17436,7 +18151,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-368",
@@ -17497,7 +18214,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-369",
@@ -17542,7 +18261,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-370",
@@ -17564,7 +18285,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Ricardo Holden"
+      "author": [
+        "Rev. Ricardo Holden"
+      ]
     },
     {
       "id": "hino-371",
@@ -17625,7 +18348,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-372",
@@ -17670,7 +18395,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-373",
@@ -17723,7 +18450,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Augusto de Sousa Pinto Caldeira"
+      "author": [
+        "Augusto de Sousa Pinto Caldeira"
+      ]
     },
     {
       "id": "hino-374",
@@ -17768,7 +18497,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-375",
@@ -17803,7 +18534,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Jerônimo Gueiros"
+      "author": [
+        "Rev. Jerônimo Gueiros"
+      ]
     },
     {
       "id": "hino-376",
@@ -17842,7 +18575,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-377",
@@ -17887,7 +18622,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Antonio Querino Lomba"
+      "author": [
+        "Antonio Querino Lomba"
+      ]
     },
     {
       "id": "hino-378",
@@ -17930,7 +18667,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-379",
@@ -17989,7 +18728,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Raul Gonçalves"
+      "author": [
+        "Raul Gonçalves"
+      ]
     },
     {
       "id": "hino-380",
@@ -18042,7 +18783,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Robert Hawkey Moreton"
+      "author": [
+        "Rev. Robert Hawkey Moreton"
+      ]
     },
     {
       "id": "hino-381",
@@ -18096,7 +18839,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Ricardo Holden"
+      "author": [
+        "Rev. Ricardo Holden"
+      ]
     },
     {
       "id": "hino-382",
@@ -18132,7 +18877,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Robert Hawkey Moreton"
+      "author": [
+        "Rev. Robert Hawkey Moreton"
+      ]
     },
     {
       "id": "hino-383",
@@ -18175,7 +18922,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Isaac Nicolau Salum"
+      "author": [
+        "Rev. Isaac Nicolau Salum"
+      ]
     },
     {
       "id": "hino-384",
@@ -18238,7 +18987,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. John Boyle"
+      "author": [
+        "Rev. John Boyle"
+      ]
     },
     {
       "id": "hino-385",
@@ -18281,7 +19032,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-386",
@@ -18329,7 +19082,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Robert Hawkey Moreton"
+      "author": [
+        "Rev. Robert Hawkey Moreton"
+      ]
     },
     {
       "id": "hino-387",
@@ -18390,7 +19145,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Myron Augusto Clark"
+      "author": [
+        "Myron Augusto Clark"
+      ]
     },
     {
       "id": "hino-388",
@@ -18444,7 +19201,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Justus Henri Nelson"
+      "author": [
+        "Rev. Justus Henri Nelson"
+      ]
     },
     {
       "id": "hino-389",
@@ -18498,7 +19257,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-390",
@@ -18552,7 +19313,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Marques da Mota Sobrinho"
+      "author": [
+        "Rev. João Marques da Mota Sobrinho"
+      ]
     },
     {
       "id": "hino-391",
@@ -18600,7 +19363,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-392",
@@ -18654,7 +19419,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-393",
@@ -18728,7 +19495,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-394",
@@ -18785,7 +19554,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-395",
@@ -18821,7 +19592,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-396",
@@ -18866,7 +19639,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Alfredo Henrique da Silva"
+      "author": [
+        "Rev. Alfredo Henrique da Silva"
+      ]
     },
     {
       "id": "hino-397",
@@ -18914,7 +19689,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Jorge Cesar Mota"
+      "author": [
+        "Rev. Jorge Cesar Mota"
+      ]
     },
     {
       "id": "hino-398",
@@ -18962,7 +19739,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Antonio de Campo Gonçalves"
+      "author": [
+        "Rev. Antonio de Campo Gonçalves"
+      ]
     },
     {
       "id": "hino-399",
@@ -19010,7 +19789,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Alfredo Henrique da Silva"
+      "author": [
+        "Rev. Alfredo Henrique da Silva"
+      ]
     },
     {
       "id": "hino-400",
@@ -19058,7 +19839,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Major Guilherme Luís dos Santos Ferreira"
+      "author": [
+        "Major Guilherme Luís dos Santos Ferreira"
+      ]
     },
     {
       "id": "hino-401",
@@ -19106,7 +19889,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-402",
@@ -19151,7 +19936,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-403",
@@ -19214,7 +20001,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-404",
@@ -19258,7 +20047,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Manoel Antonio de Menezes"
+      "author": [
+        "Rev. Manoel Antonio de Menezes"
+      ]
     },
     {
       "id": "hino-405",
@@ -19306,7 +20097,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-406",
@@ -19360,7 +20153,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-407",
@@ -19405,7 +20200,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Domingos José Ferreira"
+      "author": [
+        "Domingos José Ferreira"
+      ]
     },
     {
       "id": "hino-408",
@@ -19450,7 +20247,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-409",
@@ -19492,7 +20291,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-410",
@@ -19539,7 +20340,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Robert Hawkey Moreton"
+      "author": [
+        "Rev. Robert Hawkey Moreton"
+      ]
     },
     {
       "id": "hino-411",
@@ -19600,7 +20403,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Otoniel Mota"
+      "author": [
+        "Rev. Otoniel Mota"
+      ]
     },
     {
       "id": "hino-412",
@@ -19645,7 +20450,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Antonio de Campo Gonçalves"
+      "author": [
+        "Rev. Antonio de Campo Gonçalves"
+      ]
     },
     {
       "id": "hino-413",
@@ -19690,7 +20497,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "John J. Ransom"
+      "author": [
+        "John J. Ransom"
+      ]
     },
     {
       "id": "hino-414",
@@ -19755,7 +20564,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "João Wilson Faustini"
+      "author": [
+        "João Wilson Faustini"
+      ]
     },
     {
       "id": "hino-415",
@@ -19838,7 +20649,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-416",
@@ -19869,7 +20682,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-417",
@@ -19911,7 +20726,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-418",
@@ -19968,7 +20785,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-419",
@@ -20025,7 +20844,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-420",
@@ -20070,7 +20891,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. William E. Entzminger"
+      "author": [
+        "Rev. William E. Entzminger"
+      ]
     },
     {
       "id": "hino-421",
@@ -20136,7 +20959,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-422",
@@ -20206,7 +21031,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-423",
@@ -20251,7 +21078,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-424",
@@ -20312,7 +21141,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-425",
@@ -20351,7 +21182,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Salomão Luis Ginsburg"
+      "author": [
+        "Rev. Salomão Luis Ginsburg"
+      ]
     },
     {
       "id": "hino-426",
@@ -20393,7 +21226,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. R.E. Neighbour"
+      "author": [
+        "Rev. R.E. Neighbour"
+      ]
     },
     {
       "id": "hino-427",
@@ -20447,7 +21282,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Elisa Rivers Smart"
+      "author": [
+        "Elisa Rivers Smart"
+      ]
     },
     {
       "id": "hino-428",
@@ -20517,7 +21354,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Isaac Nicolau Salum"
+      "author": [
+        "Rev. Isaac Nicolau Salum"
+      ]
     },
     {
       "id": "hino-429",
@@ -20570,7 +21409,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Maria Conceição da Costa Lemos"
+      "author": [
+        "Maria Conceição da Costa Lemos"
+      ]
     },
     {
       "id": "hino-430",
@@ -20615,7 +21456,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Patrocínia de Castro Fernandes"
+      "author": [
+        "Patrocínia de Castro Fernandes"
+      ]
     },
     {
       "id": "hino-431",
@@ -20663,7 +21506,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Alfredo Henrique da Silva"
+      "author": [
+        "Rev. Alfredo Henrique da Silva"
+      ]
     },
     {
       "id": "hino-432",
@@ -20717,7 +21562,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Robert Hawkey Moreton"
+      "author": [
+        "Rev. Robert Hawkey Moreton"
+      ]
     },
     {
       "id": "hino-433",
@@ -20802,7 +21649,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Eduardo Henrique Moreira"
+      "author": [
+        "Rev. Eduardo Henrique Moreira"
+      ]
     },
     {
       "id": "hino-434",
@@ -20859,7 +21708,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Raul Gonçalves"
+      "author": [
+        "Raul Gonçalves"
+      ]
     },
     {
       "id": "hino-435",
@@ -20904,7 +21755,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Eudaldo Silva Lima"
+      "author": [
+        "Rev. Eudaldo Silva Lima"
+      ]
     },
     {
       "id": "hino-436",
@@ -20940,7 +21793,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-437",
@@ -20985,7 +21840,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Manoel de Arruda Camargo"
+      "author": [
+        "Manoel de Arruda Camargo"
+      ]
     },
     {
       "id": "hino-438",
@@ -21043,7 +21900,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Jorge César Mota"
+      "author": [
+        "Rev. Jorge César Mota"
+      ]
     },
     {
       "id": "hino-439",
@@ -21088,7 +21947,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Marques da Mota Sobrinho"
+      "author": [
+        "Rev. João Marques da Mota Sobrinho"
+      ]
     },
     {
       "id": "hino-440",
@@ -21136,7 +21997,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Marques da Mota Sobrinho"
+      "author": [
+        "Rev. João Marques da Mota Sobrinho"
+      ]
     },
     {
       "id": "hino-441",
@@ -21210,7 +22073,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-442",
@@ -21245,7 +22110,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Ricardo Holden"
+      "author": [
+        "Rev. Ricardo Holden"
+      ]
     },
     {
       "id": "hino-443",
@@ -21280,7 +22147,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Leônidas P. G. da Silva"
+      "author": [
+        "Rev. Leônidas P. G. da Silva"
+      ]
     },
     {
       "id": "hino-444",
@@ -21328,7 +22197,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. John Boyle"
+      "author": [
+        "Rev. John Boyle"
+      ]
     },
     {
       "id": "hino-445",
@@ -21388,7 +22259,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-446",
@@ -21436,7 +22309,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Antonio J. dos Santos Neves"
+      "author": [
+        "Antonio J. dos Santos Neves"
+      ]
     },
     {
       "id": "hino-447",
@@ -21479,7 +22354,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Benjamim Rufino Duarte"
+      "author": [
+        "Rev. Benjamim Rufino Duarte"
+      ]
     },
     {
       "id": "hino-448",
@@ -21524,7 +22401,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Maria da Glória Loureiro de Andrade"
+      "author": [
+        "Maria da Glória Loureiro de Andrade"
+      ]
     },
     {
       "id": "hino-449",
@@ -21567,7 +22446,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-450",
@@ -21614,7 +22495,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Maria da Glória Loureiro de Andrade"
+      "author": [
+        "Maria da Glória Loureiro de Andrade"
+      ]
     },
     {
       "id": "hino-451",
@@ -21666,7 +22549,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. William E. Entzminger"
+      "author": [
+        "Rev. William E. Entzminger"
+      ]
     },
     {
       "id": "hino-452",
@@ -21720,7 +22605,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-453",
@@ -21768,7 +22655,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Justus Henri Nelson"
+      "author": [
+        "Rev. Justus Henri Nelson"
+      ]
     },
     {
       "id": "hino-454",
@@ -21811,7 +22700,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. John Boyle"
+      "author": [
+        "Rev. John Boyle"
+      ]
     },
     {
       "id": "hino-455",
@@ -21868,7 +22759,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Manoel Antonio de Menezes"
+      "author": [
+        "Rev. Manoel Antonio de Menezes"
+      ]
     },
     {
       "id": "hino-456",
@@ -21916,7 +22809,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-457",
@@ -21972,7 +22867,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Justus Henri Nelson"
+      "author": [
+        "Rev. Justus Henri Nelson"
+      ]
     },
     {
       "id": "hino-458",
@@ -22033,7 +22930,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. Luis Vieira Ferreira"
+      "author": [
+        "Dr. Luis Vieira Ferreira"
+      ]
     },
     {
       "id": "hino-459",
@@ -22086,7 +22985,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. John Boyle"
+      "author": [
+        "Rev. John Boyle"
+      ]
     },
     {
       "id": "hino-460",
@@ -22158,7 +23059,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Manoel de Arruda Camargo"
+      "author": [
+        "Manoel de Arruda Camargo"
+      ]
     },
     {
       "id": "hino-461",
@@ -22212,7 +23115,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Manoel Antonio de Menezes"
+      "author": [
+        "Rev. Manoel Antonio de Menezes"
+      ]
     },
     {
       "id": "hino-462",
@@ -22257,7 +23162,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Leônidas P. G. da Silva"
+      "author": [
+        "Rev. Leônidas P. G. da Silva"
+      ]
     },
     {
       "id": "hino-463",
@@ -22309,7 +23216,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-464",
@@ -22374,7 +23283,9 @@
           "type": "CHORUS"
         }
       ],
-      "author": "Henry Maxwell Wright"
+      "author": [
+        "Henry Maxwell Wright"
+      ]
     },
     {
       "id": "hino-465",
@@ -22419,7 +23330,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Jerônimo Gueiros"
+      "author": [
+        "Rev. Jerônimo Gueiros"
+      ]
     },
     {
       "id": "hino-466",
@@ -22464,7 +23377,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Marques da Mota Sobrinho"
+      "author": [
+        "Rev. João Marques da Mota Sobrinho"
+      ]
     },
     {
       "id": "hino-467",
@@ -22512,7 +23427,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Law"
+      "author": [
+        "Rev. João Law"
+      ]
     },
     {
       "id": "hino-468",
@@ -22566,7 +23483,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Robert Hawkey Moreton"
+      "author": [
+        "Rev. Robert Hawkey Moreton"
+      ]
     },
     {
       "id": "hino-469",
@@ -22620,7 +23539,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-470",
@@ -22681,7 +23602,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Antonio de Campo Gonçalves"
+      "author": [
+        "Rev. Antonio de Campo Gonçalves"
+      ]
     },
     {
       "id": "hino-471",
@@ -22726,7 +23649,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Marques da Mota Sobrinho"
+      "author": [
+        "Rev. João Marques da Mota Sobrinho"
+      ]
     },
     {
       "id": "hino-472",
@@ -22769,7 +23694,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Alfredo Henrique da Silva"
+      "author": [
+        "Rev. Alfredo Henrique da Silva"
+      ]
     },
     {
       "id": "hino-473",
@@ -22817,7 +23744,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Padre Antonio Pereira de Sousa Caldas"
+      "author": [
+        "Padre Antonio Pereira de Sousa Caldas"
+      ]
     },
     {
       "id": "hino-474",
@@ -22837,7 +23766,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Antonio de Campo Gonçalves"
+      "author": [
+        "Rev. Antonio de Campo Gonçalves"
+      ]
     },
     {
       "id": "hino-475",
@@ -22882,7 +23813,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-476",
@@ -22962,7 +23895,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-478",
@@ -22980,7 +23915,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-479",
@@ -23025,7 +23962,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "George Searle"
+      "author": [
+        "George Searle"
+      ]
     },
     {
       "id": "hino-480",
@@ -23064,7 +24003,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-481",
@@ -23125,7 +24066,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-482",
@@ -23160,7 +24103,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Robert Hawkey Moreton"
+      "author": [
+        "Rev. Robert Hawkey Moreton"
+      ]
     },
     {
       "id": "hino-483",
@@ -23213,7 +24158,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Marques da Mota Sobrinho"
+      "author": [
+        "Rev. João Marques da Mota Sobrinho"
+      ]
     },
     {
       "id": "hino-484",
@@ -23267,7 +24214,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Jerônimo Gueiros"
+      "author": [
+        "Rev. Jerônimo Gueiros"
+      ]
     },
     {
       "id": "hino-485",
@@ -23309,7 +24258,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-486",
@@ -23357,7 +24308,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-487",
@@ -23393,7 +24346,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-488",
@@ -23454,7 +24409,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Bispo Atalício Teodoro Pithan"
+      "author": [
+        "Bispo Atalício Teodoro Pithan"
+      ]
     },
     {
       "id": "hino-489",
@@ -23515,7 +24472,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "hino-490",
@@ -23584,7 +24543,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-491",
@@ -23620,7 +24581,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Bispo Atalício Teodoro Pithan"
+      "author": [
+        "Bispo Atalício Teodoro Pithan"
+      ]
     },
     {
       "id": "hino-492",
@@ -23665,7 +24628,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. Silvano Rocha Filho"
+      "author": [
+        "Rev. Silvano Rocha Filho"
+      ]
     },
     {
       "id": "hino-493",
@@ -23722,7 +24687,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Rev. João Marques da Mota Sobrinho"
+      "author": [
+        "Rev. João Marques da Mota Sobrinho"
+      ]
     },
     {
       "id": "hino-494",
@@ -23749,7 +24716,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-495",
@@ -23829,7 +24798,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-497",
@@ -23936,7 +24907,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Stuart Edmund McNair"
+      "author": [
+        "Stuart Edmund McNair"
+      ]
     },
     {
       "id": "hino-499",
@@ -23999,7 +24972,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Sarah Poulton Kalley"
+      "author": [
+        "Sarah Poulton Kalley"
+      ]
     },
     {
       "id": "hino-500",
@@ -24053,7 +25028,9 @@
           "type": "VERSE"
         }
       ],
-      "author": "Dr. João Gomes da Rocha"
+      "author": [
+        "Dr. João Gomes da Rocha"
+      ]
     },
     {
       "id": "antifona-1",

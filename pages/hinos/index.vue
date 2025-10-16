@@ -32,7 +32,7 @@
         >
           <ion-label :style="{ fontSize: hymnalStore.fontSize + 'px' }">
             <h2>{{ hymn.number }}. {{ hymn.title }}</h2>
-            <p v-if="hymn.author">{{ hymn.author }}</p>
+            <p v-if="hymn.author && hymn.author.length > 0">{{ hymn.author.join(' / ') }}</p>
           </ion-label>
           <ion-icon
             slot="end"
@@ -143,14 +143,21 @@ const filteredHymns = computed(() => {
   
   const search = searchText.value.toLowerCase()
   return hymnalStore.hymns.filter((hymn: Content) => {
-    // Busca em título, número e autor
+    // Busca em título e número
     const basicMatch = (
       hymn.title.toLowerCase().includes(search) ||
-      hymn.number?.toString().includes(search) ||
-      hymn.author?.toLowerCase().includes(search)
+      hymn.number?.toString().includes(search)
     )
     
     if (basicMatch) return true
+    
+    // Busca em autores (array)
+    if (hymn.author && Array.isArray(hymn.author)) {
+      const authorMatch = hymn.author.some((author: string) => 
+        author.toLowerCase().includes(search)
+      )
+      if (authorMatch) return true
+    }
     
     // Busca no conteúdo (letras dos hinos)
     if (Array.isArray(hymn.items)) {

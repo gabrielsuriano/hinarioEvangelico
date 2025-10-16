@@ -26,7 +26,9 @@
       <div v-if="content">
         <h1 class="hymn-number">Hino {{ content.number }}</h1>
         <h2 class="hymn-title">{{ content.title }}</h2>
-        <p v-if="content.author" class="hymn-author">{{ content.author }}</p>
+        <p v-if="content.author && content.author.length > 0" class="hymn-author">
+          {{ content.author.join(' / ') }}
+        </p>
 
         <div class="hymn-content" :style="{ fontSize: hymnalStore.fontSize + 'px' }">
           <template v-if="Array.isArray(content.items) && typeof content.items[0] === 'object'">
@@ -109,13 +111,13 @@ useHead(() => ({
     {
       name: 'description',
       content: content.value?.title 
-        ? `Hino ${content.value.number}: ${content.value.title}${content.value.author ? ' - ' + content.value.author : ''}` 
+        ? `Hino ${content.value.number}: ${content.value.title}${content.value.author && content.value.author.length > 0 ? ' - ' + content.value.author.join(', ') : ''}` 
         : 'Hinário Evangélico Metodista'
     },
     {
       name: 'keywords',
       content: content.value?.title 
-        ? `hino ${content.value.number}, ${content.value.title}, hinário metodista, hinário evangélico${content.value.author ? ', ' + content.value.author : ''}` 
+        ? `hino ${content.value.number}, ${content.value.title}, hinário metodista, hinário evangélico${content.value.author && content.value.author.length > 0 ? ', ' + content.value.author.join(', ') : ''}` 
         : 'hinário, metodista, evangélico'
     },
     {

@@ -23,7 +23,7 @@ export type Content = {
   title: string
   number?: number
   items: SONG_ITEM[] | string[]
-  author?: string
+  author?: string[]
 }
 
 export type Hymnal = {
