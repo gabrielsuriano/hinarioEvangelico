@@ -16,7 +16,7 @@
             ></ion-icon>
           </ion-button>
           <ion-button @click="presentActionSheet">
-            <ion-icon slot="icon-only" :icon="ellipsisVertical"></ion-icon>
+            <ion-icon slot="icon-only" :icon="settings"></ion-icon>
           </ion-button>
         </ion-buttons>
       </ion-toolbar>
@@ -54,7 +54,7 @@ import {
   IonText,
   actionSheetController,
 } from '@ionic/vue'
-import { heart, heartOutline, ellipsisVertical, add, remove, text, arrowBack } from 'ionicons/icons'
+import { heart, heartOutline, settings, add, remove, text, arrowBack } from 'ionicons/icons'
 import type { Content } from '~/types/hymnal'
 
 const route = useRoute()
@@ -130,6 +130,7 @@ const presentActionSheet = async () => {
         icon: add,
         handler: () => {
           hymnalStore.increaseFontSize()
+          return false // Mantém o menu aberto
         },
       },
       {
@@ -137,6 +138,7 @@ const presentActionSheet = async () => {
         icon: remove,
         handler: () => {
           hymnalStore.decreaseFontSize()
+          return false // Mantém o menu aberto
         },
       },
       {
@@ -144,6 +146,7 @@ const presentActionSheet = async () => {
         icon: text,
         handler: () => {
           hymnalStore.resetFontSize()
+          return false // Mantém o menu aberto
         },
       },
       {

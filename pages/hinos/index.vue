@@ -4,15 +4,15 @@
       <ion-toolbar color="primary">
         <ion-title>Hinos</ion-title>
         <ion-buttons slot="end">
-          <ion-button @click="showSearchbar = !showSearchbar">
-            <ion-icon slot="icon-only" :icon="searchOutline"></ion-icon>
+          <ion-button @click="presentActionSheet">
+            <ion-icon slot="icon-only" :icon="settings"></ion-icon>
           </ion-button>
         </ion-buttons>
       </ion-toolbar>
-      <ion-toolbar v-if="showSearchbar">
+      <ion-toolbar>
         <ion-searchbar
           v-model="searchText"
-          placeholder="Buscar hino..."
+          placeholder="Buscar por título, autor ou letra..."
           animated
           @ionClear="searchText = ''"
         ></ion-searchbar>
@@ -27,7 +27,7 @@
           button
           @click="navigateToHymn(hymn.id)"
         >
-          <ion-label>
+          <ion-label :style="{ fontSize: hymnalStore.fontSize + 'px' }">
             <h2>{{ hymn.number }}. {{ hymn.title }}</h2>
             <p v-if="hymn.author">{{ hymn.author }}</p>
           </ion-label>
@@ -59,17 +59,54 @@ import {
   IonLabel,
   IonIcon,
   IonSearchbar,
+  IonText,
   IonButtons,
   IonButton,
-  IonText,
+  actionSheetController,
 } from '@ionic/vue'
-import { searchOutline, heart, heartOutline } from 'ionicons/icons'
+import { heart, heartOutline, settings, add, remove, text } from 'ionicons/icons'
 import type { Content } from '~/types/hymnal'
 
 const hymnalStore = useHymnalStore()
 const router = useRouter()
 const searchText = ref('')
-const showSearchbar = ref(false)
+
+const presentActionSheet = async () => {
+  const actionSheet = await actionSheetController.create({
+    header: 'Configurações',
+    buttons: [
+      {
+        text: 'Aumentar Fonte',
+        icon: add,
+        handler: () => {
+          hymnalStore.increaseFontSize()
+          return false // Mantém o menu aberto
+        },
+      },
+      {
+        text: 'Diminuir Fonte',
+        icon: remove,
+        handler: () => {
+          hymnalStore.decreaseFontSize()
+          return false // Mantém o menu aberto
+        },
+      },
+      {
+        text: 'Fonte Padrão',
+        icon: text,
+        handler: () => {
+          hymnalStore.resetFontSize()
+          return false // Mantém o menu aberto
+        },
+      },
+      {
+        text: 'Cancelar',
+        role: 'cancel',
+      },
+    ],
+  })
+  await actionSheet.present()
+}
 
 // SEO: Metadados para lista de hinos
 useHead({
@@ -77,7 +114,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'Explore os hinos do Hinário Evangélico Metodista. Busque por título, número ou autor.'
+      content: 'Explore os hinos do Hinário Evangélico Metodista. Busque por título, número, autor ou letra do hino.'
     },
     {
       property: 'og:title',
@@ -97,11 +134,29 @@ const filteredHymns = computed(() => {
   
   const search = searchText.value.toLowerCase()
   return hymnalStore.hymns.filter((hymn: Content) => {
-    return (
+    // Busca em título, número e autor
+    const basicMatch = (
       hymn.title.toLowerCase().includes(search) ||
       hymn.number?.toString().includes(search) ||
       hymn.author?.toLowerCase().includes(search)
     )
+    
+    if (basicMatch) return true
+    
+    // Busca no conteúdo (letras dos hinos)
+    if (Array.isArray(hymn.items)) {
+      return hymn.items.some((item: any) => {
+        if (typeof item === 'string') {
+          return item.toLowerCase().includes(search)
+        }
+        if (typeof item === 'object' && item.text) {
+          return item.text.toLowerCase().includes(search)
+        }
+        return false
+      })
+    }
+    
+    return false
   })
 })
 
@@ -109,3 +164,14 @@ const navigateToHymn = (id: string) => {
   router.push(`/hinos/${id}`)
 }
 </script>
+
+<style scoped>
+ion-label {
+  font-size: v-bind('hymnalStore.fontSize + "px"') !important;
+}
+
+ion-label h2,
+ion-label p {
+  font-size: inherit !important;
+}
+</style>
