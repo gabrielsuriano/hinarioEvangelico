@@ -8,7 +8,8 @@
     "build": "nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "generate-icons": "node scripts/generate-icons.js"
   },
   "dependencies": {
     "@ionic/vue": "^8.3.0",
@@ -24,6 +25,8 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@pinia/nuxt": "^0.5.5",
+    "@vite-pwa/nuxt": "^1.0.6",
+    "sharp": "^0.34.4",
     "typescript": "^5.5.4"
   }
 }
