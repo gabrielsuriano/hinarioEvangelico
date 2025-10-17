@@ -68,7 +68,7 @@ import {
   actionSheetController,
   toastController,
 } from '@ionic/vue'
-import { heart, heartOutline, settings, add, remove, text, moon, sunny, cloudDownloadOutline } from 'ionicons/icons'
+import { heart, heartOutline, settings, add, remove, text, moon, sunny, cloudDownloadOutline, refreshOutline } from 'ionicons/icons'
 import { useThemeStore } from '~/stores/theme'
 import { usePwaUpdate } from '~/composables/usePwaUpdate'
 import type { Content } from '~/types/hymnal'
@@ -77,7 +77,7 @@ const hymnalStore = useHymnalStore()
 const themeStore = useThemeStore()
 const router = useRouter()
 const searchText = ref('')
-const { updateAvailable, isNativeApp, checkForUpdate, applyUpdate, forceCheckUpdate } = usePwaUpdate()
+const { updateAvailable, isNativeApp, checkForUpdate, applyUpdate, forceCheckUpdate, forceReload } = usePwaUpdate()
 
 // Carrega dados do hinário
 await hymnalStore.loadHymnal()
@@ -148,6 +148,14 @@ const presentActionSheet = async () => {
       handler: () => {
         hymnalStore.resetFontSize()
         return false // Mantém o menu aberto
+      },
+    },
+    {
+      text: 'Recarregar App',
+      icon: refreshOutline,
+      handler: () => {
+        forceReload()
+        return true
       },
     },
     {

@@ -83,13 +83,15 @@ export const usePwaUpdate = () => {
     // Envia mensagem para o SW waiting ativar
     registration.value.waiting.postMessage({ type: 'SKIP_WAITING' })
     
-    // Recarrega a página após o novo SW estar ativo
-    registration.value.waiting.addEventListener('statechange', (e: Event) => {
-      const target = e.target as ServiceWorker
-      if (target.state === 'activated') {
-        window.location.reload()
-      }
-    })
+    // Aguarda um pouco e força reload
+    setTimeout(() => {
+      window.location.reload()
+    }, 100)
+  }
+
+  const forceReload = () => {
+    // Força reload completo, limpando cache do browser
+    window.location.reload()
   }
 
   onMounted(() => {
@@ -126,5 +128,6 @@ export const usePwaUpdate = () => {
     checkForUpdate,
     forceCheckUpdate,
     applyUpdate,
+    forceReload,
   }
 }
