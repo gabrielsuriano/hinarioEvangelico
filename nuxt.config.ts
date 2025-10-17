@@ -56,10 +56,11 @@ export default defineNuxtConfig({
       cleanupOutdatedCaches: true,
       skipWaiting: true,
       clientsClaim: true,
-      // Adiciona precaching explícito do index.html
+      // Adiciona precaching explícito do index.html e API
       additionalManifestEntries: [
         { url: '/', revision: null },
-        { url: '/index.html', revision: null }
+        { url: '/index.html', revision: null },
+        { url: '/api/hymnal', revision: null }
       ],
       runtimeCaching: [
         {
@@ -92,13 +93,12 @@ export default defineNuxtConfig({
         },
         {
           urlPattern: /\/api\/hymnal/i,
-          handler: 'NetworkFirst',
+          handler: 'CacheFirst',
           options: {
             cacheName: 'hymnal-data-cache',
-            networkTimeoutSeconds: 10,
             expiration: {
-              maxEntries: 50,
-              maxAgeSeconds: 60 * 60 * 24 * 30 // 30 dias
+              maxEntries: 10,
+              maxAgeSeconds: 60 * 60 * 24 * 365 // 1 ano - dados raramente mudam
             },
             cacheableResponse: {
               statuses: [0, 200]

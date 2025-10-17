@@ -71,16 +71,12 @@ const goBack = () => {
   }
 }
 
-// Carrega dados no servidor para SSR
-const { data: hymnalData } = await useFetch('/api/hymnal')
+// Carrega dados da store (funciona offline)
+await hymnalStore.loadHymnal()
 
-// Busca o conteúdo específico para SSR
+// Busca o conteúdo específico da store
 const content = computed(() => {
-  const data = hymnalData.value as any
-  if (data?.contents) {
-    return data.contents.find((item: any) => item.id === id)
-  }
-  return null
+  return hymnalStore.getContentById(id)
 })
 
 // SEO: Metadados dinâmicos para SSR

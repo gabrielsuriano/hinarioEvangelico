@@ -71,6 +71,9 @@ const themeStore = useThemeStore()
 const router = useRouter()
 const { updateAvailable, isNativeApp, checkForUpdate, applyUpdate } = usePwaUpdate()
 
+// Carrega dados do hinário
+await hymnalStore.loadHymnal()
+
 const navigateTo = (path: string) => {
   router.push(path)
 }

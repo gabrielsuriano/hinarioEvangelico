@@ -78,6 +78,9 @@ const router = useRouter()
 const searchText = ref('')
 const { updateAvailable, isNativeApp, checkForUpdate, applyUpdate } = usePwaUpdate()
 
+// Carrega dados do hinário
+await hymnalStore.loadHymnal()
+
 const toggleTheme = () => {
   themeStore.toggleTheme()
 }
