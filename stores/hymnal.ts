@@ -40,36 +40,54 @@ export const useHymnalStore = defineStore('hymnal', {
     async loadHymnal() {
       // Se já carregou, não carrega novamente
       if (this.hymnal) {
-        console.log('Hinário já carregado, pulando...')
-        return
-      }
-      
-      console.log('Iniciando carregamento do hinário...')
-      
-      try {
-        // Tenta carregar do arquivo local primeiro (mais rápido)
-        console.log('Tentando carregar do arquivo local...')
-        const data = await import('~/hymnals/evangelico.json')
-        this.hymnal = data.default as Hymnal
-        console.log('Hinário carregado com sucesso do arquivo local!', {
+        console.log('✅ Hinário já carregado, pulando...', {
           hymns: this.hymns.length,
           antiphons: this.antiphons.length,
           rituals: this.rituals.length
         })
-      } catch (error) {
-        console.error('Erro ao carregar hinário do arquivo local:', error)
-        
-        // Fallback: tenta carregar da API
-        try {
-          console.log('Tentando carregar da API...')
-          const data = await $fetch('/api/hymnal')
-          this.hymnal = data as Hymnal
-          console.log('Hinário carregado com sucesso da API!')
-        } catch (apiError) {
-          console.error('Erro ao carregar hinário da API:', apiError)
-          console.error('FALHA CRÍTICA: Não foi possível carregar o hinário de nenhuma fonte!')
-        }
+        return
       }
+      
+      console.log('🔄 Iniciando carregamento do hinário...')
+      console.log('📍 Navigator online?', navigator?.onLine)
+      
+      // Estratégia 1: Tentar API primeiro (funciona melhor em produção)
+      try {
+        console.log('📡 Tentando carregar da API...')
+        const data = await $fetch('/api/hymnal', {
+          retry: 0,
+          timeout: 5000
+        })
+        this.hymnal = data as Hymnal
+        console.log('✅ Hinário carregado da API!', {
+          hymns: this.hymns.length,
+          antiphons: this.antiphons.length,
+          rituals: this.rituals.length,
+          total: this.hymnal.contents.length
+        })
+        return
+      } catch (apiError) {
+        console.warn('⚠️ Falha ao carregar da API, tentando arquivo local...', apiError)
+      }
+      
+      // Estratégia 2: Tentar import do arquivo local
+      try {
+        console.log('📁 Tentando carregar do arquivo local...')
+        const data = await import('~/hymnals/evangelico.json')
+        this.hymnal = data.default as Hymnal
+        console.log('✅ Hinário carregado do arquivo local!', {
+          hymns: this.hymns.length,
+          antiphons: this.antiphons.length,
+          rituals: this.rituals.length,
+          total: this.hymnal.contents.length
+        })
+        return
+      } catch (error) {
+        console.error('❌ Erro ao carregar hinário do arquivo local:', error)
+      }
+      
+      console.error('💥 FALHA CRÍTICA: Não foi possível carregar o hinário de nenhuma fonte!')
+      console.error('Por favor, verifique sua conexão e recarregue a página.')
     },
 
     setCurrentContent(content: Content) {

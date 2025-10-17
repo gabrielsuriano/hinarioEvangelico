@@ -18,7 +18,7 @@ export default defineNuxtConfig({
       display: 'standalone',
       orientation: 'portrait',
       scope: '/',
-      start_url: '/?v=1.1.0',
+      start_url: '/?v=1.2.0',
       icons: [
         {
           src: '/icon-192x192.png',
@@ -150,6 +150,16 @@ export default defineNuxtConfig({
   vite: {
     css: {
       preprocessorOptions: {}
+    },
+    build: {
+      rollupOptions: {
+        output: {
+          // Gera nomes de chunk mais estáveis
+          chunkFileNames: '_nuxt/[name]-[hash].js',
+          entryFileNames: '_nuxt/[name]-[hash].js',
+          assetFileNames: '_nuxt/[name]-[hash].[ext]'
+        }
+      }
     }
   },
 
