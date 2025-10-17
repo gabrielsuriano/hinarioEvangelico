@@ -50,8 +50,8 @@ export default defineNuxtConfig({
     },
     workbox: {
       navigateFallback: '/index.html',
-      navigateFallbackDenylist: [/\/_nuxt\/.*\.hot-update\.json$/],
-      navigateFallbackAllowlist: [/^\/(hinos|antifonas|ritos)?/],
+      navigateFallbackDenylist: [/\/_nuxt\/.*\.hot-update\.json$/, /\/sw\.js$/, /\/workbox-.*\.js$/],
+      // Remove allowlist para permitir TODAS as rotas
       globPatterns: ['**/*.{js,css,html,png,svg,ico,json,woff,woff2,ttf,eot}'],
       globDirectory: '.output/public',
       cleanupOutdatedCaches: true,
@@ -135,8 +135,7 @@ export default defineNuxtConfig({
     devOptions: {
       enabled: false, // Desabilitado em produção
       suppressWarnings: true,
-      navigateFallback: '/',
-      navigateFallbackAllowlist: [/^\//],
+      navigateFallback: '/index.html',
       type: 'module'
     },
     injectManifest: {
