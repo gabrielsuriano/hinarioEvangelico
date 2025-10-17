@@ -15,7 +15,7 @@
               :icon="hymnalStore.isFavorite(id) ? heart : heartOutline"
             ></ion-icon>
           </ion-button>
-          <ion-button @click="presentActionSheet">
+          <ion-button @click="openSettings">
             <ion-icon slot="icon-only" :icon="settings"></ion-icon>
           </ion-button>
         </ion-buttons>
@@ -38,6 +38,8 @@
         <p class="ion-text-center">Antifona não encontrada.</p>
       </ion-text>
     </ion-content>
+
+    <SettingsMenu ref="settingsMenu" />
   </ion-page>
 </template>
 
@@ -52,15 +54,19 @@ import {
   IonButton,
   IonIcon,
   IonText,
-  actionSheetController,
 } from '@ionic/vue'
-import { heart, heartOutline, settings, add, remove, text, arrowBack } from 'ionicons/icons'
+import { heart, heartOutline, settings, arrowBack } from 'ionicons/icons'
 import type { Content } from '~/types/hymnal'
 
 const route = useRoute()
 const router = useRouter()
 const hymnalStore = useHymnalStore()
 const id = route.params.id as string
+const settingsMenu = ref()
+
+const openSettings = () => {
+  settingsMenu.value?.present()
+}
 
 const goBack = () => {
   // Tenta voltar no histórico, se não houver histórico vai para a lista de antifonas
@@ -121,43 +127,6 @@ onMounted(() => {
     hymnalStore.setCurrentContent(content.value as Content)
   }
 })
-
-const presentActionSheet = async () => {
-  const actionSheet = await actionSheetController.create({
-    header: 'Opções',
-    buttons: [
-      {
-        text: 'Aumentar Fonte',
-        icon: add,
-        handler: () => {
-          hymnalStore.increaseFontSize()
-          return false // Mantém o menu aberto
-        },
-      },
-      {
-        text: 'Diminuir Fonte',
-        icon: remove,
-        handler: () => {
-          hymnalStore.decreaseFontSize()
-          return false // Mantém o menu aberto
-        },
-      },
-      {
-        text: 'Fonte Padrão',
-        icon: text,
-        handler: () => {
-          hymnalStore.resetFontSize()
-          return false // Mantém o menu aberto
-        },
-      },
-      {
-        text: 'Cancelar',
-        role: 'cancel',
-      },
-    ],
-  })
-  await actionSheet.present()
-}
 </script>
 
 <style scoped>
