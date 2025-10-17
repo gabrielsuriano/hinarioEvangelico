@@ -18,7 +18,7 @@
       ]
     },
     {
-      "source": "/workbox-*.js",
+      "source": "/workbox-(.*).js",
       "headers": [
         {
           "key": "Cache-Control",
@@ -49,7 +49,7 @@
       ]
     },
     {
-      "source": "/_nuxt/**",
+      "source": "/_nuxt/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
