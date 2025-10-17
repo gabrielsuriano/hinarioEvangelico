@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# Hook: post-commit
+# Executado APÓS o commit ser finalizado
+# Verifica se package.json foi modificado pelo versionamento e faz amend
+
+# Verifica se há mudanças no package.json
+if git diff --name-only | grep -q "package.json"; then
+  echo "📦 Versão atualizada - fazendo amend..."
+  
+  # Adiciona package.json
+  git add package.json
+  
+  # Amend no último commit (sem mudar a mensagem)
+  git commit --amend --no-edit --no-verify
+  
+  echo "✅ Commit atualizado com nova versão!"
+fi
+
+exit 0

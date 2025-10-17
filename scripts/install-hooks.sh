@@ -17,16 +17,19 @@ fi
 # Copiar hooks
 cp "$SOURCE_DIR/pre-commit" "$HOOKS_DIR/pre-commit"
 cp "$SOURCE_DIR/prepare-commit-msg" "$HOOKS_DIR/prepare-commit-msg"
+cp "$SOURCE_DIR/post-commit" "$HOOKS_DIR/post-commit"
 
 # Tornar executáveis
 chmod +x "$HOOKS_DIR/pre-commit"
 chmod +x "$HOOKS_DIR/prepare-commit-msg"
+chmod +x "$HOOKS_DIR/post-commit"
 
 echo "✅ Hooks instalados com sucesso!"
 echo ""
 echo "📋 Hooks ativos:"
 echo "   • pre-commit: Sincroniza versão antes do commit"
 echo "   • prepare-commit-msg: Versionamento automático via [FIX], [FEAT], [MAJOR]"
+echo "   • post-commit: Adiciona package.json atualizado ao commit via amend"
 echo ""
 echo "🎯 Uso:"
 echo "   git commit -m \"[FIX] Descrição\"   → patch (1.3.0 → 1.3.1)"
