@@ -14,7 +14,10 @@ export default defineNuxtPlugin(() => {
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker
-          .register('/sw.js', { scope: '/' })
+          .register('/sw.js', { 
+            scope: '/',
+            updateViaCache: 'none' // Força verificação de updates
+          })
           .then(registration => {
             console.log('✅ Service Worker registrado:', registration.scope)
             
@@ -29,13 +32,35 @@ export default defineNuxtPlugin(() => {
               newWorker?.addEventListener('statechange', () => {
                 if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
                   console.log('✅ Nova versão instalada! Recarregue a página.')
+                  
+                  // Notifica a aplicação que há update disponível
+                  if (navigator.serviceWorker.controller) {
+                    navigator.serviceWorker.controller.postMessage({
+                      type: 'UPDATE_AVAILABLE'
+                    })
+                  }
+                  
+                  // Também dispara um evento customizado
+                  window.dispatchEvent(new CustomEvent('swUpdateAvailable'))
                 }
               })
+            })
+            
+            // Adiciona listener para mensagens do SW
+            navigator.serviceWorker.addEventListener('message', (event) => {
+              if (event.data && event.data.type === 'CACHE_UPDATED') {
+                console.log('✅ Cache atualizado:', event.data.url)
+              }
             })
           })
           .catch(error => {
             console.error('❌ Erro ao registrar Service Worker:', error)
           })
+      })
+      
+      // Listener para quando o SW está controlando a página
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        console.log('🔄 Service Worker controller mudou')
       })
     }
   }

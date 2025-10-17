@@ -49,13 +49,18 @@ export default defineNuxtConfig({
       lang: 'pt-BR'
     },
     workbox: {
-      navigateFallback: '/',
-      navigateFallbackDenylist: [/^\/api\//],
+      navigateFallback: '/index.html',
+      navigateFallbackDenylist: [/^\/api\//, /\/_nuxt\/.*\.hot-update\.json$/],
       globPatterns: ['**/*.{js,css,html,png,svg,ico,json,woff,woff2,ttf,eot}'],
       globDirectory: '.output/public',
       cleanupOutdatedCaches: true,
       skipWaiting: true,
       clientsClaim: true,
+      // Adiciona precaching explícito do index.html
+      additionalManifestEntries: [
+        { url: '/', revision: null },
+        { url: '/index.html', revision: null }
+      ],
       runtimeCaching: [
         {
           urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,

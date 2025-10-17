@@ -62,12 +62,14 @@ import {
   IonButton,
   actionSheetController,
 } from '@ionic/vue'
-import { musicalNotesOutline, prismOutline, bookOutline, chevronForward, settings, add, remove, text, moon, sunny } from 'ionicons/icons'
+import { musicalNotesOutline, prismOutline, bookOutline, chevronForward, settings, add, remove, text, moon, sunny, cloudDownloadOutline } from 'ionicons/icons'
 import { useThemeStore } from '~/stores/theme'
+import { usePwaUpdate } from '~/composables/usePwaUpdate'
 
 const hymnalStore = useHymnalStore()
 const themeStore = useThemeStore()
 const router = useRouter()
+const { updateAvailable, isNativeApp, checkForUpdate, applyUpdate } = usePwaUpdate()
 
 const navigateTo = (path: string) => {
   router.push(path)
@@ -78,38 +80,59 @@ const toggleTheme = () => {
 }
 
 const presentActionSheet = async () => {
+  // Verifica se há updates antes de abrir o menu
+  await checkForUpdate()
+  
+  const buttons: any[] = []
+  
+  // Adiciona botão de update apenas se houver update disponível e não for app nativo
+  if (updateAvailable.value && !isNativeApp) {
+    buttons.push({
+      text: 'Atualizar App',
+      icon: cloudDownloadOutline,
+      cssClass: 'update-button',
+      handler: () => {
+        applyUpdate()
+        return true // Fecha o menu
+      },
+    })
+  }
+  
+  // Adiciona botões de fonte
+  buttons.push(
+    {
+      text: 'Aumentar Fonte',
+      icon: add,
+      handler: () => {
+        hymnalStore.increaseFontSize()
+        return false // Mantém o menu aberto
+      },
+    },
+    {
+      text: 'Diminuir Fonte',
+      icon: remove,
+      handler: () => {
+        hymnalStore.decreaseFontSize()
+        return false // Mantém o menu aberto
+      },
+    },
+    {
+      text: 'Fonte Padrão',
+      icon: text,
+      handler: () => {
+        hymnalStore.resetFontSize()
+        return false // Mantém o menu aberto
+      },
+    },
+    {
+      text: 'Cancelar',
+      role: 'cancel',
+    }
+  )
+  
   const actionSheet = await actionSheetController.create({
     header: 'Configurações',
-    buttons: [
-      {
-        text: 'Aumentar Fonte',
-        icon: add,
-        handler: () => {
-          hymnalStore.increaseFontSize()
-          return false // Mantém o menu aberto
-        },
-      },
-      {
-        text: 'Diminuir Fonte',
-        icon: remove,
-        handler: () => {
-          hymnalStore.decreaseFontSize()
-          return false // Mantém o menu aberto
-        },
-      },
-      {
-        text: 'Fonte Padrão',
-        icon: text,
-        handler: () => {
-          hymnalStore.resetFontSize()
-          return false // Mantém o menu aberto
-        },
-      },
-      {
-        text: 'Cancelar',
-        role: 'cancel',
-      },
-    ],
+    buttons,
   })
   await actionSheet.present()
 }
@@ -164,5 +187,10 @@ ion-label p {
   font-size: 0.9em !important;
   margin: 0 !important;
   opacity: 0.7;
+}
+
+:deep(.update-button) {
+  color: var(--ion-color-success) !important;
+  font-weight: 600 !important;
 }
 </style>

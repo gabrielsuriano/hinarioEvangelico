@@ -66,52 +66,72 @@ import {
   IonButton,
   actionSheetController,
 } from '@ionic/vue'
-import { heart, heartOutline, settings, add, remove, text, moon, sunny } from 'ionicons/icons'
+import { heart, heartOutline, settings, add, remove, text, moon, sunny, cloudDownloadOutline } from 'ionicons/icons'
 import { useThemeStore } from '~/stores/theme'
+import { usePwaUpdate } from '~/composables/usePwaUpdate'
 import type { Content } from '~/types/hymnal'
 
 const hymnalStore = useHymnalStore()
 const themeStore = useThemeStore()
 const router = useRouter()
 const searchText = ref('')
+const { updateAvailable, isNativeApp, checkForUpdate, applyUpdate } = usePwaUpdate()
 
 const toggleTheme = () => {
   themeStore.toggleTheme()
 }
 
 const presentActionSheet = async () => {
+  await checkForUpdate()
+  
+  const buttons: any[] = []
+  
+  if (updateAvailable.value && !isNativeApp) {
+    buttons.push({
+      text: 'Atualizar App',
+      icon: cloudDownloadOutline,
+      cssClass: 'update-button',
+      handler: () => {
+        applyUpdate()
+        return true
+      },
+    })
+  }
+  
+  buttons.push(
+    {
+      text: 'Aumentar Fonte',
+      icon: add,
+      handler: () => {
+        hymnalStore.increaseFontSize()
+        return false // Mantém o menu aberto
+      },
+    },
+    {
+      text: 'Diminuir Fonte',
+      icon: remove,
+      handler: () => {
+        hymnalStore.decreaseFontSize()
+        return false // Mantém o menu aberto
+      },
+    },
+    {
+      text: 'Fonte Padrão',
+      icon: text,
+      handler: () => {
+        hymnalStore.resetFontSize()
+        return false // Mantém o menu aberto
+      },
+    },
+    {
+      text: 'Cancelar',
+      role: 'cancel',
+    }
+  )
+  
   const actionSheet = await actionSheetController.create({
     header: 'Configurações',
-    buttons: [
-      {
-        text: 'Aumentar Fonte',
-        icon: add,
-        handler: () => {
-          hymnalStore.increaseFontSize()
-          return false // Mantém o menu aberto
-        },
-      },
-      {
-        text: 'Diminuir Fonte',
-        icon: remove,
-        handler: () => {
-          hymnalStore.decreaseFontSize()
-          return false // Mantém o menu aberto
-        },
-      },
-      {
-        text: 'Fonte Padrão',
-        icon: text,
-        handler: () => {
-          hymnalStore.resetFontSize()
-          return false // Mantém o menu aberto
-        },
-      },
-      {
-        text: 'Cancelar',
-        role: 'cancel',
-      },
-    ],
+    buttons,
   })
   await actionSheet.present()
 }
@@ -176,5 +196,10 @@ ion-label {
 ion-label h2,
 ion-label p {
   font-size: inherit !important;
+}
+
+:deep(.update-button) {
+  color: var(--ion-color-success) !important;
+  font-weight: 600 !important;
 }
 </style>
