@@ -50,7 +50,12 @@ export default defineNuxtConfig({
     },
     workbox: {
       navigateFallback: '/',
-      globPatterns: ['**/*.{js,css,html,png,svg,ico,json}'],
+      navigateFallbackDenylist: [/^\/api\//],
+      globPatterns: ['**/*.{js,css,html,png,svg,ico,json,woff,woff2,ttf,eot}'],
+      globDirectory: '.output/public',
+      cleanupOutdatedCaches: true,
+      skipWaiting: true,
+      clientsClaim: true,
       runtimeCaching: [
         {
           urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
@@ -67,25 +72,63 @@ export default defineNuxtConfig({
           }
         },
         {
-          urlPattern: /\/api\/hymnal/i,
+          urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
           handler: 'CacheFirst',
           options: {
-            cacheName: 'hymnal-data-cache',
+            cacheName: 'gstatic-fonts-cache',
             expiration: {
               maxEntries: 10,
+              maxAgeSeconds: 60 * 60 * 24 * 365 // 1 ano
+            },
+            cacheableResponse: {
+              statuses: [0, 200]
+            }
+          }
+        },
+        {
+          urlPattern: /\/api\/hymnal/i,
+          handler: 'NetworkFirst',
+          options: {
+            cacheName: 'hymnal-data-cache',
+            networkTimeoutSeconds: 10,
+            expiration: {
+              maxEntries: 50,
               maxAgeSeconds: 60 * 60 * 24 * 30 // 30 dias
             },
             cacheableResponse: {
               statuses: [0, 200]
             }
           }
+        },
+        {
+          urlPattern: /\/_nuxt\/.*/i,
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'nuxt-app-cache',
+            expiration: {
+              maxEntries: 100,
+              maxAgeSeconds: 60 * 60 * 24 * 30 // 30 dias
+            }
+          }
+        },
+        {
+          urlPattern: /\/.*\.(png|jpg|jpeg|svg|gif|webp|ico)/i,
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'image-cache',
+            expiration: {
+              maxEntries: 60,
+              maxAgeSeconds: 60 * 60 * 24 * 30 // 30 dias
+            }
+          }
         }
       ]
     },
     devOptions: {
-      enabled: true,
+      enabled: false, // Desabilitado em produção
       suppressWarnings: true,
       navigateFallback: '/',
+      navigateFallbackAllowlist: [/^\//],
       type: 'module'
     },
     injectManifest: {

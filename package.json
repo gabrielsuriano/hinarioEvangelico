@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",
-    "generate": "nuxt generate",
+    "generate": "nuxt generate && node scripts/copy-api-data.js",
     "preview": "nuxt preview",
+    "serve:https": "node scripts/serve-https.js",
     "postinstall": "nuxt prepare",
     "generate-icons": "node scripts/generate-icons.js"
   },
@@ -26,6 +27,7 @@
     "@nuxt/devtools": "latest",
     "@pinia/nuxt": "^0.5.5",
     "@vite-pwa/nuxt": "^1.0.6",
+    "serve-handler": "^6.1.6",
     "sharp": "^0.34.4",
     "typescript": "^5.5.4"
   }
