@@ -65,6 +65,7 @@ import {
   IonButtons,
   IonButton,
   actionSheetController,
+  toastController,
 } from '@ionic/vue'
 import { heart, heartOutline, settings, add, remove, text, moon, sunny, cloudDownloadOutline } from 'ionicons/icons'
 import { useThemeStore } from '~/stores/theme'
@@ -75,7 +76,7 @@ const hymnalStore = useHymnalStore()
 const themeStore = useThemeStore()
 const router = useRouter()
 const searchText = ref('')
-const { updateAvailable, isNativeApp, checkForUpdate, applyUpdate } = usePwaUpdate()
+const { updateAvailable, isNativeApp, checkForUpdate, applyUpdate, forceCheckUpdate } = usePwaUpdate()
 
 // Carrega dados do hinário
 await hymnalStore.loadHymnal()
@@ -85,8 +86,6 @@ const toggleTheme = () => {
 }
 
 const presentActionSheet = async () => {
-  await checkForUpdate()
-  
   const buttons: any[] = []
   
   if (updateAvailable.value && !isNativeApp) {
@@ -97,6 +96,30 @@ const presentActionSheet = async () => {
       handler: () => {
         applyUpdate()
         return true
+      },
+    })
+  }
+  
+  if (navigator.onLine && !isNativeApp) {
+    buttons.push({
+      text: 'Verificar Atualizações',
+      icon: cloudDownloadOutline,
+      handler: async () => {
+        const hasUpdate = await forceCheckUpdate()
+        
+        if (hasUpdate) {
+          actionSheet.dismiss()
+          presentActionSheet()
+        } else {
+          const toast = await toastController.create({
+            message: 'Nenhuma atualização disponível',
+            duration: 2000,
+            position: 'bottom',
+            color: 'medium'
+          })
+          await toast.present()
+        }
+        return false // Mantém o menu aberto
       },
     })
   }

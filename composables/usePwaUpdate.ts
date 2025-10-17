@@ -12,6 +12,12 @@ export const usePwaUpdate = () => {
       return
     }
 
+    // Só verifica se está online
+    if (!navigator.onLine) {
+      console.log('Offline - pulando verificação de updates')
+      return
+    }
+
     if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
       try {
         const reg = await navigator.serviceWorker.getRegistration()
@@ -23,6 +29,50 @@ export const usePwaUpdate = () => {
         console.error('Erro ao verificar update:', error)
       }
     }
+  }
+
+  const forceCheckUpdate = async () => {
+    // Força verificação de update mesmo offline
+    if (isNativeApp) {
+      return false
+    }
+
+    if (!navigator.onLine) {
+      console.log('Sem conexão - impossível verificar updates')
+      return false
+    }
+
+    if ('serviceWorker' in navigator) {
+      try {
+        const reg = await navigator.serviceWorker.getRegistration()
+        if (reg) {
+          registration.value = reg
+          await reg.update()
+          
+          // Verifica se tem update disponível
+          if (reg.waiting) {
+            updateAvailable.value = true
+            return true
+          }
+          
+          // Aguarda um pouco para ver se detecta update
+          return new Promise((resolve) => {
+            setTimeout(() => {
+              if (reg.waiting) {
+                updateAvailable.value = true
+                resolve(true)
+              } else {
+                resolve(false)
+              }
+            }, 1000)
+          })
+        }
+      } catch (error) {
+        console.error('Erro ao forçar verificação de update:', error)
+        return false
+      }
+    }
+    return false
   }
 
   const applyUpdate = async () => {
@@ -74,6 +124,7 @@ export const usePwaUpdate = () => {
     updateAvailable,
     isNativeApp,
     checkForUpdate,
+    forceCheckUpdate,
     applyUpdate,
   }
 }

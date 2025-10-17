@@ -61,6 +61,7 @@ import {
   IonButtons,
   IonButton,
   actionSheetController,
+  toastController,
 } from '@ionic/vue'
 import { musicalNotesOutline, prismOutline, bookOutline, chevronForward, settings, add, remove, text, moon, sunny, cloudDownloadOutline } from 'ionicons/icons'
 import { useThemeStore } from '~/stores/theme'
@@ -69,7 +70,7 @@ import { usePwaUpdate } from '~/composables/usePwaUpdate'
 const hymnalStore = useHymnalStore()
 const themeStore = useThemeStore()
 const router = useRouter()
-const { updateAvailable, isNativeApp, checkForUpdate, applyUpdate } = usePwaUpdate()
+const { updateAvailable, isNativeApp, checkForUpdate, applyUpdate, forceCheckUpdate } = usePwaUpdate()
 
 // Carrega dados do hinário
 await hymnalStore.loadHymnal()
@@ -83,12 +84,9 @@ const toggleTheme = () => {
 }
 
 const presentActionSheet = async () => {
-  // Verifica se há updates antes de abrir o menu
-  await checkForUpdate()
-  
   const buttons: any[] = []
   
-  // Adiciona botão de update apenas se houver update disponível e não for app nativo
+  // Adiciona botão de aplicar update se houver update disponível e não for app nativo
   if (updateAvailable.value && !isNativeApp) {
     buttons.push({
       text: 'Atualizar App',
@@ -97,6 +95,33 @@ const presentActionSheet = async () => {
       handler: () => {
         applyUpdate()
         return true // Fecha o menu
+      },
+    })
+  }
+  
+  // Adiciona botão de verificar atualizações (apenas online)
+  if (navigator.onLine && !isNativeApp) {
+    buttons.push({
+      text: 'Verificar Atualizações',
+      icon: cloudDownloadOutline,
+      handler: async () => {
+        const hasUpdate = await forceCheckUpdate()
+        
+        if (hasUpdate) {
+          // Fecha e reabre o menu para mostrar o botão de atualizar
+          actionSheet.dismiss()
+          presentActionSheet()
+        } else {
+          // Mostra toast informando que não há atualizações
+          const toast = await toastController.create({
+            message: 'Nenhuma atualização disponível',
+            duration: 2000,
+            position: 'bottom',
+            color: 'medium'
+          })
+          await toast.present()
+        }
+        return false // Mantém o menu aberto
       },
     })
   }
