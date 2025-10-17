@@ -51,13 +51,13 @@ export default defineNuxtConfig({
     workbox: {
       navigateFallback: '/index.html',
       navigateFallbackDenylist: [/\/_nuxt\/.*\.hot-update\.json$/, /\/sw\.js$/, /\/workbox-.*\.js$/],
-      // Remove allowlist para permitir TODAS as rotas
+      // Força o Service Worker a responder com index.html para TODAS as navegações
+      navigateFallbackAllowlist: [/.*/],
       globPatterns: ['**/*.{js,css,html,png,svg,ico,json,woff,woff2,ttf,eot}'],
       globDirectory: '.output/public',
       cleanupOutdatedCaches: true,
       skipWaiting: true,
       clientsClaim: true,
-      // Força verificação de updates mais frequente
       maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB
       // Adiciona precaching explícito
       additionalManifestEntries: [
