@@ -7,7 +7,7 @@
           <ion-button @click="toggleTheme">
             <ion-icon slot="icon-only" :icon="themeStore.isDark ? sunny : moon"></ion-icon>
           </ion-button>
-          <ion-button @click="presentActionSheet">
+          <ion-button @click="openSettings">
             <ion-icon slot="icon-only" :icon="settings"></ion-icon>
           </ion-button>
         </ion-buttons>
@@ -44,6 +44,8 @@
         </ion-item>
       </ion-list>
     </ion-content>
+    
+    <SettingsMenu ref="settingsMenu" />
   </ion-page>
 </template>
 
@@ -60,17 +62,15 @@ import {
   IonIcon,
   IonButtons,
   IonButton,
-  actionSheetController,
-  toastController,
 } from '@ionic/vue'
-import { musicalNotesOutline, prismOutline, bookOutline, chevronForward, settings, add, remove, text, moon, sunny, cloudDownloadOutline, refreshOutline } from 'ionicons/icons'
+import { musicalNotesOutline, prismOutline, bookOutline, chevronForward, settings, moon, sunny } from 'ionicons/icons'
 import { useThemeStore } from '~/stores/theme'
-import { usePwaUpdate } from '~/composables/usePwaUpdate'
+import SettingsMenu from '~/components/SettingsMenu.vue'
 
 const hymnalStore = useHymnalStore()
 const themeStore = useThemeStore()
 const router = useRouter()
-const { updateAvailable, isNativeApp, checkForUpdate, applyUpdate, forceCheckUpdate, forceReload } = usePwaUpdate()
+const settingsMenu = ref()
 
 // Carrega dados do hinário
 await hymnalStore.loadHymnal()
@@ -83,94 +83,8 @@ const toggleTheme = () => {
   themeStore.toggleTheme()
 }
 
-const presentActionSheet = async () => {
-  const buttons: any[] = []
-  
-  // Adiciona botão de aplicar update se houver update disponível e não for app nativo
-  if (updateAvailable.value && !isNativeApp) {
-    buttons.push({
-      text: 'Atualizar App',
-      icon: cloudDownloadOutline,
-      cssClass: 'update-button',
-      handler: () => {
-        applyUpdate()
-        return true // Fecha o menu
-      },
-    })
-  }
-  
-  // Adiciona botão de verificar atualizações (apenas online)
-  if (navigator.onLine && !isNativeApp) {
-    buttons.push({
-      text: 'Verificar Atualizações',
-      icon: cloudDownloadOutline,
-      handler: async () => {
-        const hasUpdate = await forceCheckUpdate()
-        
-        if (hasUpdate) {
-          // Fecha e reabre o menu para mostrar o botão de atualizar
-          actionSheet.dismiss()
-          presentActionSheet()
-        } else {
-          // Mostra toast informando que não há atualizações
-          const toast = await toastController.create({
-            message: 'Nenhuma atualização disponível',
-            duration: 2000,
-            position: 'bottom',
-            color: 'medium'
-          })
-          await toast.present()
-        }
-        return false // Mantém o menu aberto
-      },
-    })
-  }
-  
-  // Adiciona botões de fonte
-  buttons.push(
-    {
-      text: 'Aumentar Fonte',
-      icon: add,
-      handler: () => {
-        hymnalStore.increaseFontSize()
-        return false // Mantém o menu aberto
-      },
-    },
-    {
-      text: 'Diminuir Fonte',
-      icon: remove,
-      handler: () => {
-        hymnalStore.decreaseFontSize()
-        return false // Mantém o menu aberto
-      },
-    },
-    {
-      text: 'Fonte Padrão',
-      icon: text,
-      handler: () => {
-        hymnalStore.resetFontSize()
-        return false // Mantém o menu aberto
-      },
-    },
-    {
-      text: 'Recarregar App',
-      icon: refreshOutline,
-      handler: () => {
-        forceReload()
-        return true
-      },
-    },
-    {
-      text: 'Cancelar',
-      role: 'cancel',
-    }
-  )
-  
-  const actionSheet = await actionSheetController.create({
-    header: 'Configurações',
-    buttons,
-  })
-  await actionSheet.present()
+const openSettings = () => {
+  settingsMenu.value?.present()
 }
 </script>
 
@@ -223,10 +137,5 @@ ion-label p {
   font-size: 0.9em !important;
   margin: 0 !important;
   opacity: 0.7;
-}
-
-:deep(.update-button) {
-  color: var(--ion-color-success) !important;
-  font-weight: 600 !important;
 }
 </style>

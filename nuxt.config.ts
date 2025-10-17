@@ -18,7 +18,7 @@ export default defineNuxtConfig({
       display: 'standalone',
       orientation: 'portrait',
       scope: '/',
-      start_url: '/?v=1.2.0',
+      start_url: '/',
       icons: [
         {
           src: '/icon-192x192.png',
@@ -50,7 +50,8 @@ export default defineNuxtConfig({
     },
     workbox: {
       navigateFallback: '/index.html',
-      navigateFallbackDenylist: [/^\/api\//, /\/_nuxt\/.*\.hot-update\.json$/],
+      navigateFallbackDenylist: [/\/_nuxt\/.*\.hot-update\.json$/],
+      navigateFallbackAllowlist: [/^\/(hinos|antifonas|ritos)?/],
       globPatterns: ['**/*.{js,css,html,png,svg,ico,json,woff,woff2,ttf,eot}'],
       globDirectory: '.output/public',
       cleanupOutdatedCaches: true,
@@ -58,7 +59,7 @@ export default defineNuxtConfig({
       clientsClaim: true,
       // Força verificação de updates mais frequente
       maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB
-      // Adiciona precaching explícito do index.html e API
+      // Adiciona precaching explícito
       additionalManifestEntries: [
         { url: '/', revision: null },
         { url: '/index.html', revision: null },
