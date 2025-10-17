@@ -18,7 +18,7 @@ export default defineNuxtConfig({
       display: 'standalone',
       orientation: 'portrait',
       scope: '/',
-      start_url: '/',
+      start_url: '/?v=1.1.0',
       icons: [
         {
           src: '/icon-192x192.png',
@@ -56,6 +56,8 @@ export default defineNuxtConfig({
       cleanupOutdatedCaches: true,
       skipWaiting: true,
       clientsClaim: true,
+      // Força verificação de updates mais frequente
+      maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB
       // Adiciona precaching explícito do index.html e API
       additionalManifestEntries: [
         { url: '/', revision: null },

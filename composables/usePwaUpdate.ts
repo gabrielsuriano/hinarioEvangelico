@@ -118,6 +118,14 @@ export const usePwaUpdate = () => {
           updateAvailable.value = true
           registration.value = reg
         }
+        
+        // Força verificação de update ao abrir o app (se online)
+        if (navigator.onLine && reg) {
+          console.log('Verificando atualizações automaticamente...')
+          reg.update().catch((err) => {
+            console.error('Erro ao verificar atualização:', err)
+          })
+        }
       })
     }
   })

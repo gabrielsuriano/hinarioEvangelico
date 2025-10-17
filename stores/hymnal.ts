@@ -40,22 +40,34 @@ export const useHymnalStore = defineStore('hymnal', {
     async loadHymnal() {
       // Se já carregou, não carrega novamente
       if (this.hymnal) {
+        console.log('Hinário já carregado, pulando...')
         return
       }
       
+      console.log('Iniciando carregamento do hinário...')
+      
       try {
         // Tenta carregar do arquivo local primeiro (mais rápido)
+        console.log('Tentando carregar do arquivo local...')
         const data = await import('~/hymnals/evangelico.json')
         this.hymnal = data.default as Hymnal
+        console.log('Hinário carregado com sucesso do arquivo local!', {
+          hymns: this.hymns.length,
+          antiphons: this.antiphons.length,
+          rituals: this.rituals.length
+        })
       } catch (error) {
         console.error('Erro ao carregar hinário do arquivo local:', error)
         
         // Fallback: tenta carregar da API
         try {
+          console.log('Tentando carregar da API...')
           const data = await $fetch('/api/hymnal')
           this.hymnal = data as Hymnal
+          console.log('Hinário carregado com sucesso da API!')
         } catch (apiError) {
           console.error('Erro ao carregar hinário da API:', apiError)
+          console.error('FALHA CRÍTICA: Não foi possível carregar o hinário de nenhuma fonte!')
         }
       }
     },
