@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# Hook pre-commit para sincronizar versão
+echo "🔄 Verificando sincronização de versão..."
+
+# Executa o script de sincronização
+node scripts/sync-version.js
+
+# Se o script falhar, cancela o commit
+if [ $? -ne 0 ]; then
+  echo "❌ Falha na sincronização de versão. Commit cancelado."
+  exit 1
+fi
+
+# Adiciona arquivos modificados ao commit
+git add nuxt.config.ts 2>/dev/null || true
+
+echo "✅ Sincronização de versão OK!"
+exit 0

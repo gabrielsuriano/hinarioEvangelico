@@ -5,7 +5,7 @@ Aplicação web, mobile e PWA do Hinário Evangélico Metodista.
 ## 🚀 Início Rápido
 
 ```bash
-# Instalar dependências
+# Instalar dependências (hooks instalados automaticamente)
 npm install
 
 # Executar em desenvolvimento
@@ -14,12 +14,15 @@ npm run dev
 
 Acesse: http://localhost:3000
 
+> 💡 **Nota**: Os git hooks são instalados automaticamente após `npm install`. Eles habilitam versionamento automático via commit messages.
+
 ## 📚 Documentação
 
 - **[SETUP_GUIDE.md](./SETUP_GUIDE.md)** - Guia completo de configuração e uso
 - **[PROJECT_SUMMARY.md](./PROJECT_SUMMARY.md)** - Resumo do projeto e arquivos criados
 - **[README_APP.md](./README_APP.md)** - Documentação técnica detalhada
 - **[docs/HTTPS-TAILSCALE.md](./docs/HTTPS-TAILSCALE.md)** - Configuração HTTPS com Tailscale para PWA
+- **[hooks/README.md](./hooks/README.md)** - Sistema de Git Hooks e versionamento automático
 
 ## 🛠️ Tecnologias
 
@@ -83,9 +86,33 @@ npm run preview            # Preview do build
 npm run serve:https        # Servidor HTTPS com certificados Tailscale
 ./scripts/setup-https.sh   # Configurar certificados (primeira vez)
 
+# Versionamento Automático
+npm run version:patch      # Commit [FIX] → 1.3.0 → 1.3.1
+npm run version:minor      # Commit [FEAT] → 1.3.0 → 1.4.0
+npm run version:major      # Commit [MAJOR] → 1.3.0 → 2.0.0
+npm run sync-version       # Validar sincronização de versão
+npm run install:hooks      # Reinstalar git hooks
+
 # Utilitários
 npm run generate-icons     # Gerar ícones PWA
 ```
+
+### 📦 Sistema de Versionamento Automático
+
+Este projeto usa **git hooks** para versionamento automático baseado em commit messages:
+
+```bash
+git commit -m "[FIX] Corrigido bug"      # → 1.4.0 → 1.4.1 (patch)
+git commit -m "[FEAT] Nova feature"      # → 1.4.0 → 1.5.0 (minor)
+git commit -m "[MAJOR] Breaking change"  # → 1.4.0 → 2.0.0 (major)
+```
+
+**Como funciona:**
+1. Hooks são instalados automaticamente no `npm install`
+2. Ao commitar com tags `[FIX]`, `[FEAT]` ou `[MAJOR]`, a versão é atualizada automaticamente
+3. Commits sem tags não afetam a versão
+
+📖 **Mais detalhes:** [hooks/README.md](./hooks/README.md)
 
 ### 📱 Testar PWA no Celular
 

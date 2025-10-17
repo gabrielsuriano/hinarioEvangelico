@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Hook: prepare-commit-msg
+# Executado APÓS a mensagem do commit ser criada
+# Atualiza a versão automaticamente baseado em tags no commit
+
+COMMIT_MSG_FILE=$1
+COMMIT_SOURCE=$2
+
+# Só executar para commits normais (não merges, squashes, etc)
+if [ -z "$COMMIT_SOURCE" ] || [ "$COMMIT_SOURCE" = "message" ]; then
+  echo "🔄 Verificando versionamento automático..."
+  node scripts/auto-version.js "$COMMIT_MSG_FILE"
+  
+  if [ $? -ne 0 ]; then
+    echo "❌ Erro no versionamento automático"
+    exit 1
+  fi
+fi
+
+exit 0

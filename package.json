@@ -1,6 +1,6 @@
 {
   "name": "hinario-evangelico",
-  "version": "1.3.1",
+  "version": "1.4.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,9 +8,10 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
+    "postinstall": "nuxt prepare && npm run install:hooks",
     "serve:https": "nuxt dev --https --ssl-cert ./personal/hinarioEvangelico.ts.net.crt --ssl-key ./personal/hinarioEvangelico.ts.net.key",
     "sync-version": "node scripts/sync-version.js",
+    "install:hooks": "sh scripts/install-hooks.sh",
     "version:patch": "git commit --allow-empty -m '[FIX] Atualização de correção'",
     "version:minor": "git commit --allow-empty -m '[FEAT] Nova funcionalidade'",
     "version:major": "git commit --allow-empty -m '[MAJOR] Breaking change'"
