@@ -22,33 +22,47 @@ async function generateIcons() {
 
   for (const { size, name, maskable } of sizes) {
     try {
-      // Para ícones maskable, reduz o conteúdo para 75% (safe zone)
-      // deixando 12.5% de margem em cada lado
-      const iconSize = maskable ? Math.round(size * 0.75) : size
-      const padding = maskable ? Math.round((size - iconSize) / 2) : 0
-
       if (maskable) {
-        // Cria um canvas com fundo azul (#3880ff) e o ícone reduzido no centro
-        await sharp(svgBuffer)
+        // Para ícones maskable: cria canvas azul sólido + ícone reduzido no centro
+        const iconSize = Math.round(size * 0.75) // 75% do tamanho (safe zone)
+        const padding = Math.round((size - iconSize) / 2)
+
+        // 1. Cria um canvas azul sólido do tamanho final
+        const blueBackground = await sharp({
+          create: {
+            width: size,
+            height: size,
+            channels: 4,
+            background: { r: 56, g: 128, b: 255, alpha: 1 } // #3880ff sólido
+          }
+        }).png().toBuffer()
+
+        // 2. Redimensiona o ícone SVG
+        const resizedIcon = await sharp(svgBuffer)
           .resize(iconSize, iconSize)
-          .extend({
+          .png()
+          .toBuffer()
+
+        // 3. Compõe: fundo azul + ícone no centro
+        await sharp(blueBackground)
+          .composite([{
+            input: resizedIcon,
             top: padding,
-            bottom: padding,
-            left: padding,
-            right: padding,
-            background: { r: 56, g: 128, b: 255, alpha: 1 } // #3880ff
-          })
+            left: padding
+          }])
           .png()
           .toFile(join(publicDir, name))
+
+        console.log(`✅ ${name} (${size}x${size} - maskable, fundo azul sólido, ícone 75%)`)
       } else {
         // Ícones normais mantêm o tamanho original
         await sharp(svgBuffer)
           .resize(size, size)
           .png()
           .toFile(join(publicDir, name))
-      }
 
-      console.log(`✅ ${name} (${size}x${size}${maskable ? ' - maskable com 75% safe zone' : ''})`)
+        console.log(`✅ ${name} (${size}x${size})`)
+      }
     } catch (error) {
       console.error(`❌ Erro ao gerar ${name}:`, error.message)
     }

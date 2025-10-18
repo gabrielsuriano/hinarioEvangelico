@@ -26,7 +26,7 @@ export default defineNuxtConfig({
       short_name: 'Hinário Evangélico',
       description: 'Hinário  - Acesso offline completo disponível',
       theme_color: '#3880ff',
-      background_color: '#ffffff',
+      background_color: '#3880ff',
       display: 'standalone',
       orientation: 'portrait',
       scope: '/',
