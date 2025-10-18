@@ -135,16 +135,7 @@ export const usePwaUpdate = () => {
     console.log('🔄 Forçando atualização completa (hard reset)...')
 
     try {
-      // 1. Desregistra todos os Service Workers
-      if ('serviceWorker' in navigator) {
-        const registrations = await navigator.serviceWorker.getRegistrations()
-        for (const registration of registrations) {
-          console.log('🗑️ Desregistrando Service Worker...')
-          await registration.unregister()
-        }
-      }
-
-      // 2. Limpa todos os caches
+      // 1. Limpa todos os caches PRIMEIRO (mas não desregistra SW ainda)
       if ('caches' in window) {
         const cacheNames = await caches.keys()
         for (const cacheName of cacheNames) {
@@ -153,7 +144,7 @@ export const usePwaUpdate = () => {
         }
       }
 
-      // 3. Limpa localStorage (exceto preferências importantes)
+      // 2. Limpa localStorage (exceto preferências importantes)
       const preserveKeys = ['theme', 'fontSize', 'favorites', 'recentlyViewed']
       const keysToRemove: string[] = []
 
@@ -171,7 +162,8 @@ export const usePwaUpdate = () => {
 
       console.log('✅ Limpeza completa! Recarregando...')
 
-      // 4. Force hard reload (Ctrl+Shift+R equivalente)
+      // 3. Force hard reload - O Service Worker será re-registrado automaticamente
+      // pelo Nuxt PWA no próximo carregamento da página
       setTimeout(() => {
         window.location.reload()
       }, 500)
