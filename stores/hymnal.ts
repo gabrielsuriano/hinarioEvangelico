@@ -1,6 +1,9 @@
 import { defineStore } from 'pinia'
 import type { Hymnal, Content, ContentType } from '~/types/hymnal'
 
+// Versão dos dados - incremente quando fizer mudanças no evangelico.json
+const HYMNAL_DATA_VERSION = 2
+
 export const useHymnalStore = defineStore('hymnal', {
   state: () => ({
     hymnal: null as Hymnal | null,
@@ -8,6 +11,7 @@ export const useHymnalStore = defineStore('hymnal', {
     favorites: [] as string[],
     recentlyViewed: [] as string[],
     fontSize: 16,
+    dataVersion: 1, // Versão dos dados carregados
   }),
 
   getters: {
@@ -38,14 +42,25 @@ export const useHymnalStore = defineStore('hymnal', {
 
   actions: {
     async loadHymnal() {
-      // Se já carregou, não carrega novamente
-      if (this.hymnal) {
-        console.log('✅ Hinário já carregado, pulando...', {
+      // Verifica se precisa recarregar por mudança de versão
+      const needsReload = this.dataVersion !== HYMNAL_DATA_VERSION
+
+      // Se já carregou e a versão é a mesma, não carrega novamente
+      if (this.hymnal && !needsReload) {
+        console.log('✅ Hinário já carregado (versão atual), pulando...', {
+          version: this.dataVersion,
           hymns: this.hymns.length,
           antiphons: this.antiphons.length,
           rituals: this.rituals.length
         })
         return
+      }
+
+      if (needsReload) {
+        console.log('🔄 Nova versão detectada! Recarregando hinário...', {
+          oldVersion: this.dataVersion,
+          newVersion: HYMNAL_DATA_VERSION
+        })
       }
 
       console.log('🔄 Iniciando carregamento do hinário...')
@@ -56,7 +71,9 @@ export const useHymnalStore = defineStore('hymnal', {
         console.log('📁 Carregando do arquivo local...')
         const data = await import('~/hymnals/evangelico.json')
         this.hymnal = data.default as Hymnal
+        this.dataVersion = HYMNAL_DATA_VERSION // Atualiza versão
         console.log('✅ Hinário carregado do arquivo local!', {
+          version: this.dataVersion,
           hymns: this.hymns.length,
           antiphons: this.antiphons.length,
           rituals: this.rituals.length,
@@ -111,5 +128,8 @@ export const useHymnalStore = defineStore('hymnal', {
     },
   },
 
-  persist: true,
+  persist: {
+    // Persiste apenas dados do usuário, NÃO persiste o hymnal
+    paths: ['favorites', 'recentlyViewed', 'fontSize', 'dataVersion'],
+  },
 })

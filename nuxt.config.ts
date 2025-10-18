@@ -126,12 +126,13 @@ export default defineNuxtConfig({
         },
         {
           urlPattern: /\/api\/hymnal/i,
-          handler: 'CacheFirst',
+          handler: 'NetworkFirst',
           options: {
-            cacheName: 'hymnal-data-cache',
+            cacheName: 'hymnal-data-cache-v2', // v2 para forçar novo cache
+            networkTimeoutSeconds: 5,
             expiration: {
               maxEntries: 10,
-              maxAgeSeconds: 60 * 60 * 24 * 365 // 1 ano - dados raramente mudam
+              maxAgeSeconds: 60 * 60 * 24 * 30 // 30 dias - tenta rede primeiro
             },
             cacheableResponse: {
               statuses: [0, 200]
