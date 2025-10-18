@@ -1,7 +1,7 @@
 <template>
   <ion-page>
-    <ion-header>
-      <ion-toolbar color="primary">
+    <ion-header :translucent="true">
+      <ion-toolbar>
         <ion-buttons slot="start">
           <ion-button @click="router.push('/')">
             <ion-icon slot="icon-only" :icon="arrowBack"></ion-icon>

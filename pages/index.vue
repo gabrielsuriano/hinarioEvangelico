@@ -1,7 +1,7 @@
 <template>
   <ion-page>
-    <ion-header>
-      <ion-toolbar color="primary">
+    <ion-header :translucent="true">
+      <ion-toolbar>
         <ion-title>Hinário Evangélico</ion-title>
         <ion-buttons slot="end">
           <ion-button @click="toggleTheme">
@@ -44,7 +44,7 @@
         </ion-item>
       </ion-list>
     </ion-content>
-    
+
     <SettingsMenu ref="settingsMenu" />
   </ion-page>
 </template>
