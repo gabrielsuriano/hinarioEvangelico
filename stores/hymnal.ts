@@ -51,30 +51,7 @@ export const useHymnalStore = defineStore('hymnal', {
       console.log('🔄 Iniciando carregamento do hinário...')
       console.log('📍 Navigator online?', navigator?.onLine)
       
-      // Estratégia 1: Tentar API primeiro (funciona melhor com Service Worker em produção)
-      if (navigator?.onLine !== false) {
-        try {
-          console.log('📡 Tentando carregar da API...')
-          const data = await $fetch('/api/hymnal', {
-            retry: 0,
-            timeout: 3000
-          })
-          this.hymnal = data as Hymnal
-          console.log('✅ Hinário carregado da API!', {
-            hymns: this.hymns.length,
-            antiphons: this.antiphons.length,
-            rituals: this.rituals.length,
-            total: this.hymnal.contents.length
-          })
-          return
-        } catch (apiError: any) {
-          console.warn('⚠️ Falha ao carregar da API:', apiError?.message || apiError)
-        }
-      } else {
-        console.log('📴 Modo offline detectado, pulando API...')
-      }
-      
-      // Estratégia 2: Tentar import do arquivo local (sempre funciona)
+      // SEMPRE carrega do arquivo local - mais confiável
       try {
         console.log('📁 Carregando do arquivo local...')
         const data = await import('~/hymnals/evangelico.json')

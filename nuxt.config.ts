@@ -6,8 +6,20 @@ export default defineNuxtConfig({
 
   modules: ['@pinia/nuxt', '@vite-pwa/nuxt'],
 
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: [
+        '/',
+        '/hinos',
+        '/antifonas', 
+        '/ritos'
+      ]
+    }
+  },
+
   pwa: {
-    registerType: 'autoUpdate',
+    registerType: 'prompt', // Mudado de autoUpdate para prompt - não atualiza automaticamente
     includeAssets: ['favicon.png', 'icon.svg', '*.png'],
     manifest: {
       name: 'Hinário Evangélico Metodista',
@@ -49,23 +61,42 @@ export default defineNuxtConfig({
       lang: 'pt-BR'
     },
     workbox: {
-      navigateFallback: '/index.html',
+      navigateFallback: '/',
       navigateFallbackDenylist: [/\/_nuxt\/.*\.hot-update\.json$/, /\/sw\.js$/, /\/workbox-.*\.js$/],
-      // Força o Service Worker a responder com index.html para TODAS as navegações
       navigateFallbackAllowlist: [/.*/],
       globPatterns: ['**/*.{js,css,html,png,svg,ico,json,woff,woff2,ttf,eot}'],
+      globIgnores: ['**/offline.html'],
       globDirectory: '.output/public',
       cleanupOutdatedCaches: true,
       skipWaiting: true,
       clientsClaim: true,
-      maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB
-      // Adiciona precaching explícito
-      additionalManifestEntries: [
-        { url: '/', revision: null },
-        { url: '/index.html', revision: null },
-        { url: '/api/hymnal', revision: null }
-      ],
+      maximumFileSizeToCacheInBytes: 10 * 1024 * 1024, // 10MB - aumentado para cachear tudo
+      // Configurações adicionais para melhor offline
+      offlineGoogleAnalytics: false,
+      sourcemap: false,
       runtimeCaching: [
+        {
+          // Páginas HTML - tenta rede primeiro, depois cache
+          urlPattern: ({ request, url }) => {
+            return request.destination === 'document' || 
+                   url.pathname === '/' ||
+                   url.pathname.startsWith('/hinos') ||
+                   url.pathname.startsWith('/antifonas') ||
+                   url.pathname.startsWith('/ritos')
+          },
+          handler: 'NetworkFirst',
+          options: {
+            cacheName: 'pages-cache',
+            networkTimeoutSeconds: 3,
+            expiration: {
+              maxEntries: 50,
+              maxAgeSeconds: 60 * 60 * 24 * 7 // 7 dias
+            },
+            cacheableResponse: {
+              statuses: [0, 200]
+            }
+          }
+        },
         {
           urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
           handler: 'CacheFirst',
@@ -114,8 +145,44 @@ export default defineNuxtConfig({
           options: {
             cacheName: 'nuxt-app-cache',
             expiration: {
-              maxEntries: 100,
-              maxAgeSeconds: 60 * 60 * 24 * 30 // 30 dias
+              maxEntries: 200,
+              maxAgeSeconds: 60 * 60 * 24 * 365 // 1 ano - código muda com versão
+            },
+            cacheableResponse: {
+              statuses: [0, 200]
+            }
+          }
+        },
+        {
+          urlPattern: /\/hinos.*/i,
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'pages-cache',
+            expiration: {
+              maxEntries: 600,
+              maxAgeSeconds: 60 * 60 * 24 * 365
+            }
+          }
+        },
+        {
+          urlPattern: /\/antifonas.*/i,
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'pages-cache',
+            expiration: {
+              maxEntries: 50,
+              maxAgeSeconds: 60 * 60 * 24 * 365
+            }
+          }
+        },
+        {
+          urlPattern: /\/ritos.*/i,
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'pages-cache',
+            expiration: {
+              maxEntries: 50,
+              maxAgeSeconds: 60 * 60 * 24 * 365
             }
           }
         },
@@ -143,7 +210,7 @@ export default defineNuxtConfig({
     },
     client: {
       installPrompt: true,
-      periodicSyncForUpdates: 20
+      periodicSyncForUpdates: 0 // Desabilitado - verifica apenas ao abrir o app
     }
   },
 
@@ -152,6 +219,8 @@ export default defineNuxtConfig({
       preprocessorOptions: {}
     },
     build: {
+      target: 'esnext',
+      minify: 'esbuild',
       rollupOptions: {
         output: {
           // Gera nomes de chunk mais estáveis
@@ -161,6 +230,10 @@ export default defineNuxtConfig({
         }
       }
     }
+  },
+
+  experimental: {
+    payloadExtraction: false
   },
 
   css: [
@@ -193,7 +266,8 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/png', href: '/favicon.png' },
-        { rel: 'apple-touch-icon', href: '/icon-192x192.png' }
+        { rel: 'apple-touch-icon', href: '/icon-192x192.png' },
+        { rel: 'manifest', href: '/manifest.webmanifest' }
       ]
     },
   },
