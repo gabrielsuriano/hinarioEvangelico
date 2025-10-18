@@ -6,6 +6,7 @@
 import {
   actionSheetController,
   toastController,
+  loadingController,
 } from '@ionic/vue'
 import { add, remove, text, cloudDownloadOutline, refreshOutline, informationCircleOutline, downloadOutline } from 'ionicons/icons'
 import { usePwaUpdate } from '~/composables/usePwaUpdate'
@@ -128,8 +129,19 @@ const present = async () => {
       text: 'Atualizar App',
       icon: cloudDownloadOutline,
       cssClass: 'update-button',
-      handler: () => {
-        applyUpdate()
+      handler: async () => {
+        // Mostra loading
+        const loading = await loadingController.create({
+          message: 'Atualizando...',
+          spinner: 'crescent',
+          cssClass: 'update-loading',
+          backdropDismiss: false,
+        })
+        await loading.present()
+
+        // Aplica update
+        await applyUpdate()
+
         return true // Fecha o menu
       },
     })
@@ -141,15 +153,37 @@ const present = async () => {
       text: 'Verificar Atualizações',
       icon: cloudDownloadOutline,
       handler: async () => {
+        // Mostra loading enquanto verifica
+        const loading = await loadingController.create({
+          message: 'Verificando atualizações...',
+          spinner: 'crescent',
+          cssClass: 'check-update-loading',
+          backdropDismiss: false,
+        })
+        await loading.present()
+
         const hasUpdate = await forceCheckUpdate()
+
+        // Remove loading
+        await loading.dismiss()
+
         if (hasUpdate) {
+          // Mostra toast de sucesso
+          const toast = await toastController.create({
+            message: '✅ Atualização disponível!',
+            duration: 2000,
+            position: 'bottom',
+            color: 'success'
+          })
+          await toast.present()
+
           // Fecha e reabre o menu para mostrar o botão de atualizar
           actionSheet.dismiss()
           present()
         } else {
           // Mostra toast informando que não há atualizações
           const toast = await toastController.create({
-            message: 'Nenhuma atualização disponível',
+            message: 'Você já está na versão mais recente',
             duration: 2000,
             position: 'bottom',
             color: 'medium'
@@ -188,7 +222,7 @@ const present = async () => {
       },
     },
     {
-      text: 'Recarregar App',
+      text: 'Forçar Atualização',
       icon: refreshOutline,
       handler: () => {
         forceReload()
@@ -229,5 +263,21 @@ defineExpose({
 .update-button {
   color: var(--ion-color-success) !important;
   font-weight: 600 !important;
+}
+
+/* Loading personalizado para atualizações */
+.update-loading,
+.check-update-loading {
+  --backdrop-opacity: 0.7 !important;
+  --background: rgba(var(--ion-color-primary-rgb), 0.95) !important;
+  --spinner-color: white !important;
+}
+
+.update-loading .loading-wrapper {
+  color: white !important;
+}
+
+.check-update-loading .loading-wrapper {
+  color: white !important;
 }
 </style>

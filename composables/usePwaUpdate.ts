@@ -46,25 +46,67 @@ export const usePwaUpdate = () => {
       try {
         const reg = await navigator.serviceWorker.getRegistration()
         if (reg) {
+          console.log('🔍 Forçando verificação de atualização...')
           registration.value = reg
+
+          // Força atualização do SW
           await reg.update()
 
-          // Verifica se tem update disponível
+          // Verifica se já tem update disponível (waiting ou installing)
           if (reg.waiting) {
+            console.log('✅ Atualização encontrada (waiting)!')
             updateAvailable.value = true
             return true
           }
 
-          // Aguarda um pouco para ver se detecta update
+          if (reg.installing) {
+            console.log('⏳ Atualização encontrada (installing)... aguardando...')
+            // Aguarda o SW installing virar waiting
+            return new Promise((resolve) => {
+              reg.installing!.addEventListener('statechange', function checkState() {
+                if (this.state === 'installed') {
+                  console.log('✅ Atualização pronta!')
+                  updateAvailable.value = true
+                  resolve(true)
+                }
+              })
+
+              // Timeout de 5 segundos
+              setTimeout(() => {
+                if (reg.waiting) {
+                  console.log('✅ Atualização disponível!')
+                  updateAvailable.value = true
+                  resolve(true)
+                } else {
+                  console.log('⏱️ Timeout - verificando status...')
+                  resolve(reg.waiting !== null)
+                }
+              }, 5000)
+            })
+          }
+
+          // Aguarda um pouco mais para detectar mudanças
+          console.log('⏳ Aguardando detecção de atualizações...')
           return new Promise((resolve) => {
-            setTimeout(() => {
-              if (reg.waiting) {
+            let checkCount = 0
+            const checkInterval = setInterval(async () => {
+              checkCount++
+              const latestReg = await navigator.serviceWorker.getRegistration()
+
+              if (latestReg && (latestReg.waiting || latestReg.installing)) {
+                console.log('✅ Atualização detectada!')
                 updateAvailable.value = true
+                clearInterval(checkInterval)
                 resolve(true)
-              } else {
+                return
+              }
+
+              if (checkCount >= 10) { // 10 verificações = 5 segundos
+                console.log('ℹ️ Nenhuma atualização encontrada')
+                clearInterval(checkInterval)
                 resolve(false)
               }
-            }, 1000)
+            }, 500) // Verifica a cada 500ms
           })
         }
       } catch (error) {
