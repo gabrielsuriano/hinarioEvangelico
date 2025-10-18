@@ -131,9 +131,55 @@ export const usePwaUpdate = () => {
     }, 100)
   }
 
-  const forceReload = () => {
-    // Força reload completo, limpando cache do browser
-    window.location.reload()
+  const forceReload = async () => {
+    console.log('🔄 Forçando atualização completa (hard reset)...')
+
+    try {
+      // 1. Desregistra todos os Service Workers
+      if ('serviceWorker' in navigator) {
+        const registrations = await navigator.serviceWorker.getRegistrations()
+        for (const registration of registrations) {
+          console.log('🗑️ Desregistrando Service Worker...')
+          await registration.unregister()
+        }
+      }
+
+      // 2. Limpa todos os caches
+      if ('caches' in window) {
+        const cacheNames = await caches.keys()
+        for (const cacheName of cacheNames) {
+          console.log(`🗑️ Removendo cache: ${cacheName}`)
+          await caches.delete(cacheName)
+        }
+      }
+
+      // 3. Limpa localStorage (exceto preferências importantes)
+      const preserveKeys = ['theme', 'fontSize', 'favorites', 'recentlyViewed']
+      const keysToRemove: string[] = []
+
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i)
+        if (key && !preserveKeys.some(preserve => key.includes(preserve))) {
+          keysToRemove.push(key)
+        }
+      }
+
+      keysToRemove.forEach(key => {
+        console.log(`🗑️ Removendo localStorage: ${key}`)
+        localStorage.removeItem(key)
+      })
+
+      console.log('✅ Limpeza completa! Recarregando...')
+
+      // 4. Force hard reload (Ctrl+Shift+R equivalente)
+      setTimeout(() => {
+        window.location.reload()
+      }, 500)
+    } catch (error) {
+      console.error('❌ Erro ao limpar cache:', error)
+      // Fallback: apenas recarrega
+      window.location.reload()
+    }
   }
 
   onMounted(() => {

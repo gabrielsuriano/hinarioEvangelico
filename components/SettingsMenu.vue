@@ -224,8 +224,19 @@ const present = async () => {
     {
       text: 'Forçar Atualização',
       icon: refreshOutline,
-      handler: () => {
-        forceReload()
+      handler: async () => {
+        // Mostra loading com mensagem explicativa
+        const loading = await loadingController.create({
+          message: 'Limpando cache e atualizando...',
+          spinner: 'crescent',
+          cssClass: 'force-reload-loading',
+          backdropDismiss: false,
+        })
+        await loading.present()
+
+        // Força atualização completa (hard reset)
+        await forceReload()
+
         return true
       },
     },
@@ -267,17 +278,16 @@ defineExpose({
 
 /* Loading personalizado para atualizações */
 .update-loading,
-.check-update-loading {
+.check-update-loading,
+.force-reload-loading {
   --backdrop-opacity: 0.7 !important;
   --background: rgba(var(--ion-color-primary-rgb), 0.95) !important;
   --spinner-color: white !important;
 }
 
-.update-loading .loading-wrapper {
-  color: white !important;
-}
-
-.check-update-loading .loading-wrapper {
+.update-loading .loading-wrapper,
+.check-update-loading .loading-wrapper,
+.force-reload-loading .loading-wrapper {
   color: white !important;
 }
 </style>
