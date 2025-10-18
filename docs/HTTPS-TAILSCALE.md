@@ -36,7 +36,7 @@ Use o script automatizado para configurar tudo de uma vez:
   ```bash
   # Ubuntu/Debian
   sudo apt install jq
-  
+
   # macOS
   brew install jq
   ```

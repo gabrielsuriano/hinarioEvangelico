@@ -14,24 +14,24 @@ const PUBLIC_DIR = path.join(__dirname, '../.output/public');
 // Auto-detect certificates in personal/ directory
 function findCertificates() {
   const personalDir = path.join(__dirname, '..', 'personal');
-  
+
   // Check if personal directory exists
   if (!fs.existsSync(personalDir)) {
     return null;
   }
-  
+
   const files = fs.readdirSync(personalDir);
-  
+
   const certFile = files.find(f => f.endsWith('.crt'));
   const keyFile = files.find(f => f.endsWith('.key'));
-  
+
   if (certFile && keyFile) {
     return {
       cert: path.join(personalDir, certFile),
       key: path.join(personalDir, keyFile)
     };
   }
-  
+
   return null;
 }
 
@@ -62,14 +62,14 @@ const server = https.createServer(options, (req, res) => {
   // Tratar rota /api/hymnal especificamente
   if (req.url === '/api/hymnal') {
     const apiFile = path.join(PUBLIC_DIR, 'api', 'hymnal');
-    
+
     if (fs.existsSync(apiFile)) {
       res.setHeader('Content-Type', 'application/json');
       res.setHeader('Cache-Control', 'public, max-age=3600');
       return fs.createReadStream(apiFile).pipe(res);
     }
   }
-  
+
   return handler(req, res, {
     public: PUBLIC_DIR,
     cleanUrls: true,
@@ -81,7 +81,7 @@ const server = https.createServer(options, (req, res) => {
 
 server.listen(PORT, () => {
   const hostname = path.basename(CERT_FILE, '.crt');
-  
+
   console.log('\n🚀 Servidor HTTPS PWA rodando!\n');
   console.log('📱 Acesse:');
   console.log(`   - HTTPS (Tailscale): https://${hostname}:${PORT}`);

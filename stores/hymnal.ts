@@ -14,11 +14,11 @@ export const useHymnalStore = defineStore('hymnal', {
     hymns: (state): Content[] => {
       return state.hymnal?.contents.filter(c => c.type === 'HYMN') || []
     },
-    
+
     antiphons: (state): Content[] => {
       return state.hymnal?.contents.filter(c => c.type === 'ANTIPHON') || []
     },
-    
+
     rituals: (state): Content[] => {
       return state.hymnal?.contents.filter(c => c.type === 'RITUALS') || []
     },
@@ -47,10 +47,10 @@ export const useHymnalStore = defineStore('hymnal', {
         })
         return
       }
-      
+
       console.log('🔄 Iniciando carregamento do hinário...')
       console.log('📍 Navigator online?', navigator?.onLine)
-      
+
       // SEMPRE carrega do arquivo local - mais confiável
       try {
         console.log('📁 Carregando do arquivo local...')

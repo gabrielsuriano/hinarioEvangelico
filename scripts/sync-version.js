@@ -18,10 +18,10 @@ try {
   // Atualiza o nuxt.config.ts se necessário
   const nuxtConfigPath = join(rootDir, 'nuxt.config.ts')
   let nuxtConfig = readFileSync(nuxtConfigPath, 'utf-8')
-  
+
   // Procura pelo start_url e atualiza se necessário
   const startUrlRegex = /start_url:\s*'\/'/
-  
+
   if (startUrlRegex.test(nuxtConfig)) {
     console.log('✅ start_url está correto (sem versão na query)')
   } else {

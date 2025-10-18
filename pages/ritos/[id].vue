@@ -87,32 +87,32 @@ const content = computed(() => {
 
 // SEO: Metadados dinâmicos para SSR
 useHead(() => ({
-  title: content.value?.title 
-    ? `${content.value.title} - Hinário Evangélico` 
+  title: content.value?.title
+    ? `${content.value.title} - Hinário Evangélico`
     : 'Hinário Evangélico',
   meta: [
     {
       name: 'description',
-      content: content.value?.title 
-        ? `Rito ${content.value.number}: ${content.value.title}` 
+      content: content.value?.title
+        ? `Rito ${content.value.number}: ${content.value.title}`
         : 'Hinário Evangélico'
     },
     {
       name: 'keywords',
-      content: content.value?.title 
-        ? `rito ${content.value.number}, ${content.value.title}, hinário evangélico` 
+      content: content.value?.title
+        ? `rito ${content.value.number}, ${content.value.title}, hinário evangélico`
         : 'ritos, hinário, evangélico'
     },
     {
       property: 'og:title',
-      content: content.value?.title 
-        ? `${content.value.title} - Hinário Evangélico` 
+      content: content.value?.title
+        ? `${content.value.title} - Hinário Evangélico`
         : 'Hinário Evangélico'
     },
     {
       property: 'og:description',
-      content: content.value?.title 
-        ? `Rito ${content.value.number}: ${content.value.title}` 
+      content: content.value?.title
+        ? `Rito ${content.value.number}: ${content.value.title}`
         : 'Hinário Evangélico'
     },
     {

@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# Hook pre-commit: Sincronização de versão
+# Hook pre-commit: Sincronização de versão e verificação de trailing spaces
 # O versionamento automático acontece no prepare-commit-msg
 
-echo "� Verificando sincronização de versão..."
+echo "🔄 Verificando sincronização de versão..."
 
 # Executa o script de sincronização
 node scripts/sync-version.js
@@ -17,4 +17,34 @@ fi
 git add nuxt.config.ts 2>/dev/null || true
 
 echo "✅ Sincronização de versão OK!"
+
+# Verifica trailing spaces nos arquivos staged
+echo "🧹 Verificando trailing spaces..."
+
+# Obtém lista de arquivos staged (apenas arquivos que existem)
+STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.(js|ts|vue|json|md|css|html|yml|yaml)$')
+
+if [ -n "$STAGED_FILES" ]; then
+  HAS_TRAILING_SPACES=false
+
+  for FILE in $STAGED_FILES; do
+    # Verifica se o arquivo tem trailing spaces
+    if grep -q '[[:space:]]$' "$FILE" 2>/dev/null; then
+      if [ "$HAS_TRAILING_SPACES" = false ]; then
+        echo "❌ Trailing spaces encontrados em:"
+        HAS_TRAILING_SPACES=true
+      fi
+      echo "   - $FILE"
+    fi
+  done
+
+  if [ "$HAS_TRAILING_SPACES" = true ]; then
+    echo ""
+    echo "💡 Execute 'node scripts/remove-trailing-spaces.js' para corrigir."
+    echo "   Ou adicione a flag --no-verify para ignorar esta verificação."
+    exit 1
+  fi
+fi
+
+echo "✅ Nenhum trailing space encontrado!"
 exit 0

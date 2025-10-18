@@ -48,13 +48,13 @@ export const usePwaUpdate = () => {
         if (reg) {
           registration.value = reg
           await reg.update()
-          
+
           // Verifica se tem update disponível
           if (reg.waiting) {
             updateAvailable.value = true
             return true
           }
-          
+
           // Aguarda um pouco para ver se detecta update
           return new Promise((resolve) => {
             setTimeout(() => {
@@ -82,7 +82,7 @@ export const usePwaUpdate = () => {
 
     // Envia mensagem para o SW waiting ativar
     registration.value.waiting.postMessage({ type: 'SKIP_WAITING' })
-    
+
     // Aguarda um pouco e força reload
     setTimeout(() => {
       window.location.reload()
@@ -118,7 +118,7 @@ export const usePwaUpdate = () => {
           updateAvailable.value = true
           registration.value = reg
         }
-        
+
         // Força verificação de update ao abrir o app (se online)
         if (navigator.onLine && reg) {
           console.log('Verificando atualizações automaticamente...')

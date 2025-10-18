@@ -106,32 +106,32 @@ const content = computed(() => {
 
 // SEO: Metadados dinâmicos para SSR
 useHead(() => ({
-  title: content.value?.title 
-    ? `${content.value.title} - Hinário Evangélico` 
+  title: content.value?.title
+    ? `${content.value.title} - Hinário Evangélico`
     : 'Hinário Evangélico',
   meta: [
     {
       name: 'description',
-      content: content.value?.title 
-        ? `Hino ${content.value.number}: ${content.value.title}${content.value.author && content.value.author.length > 0 ? ' - ' + content.value.author.join(', ') : ''}` 
+      content: content.value?.title
+        ? `Hino ${content.value.number}: ${content.value.title}${content.value.author && content.value.author.length > 0 ? ' - ' + content.value.author.join(', ') : ''}`
         : 'Hinário Evangélico'
     },
     {
       name: 'keywords',
-      content: content.value?.title 
-        ? `hino ${content.value.number}, ${content.value.title}, hinário evangélico${content.value.author && content.value.author.length > 0 ? ', ' + content.value.author.join(', ') : ''}` 
+      content: content.value?.title
+        ? `hino ${content.value.number}, ${content.value.title}, hinário evangélico${content.value.author && content.value.author.length > 0 ? ', ' + content.value.author.join(', ') : ''}`
         : 'hinário, evangélico'
     },
     {
       property: 'og:title',
-      content: content.value?.title 
-        ? `${content.value.title} - Hinário Evangélico` 
+      content: content.value?.title
+        ? `${content.value.title} - Hinário Evangélico`
         : 'Hinário Evangélico'
     },
     {
       property: 'og:description',
-      content: content.value?.title 
-        ? `Hino ${content.value.number}: ${content.value.title}` 
+      content: content.value?.title
+        ? `Hino ${content.value.number}: ${content.value.title}`
         : 'Hinário Evangélico'
     },
     {
@@ -159,22 +159,22 @@ const chorusCount = computed(() => {
 const shouldShowVerseNumber = (item: any, index: number) => {
   // Sempre mostra para VERSE
   if (item.type === 'VERSE') return true
-  
+
   // Para CHORUS, só mostra se houver mais de um refrão
   if (item.type === 'CHORUS') return chorusCount.value > 1
-  
+
   // PRE_CHORUS e BRIDGE também mostram
   if (item.type === 'PRE_CHORUS' || item.type === 'BRIDGE') return true
-  
+
   return false
 }
 
 // Calcula o número da estrofe baseado no tipo
 const getVerseNumber = (item: any, index: number) => {
   if (!content.value || !Array.isArray(content.value.items)) return '1'
-  
+
   const items = content.value.items as any[]
-  
+
   // Conta quantas estrofes do mesmo tipo já apareceram antes
   let count = 0
   for (let i = 0; i < index; i++) {
@@ -182,9 +182,9 @@ const getVerseNumber = (item: any, index: number) => {
       count++
     }
   }
-  
+
   const number = count + 1
-  
+
   // Adiciona sigla conforme o tipo
   switch (item.type) {
     case 'VERSE':

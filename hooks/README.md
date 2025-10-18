@@ -38,23 +38,26 @@ npm install  # Instala dependências + hooks automaticamente
 ## 🔧 O Que Cada Hook Faz
 
 ### 1. `pre-commit`
-**Quando:** Antes de finalizar o commit  
-**Função:** Sincroniza versão entre arquivos  
+**Quando:** Antes de finalizar o commit
+**Função:** Sincroniza versão entre arquivos e verifica trailing spaces
 
 ```bash
 git commit -m "Alguma mudança"
 # 🔄 Verificando sincronização de versão...
 # ✅ Sincronização de versão OK!
+# 🧹 Verificando trailing spaces...
+# ✅ Nenhum trailing space encontrado!
 ```
 
 **Validações:**
 - ✅ `package.json` versão correta
 - ✅ `nuxt.config.ts` start_url sem query string
 - ✅ `SettingsMenu.vue` importa versão dinamicamente
+- ✅ Nenhum trailing space nos arquivos staged
 
 ### 2. `prepare-commit-msg`
-**Quando:** Após escrever mensagem do commit  
-**Função:** Atualiza versão baseado em tags  
+**Quando:** Após escrever mensagem do commit
+**Função:** Atualiza versão baseado em tags
 
 ```bash
 git commit -m "[FIX] Corrigido bug"

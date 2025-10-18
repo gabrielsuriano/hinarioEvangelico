@@ -13,12 +13,12 @@ export default defineNuxtPlugin(() => {
       // Verifica se está online antes de tentar preload
       if (navigator.onLine) {
         console.log('🔄 Preloading rotas críticas para cache offline...')
-        
+
         // Preload das rotas em background
         for (const route of criticalRoutes) {
           try {
             // Usa fetch para colocar no cache do Service Worker
-            await fetch(route, { 
+            await fetch(route, {
               method: 'GET',
               cache: 'force-cache'
             })
@@ -27,7 +27,7 @@ export default defineNuxtPlugin(() => {
             console.warn('⚠️ Falha no preload de', route, error)
           }
         }
-        
+
         console.log('✅ Preload de rotas concluído!')
       } else {
         console.log('📴 Offline - pulando preload de rotas')

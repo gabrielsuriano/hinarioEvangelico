@@ -52,7 +52,7 @@
         <p class="ion-text-center">Nenhum hino encontrado.</p>
       </ion-text>
     </ion-content>
-    
+
     <SettingsMenu ref="settingsMenu" />
   </ion-page>
 </template>
@@ -132,7 +132,7 @@ const filteredHymns = computed(() => {
 
     // Busca em autores (array)
     if (hymn.author && Array.isArray(hymn.author)) {
-      const authorMatch = hymn.author.some((author: string) => 
+      const authorMatch = hymn.author.some((author: string) =>
         author.toLowerCase().includes(search)
       )
       if (authorMatch) return true
@@ -146,7 +146,7 @@ const filteredHymns = computed(() => {
         }
         if (typeof item === 'object' && item.lines && Array.isArray(item.lines)) {
           // Busca em cada linha do item
-          return item.lines.some((line: string) => 
+          return item.lines.some((line: string) =>
             line.toLowerCase().includes(search)
           )
         }

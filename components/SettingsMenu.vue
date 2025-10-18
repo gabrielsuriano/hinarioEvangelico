@@ -26,9 +26,9 @@ const isIOS = ref(false)
 onMounted(() => {
   // Detecta se é iOS
   isIOS.value = /iPad|iPhone|iPod/.test(navigator.userAgent) && !(window as any).MSStream
-  
+
   // Verifica se está rodando em modo standalone (instalado)
-  if (window.matchMedia('(display-mode: standalone)').matches || 
+  if (window.matchMedia('(display-mode: standalone)').matches ||
       (window.navigator as any).standalone === true) {
     isInstalled.value = true
   }

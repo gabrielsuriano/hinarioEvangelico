@@ -2,7 +2,7 @@
 
 /**
  * Auto Version Script
- * 
+ *
  * Atualiza a versão automaticamente baseado em:
  * 1. Argumento direto (usado pelo pre-commit): patch, minor, major
  * 2. Mensagem do commit (usado pelo prepare-commit-msg): [FIX], [FEAT], [MAJOR]
@@ -23,7 +23,7 @@ let versionType = null
 // Opção 1: Argumento direto (patch, minor, major)
 if (process.argv[2] && ['patch', 'minor', 'major'].includes(process.argv[2])) {
   versionType = process.argv[2]
-} 
+}
 // Opção 2: Arquivo de mensagem do commit
 else if (process.argv[2] && process.argv[2].includes('COMMIT_EDITMSG')) {
   const commitMsgFile = process.argv[2]

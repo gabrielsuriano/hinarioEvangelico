@@ -1,7 +1,7 @@
 export default defineNuxtPlugin(() => {
   if (process.client) {
     let deferredPrompt: any = null
-    
+
     console.log('🎯 Plugin PWA inicializado')
     console.log('📱 Navigator standalone:', (window.navigator as any).standalone)
     console.log('📱 Display mode:', window.matchMedia('(display-mode: standalone)').matches ? 'standalone' : 'browser')
@@ -16,7 +16,7 @@ export default defineNuxtPlugin(() => {
         showInstallBanner()
       }, 3000)
     })
-    
+
     // Força verificação após 5 segundos
     setTimeout(() => {
       if (!deferredPrompt) {
@@ -44,7 +44,7 @@ export default defineNuxtPlugin(() => {
         console.log('ℹ️ Banner já foi mostrado anteriormente')
         return
       }
-      
+
       console.log('🎉 Mostrando banner de instalação!')
 
       const banner = document.createElement('div')
