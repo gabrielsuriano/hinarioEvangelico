@@ -86,6 +86,33 @@ const settingsMenu = ref()
 // Carrega dados do hinário
 await hymnalStore.loadHymnal()
 
+// Progressive loading
+const INITIAL_LOAD = 30
+const displayedAntiphons = ref<Content[]>([])
+
+const loadRemainingAntiphons = () => {
+  if (displayedAntiphons.value.length >= hymnalStore.antiphons.length) return
+
+  console.log('[Antifonas] Loading remaining antiphons in background...')
+  displayedAntiphons.value = [...hymnalStore.antiphons]
+  console.log('[Antifonas] All antiphons loaded:', displayedAntiphons.value.length)
+}
+
+onMounted(() => {
+  // Carrega primeiras 30 antífonas imediatamente
+  displayedAntiphons.value = hymnalStore.antiphons.slice(0, INITIAL_LOAD)
+  console.log('[Antifonas] Initial load:', displayedAntiphons.value.length, 'antiphons')
+
+  // Carrega o resto quando o navegador estiver ocioso
+  if (hymnalStore.antiphons.length > INITIAL_LOAD) {
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(loadRemainingAntiphons, { timeout: 2000 })
+    } else {
+      setTimeout(loadRemainingAntiphons, 100)
+    }
+  }
+})
+
 const toggleTheme = () => {
   themeStore.toggleTheme()
 }
@@ -110,35 +137,37 @@ useHead({
 })
 
 const filteredAntiphons = computed(() => {
-  if (!searchText.value) {
-    return hymnalStore.antiphons
+  // Se está buscando, busca em todas as antífonas
+  if (searchText.value) {
+    const search = searchText.value.toLowerCase()
+    return hymnalStore.antiphons.filter((antiphon: Content) => {
+      // Busca em título e número
+      const basicMatch = (
+        antiphon.title.toLowerCase().includes(search) ||
+        antiphon.number?.toString().includes(search)
+      )
+
+      if (basicMatch) return true
+
+      // Busca no conteúdo (texto da antífona)
+      if (Array.isArray(antiphon.items)) {
+        return antiphon.items.some((item: any) => {
+          if (typeof item === 'string') {
+            return item.toLowerCase().includes(search)
+          }
+          if (typeof item === 'object' && item.text) {
+            return item.text.toLowerCase().includes(search)
+          }
+          return false
+        })
+      }
+
+      return false
+    })
   }
 
-  const search = searchText.value.toLowerCase()
-  return hymnalStore.antiphons.filter((antiphon: Content) => {
-    // Busca em título e número
-    const basicMatch = (
-      antiphon.title.toLowerCase().includes(search) ||
-      antiphon.number?.toString().includes(search)
-    )
-
-    if (basicMatch) return true
-
-    // Busca no conteúdo (texto da antífona)
-    if (Array.isArray(antiphon.items)) {
-      return antiphon.items.some((item: any) => {
-        if (typeof item === 'string') {
-          return item.toLowerCase().includes(search)
-        }
-        if (typeof item === 'object' && item.text) {
-          return item.text.toLowerCase().includes(search)
-        }
-        return false
-      })
-    }
-
-    return false
-  })
+  // Se não está buscando, usa apenas as antífonas carregadas
+  return displayedAntiphons.value
 })
 
 const navigateToAntiphon = (id: string) => {

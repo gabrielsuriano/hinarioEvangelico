@@ -85,8 +85,40 @@ const router = useRouter()
 const searchText = ref('')
 const settingsMenu = ref()
 
+// Carregamento progressivo: mostra 30 primeiro, depois carrega o resto
+const INITIAL_LOAD = 30
+const displayedHymns = ref<Content[]>([])
+const allHymnsLoaded = ref(false)
+
 // Carrega dados do hinário
 await hymnalStore.loadHymnal()
+
+// Carrega primeiros 30 hinos imediatamente
+displayedHymns.value = hymnalStore.hymns.slice(0, INITIAL_LOAD)
+
+// Carrega o resto em background (após renderização)
+onMounted(() => {
+  // Usa nextTick para garantir que a UI já foi renderizada
+  nextTick(() => {
+    // Usa requestIdleCallback se disponível, senão setTimeout
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(() => {
+        loadRemainingHymns()
+      })
+    } else {
+      setTimeout(() => {
+        loadRemainingHymns()
+      }, 100)
+    }
+  })
+})
+
+const loadRemainingHymns = () => {
+  console.log('📚 Carregando hinos restantes em background...')
+  displayedHymns.value = hymnalStore.hymns
+  allHymnsLoaded.value = true
+  console.log('✅ Todos os hinos carregados!')
+}
 
 const toggleTheme = () => {
   themeStore.toggleTheme()
@@ -116,12 +148,15 @@ useHead({
 })
 
 const filteredHymns = computed(() => {
+  // Se está buscando, sempre busca em TODOS os hinos (mesmo que não estejam carregados na tela)
+  const hymnsToSearch = searchText.value ? hymnalStore.hymns : displayedHymns.value
+
   if (!searchText.value) {
-    return hymnalStore.hymns
+    return hymnsToSearch
   }
 
   const search = searchText.value.toLowerCase()
-  return hymnalStore.hymns.filter((hymn: Content) => {
+  return hymnsToSearch.filter((hymn: Content) => {
     // Busca em título e número
     const basicMatch = (
       hymn.title.toLowerCase().includes(search) ||

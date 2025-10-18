@@ -86,6 +86,33 @@ const settingsMenu = ref()
 // Carrega dados do hinário
 await hymnalStore.loadHymnal()
 
+// Progressive loading
+const INITIAL_LOAD = 30
+const displayedRituals = ref<Content[]>([])
+
+const loadRemainingRituals = () => {
+  if (displayedRituals.value.length >= hymnalStore.rituals.length) return
+
+  console.log('[Ritos] Loading remaining rituals in background...')
+  displayedRituals.value = [...hymnalStore.rituals]
+  console.log('[Ritos] All rituals loaded:', displayedRituals.value.length)
+}
+
+onMounted(() => {
+  // Carrega primeiros 30 ritos imediatamente
+  displayedRituals.value = hymnalStore.rituals.slice(0, INITIAL_LOAD)
+  console.log('[Ritos] Initial load:', displayedRituals.value.length, 'rituals')
+
+  // Carrega o resto quando o navegador estiver ocioso
+  if (hymnalStore.rituals.length > INITIAL_LOAD) {
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(loadRemainingRituals, { timeout: 2000 })
+    } else {
+      setTimeout(loadRemainingRituals, 100)
+    }
+  }
+})
+
 const toggleTheme = () => {
   themeStore.toggleTheme()
 }
@@ -110,34 +137,36 @@ useHead({
 })
 
 const filteredRituals = computed(() => {
-  if (!searchText.value) {
-    return hymnalStore.rituals
+  // Se está buscando, busca em todos os ritos
+  if (searchText.value) {
+    const search = searchText.value.toLowerCase()
+    return hymnalStore.rituals.filter((ritual: Content) => {
+      // Busca em título e número
+      const basicMatch = (
+        ritual.title.toLowerCase().includes(search) ||
+        ritual.number?.toString().includes(search)
+      )
+
+      if (basicMatch) return true
+
+      // Busca no conteúdo (texto do rito)
+      if (Array.isArray(ritual.items)) {
+        return ritual.items.some((item: any) => {
+          if (typeof item === 'string') {
+            return item.toLowerCase().includes(search)
+          }
+          if (typeof item === 'object' && item.text) {
+            return item.text.toLowerCase().includes(search)
+          }
+          return false
+        })
+      }
+      return false
+    })
   }
 
-  const search = searchText.value.toLowerCase()
-  return hymnalStore.rituals.filter((ritual: Content) => {
-    // Busca em título e número
-    const basicMatch = (
-      ritual.title.toLowerCase().includes(search) ||
-      ritual.number?.toString().includes(search)
-    )
-
-    if (basicMatch) return true
-
-    // Busca no conteúdo (texto do rito)
-    if (Array.isArray(ritual.items)) {
-      return ritual.items.some((item: any) => {
-        if (typeof item === 'string') {
-          return item.toLowerCase().includes(search)
-        }
-        if (typeof item === 'object' && item.text) {
-          return item.text.toLowerCase().includes(search)
-        }
-        return false
-      })
-    }
-    return false
-  })
+  // Se não está buscando, usa apenas os ritos carregados
+  return displayedRituals.value
 })
 
 const navigateToRitual = (id: string) => {
