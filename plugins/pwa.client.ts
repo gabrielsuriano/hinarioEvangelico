@@ -1,10 +1,25 @@
-export default defineNuxtPlugin(() => {
+export default defineNuxtPlugin((nuxtApp) => {
   if (process.client) {
     let deferredPrompt: any = null
+    let bannerElement: HTMLElement | null = null
 
     console.log('🎯 Plugin PWA inicializado')
     console.log('📱 Navigator standalone:', (window.navigator as any).standalone)
     console.log('📱 Display mode:', window.matchMedia('(display-mode: standalone)').matches ? 'standalone' : 'browser')
+
+    // Esconde banner quando navegar para página de hino/antifona/rito
+    nuxtApp.hook('page:finish', () => {
+      const route = useRoute()
+      const isDetailPage = /\/(hinos|antifonas|ritos)\/[^/]+$/.test(route.path)
+
+      if (isDetailPage && bannerElement) {
+        console.log('📖 Navegou para página de detalhe - escondendo banner')
+        bannerElement.style.display = 'none'
+      } else if (!isDetailPage && bannerElement) {
+        console.log('📋 Navegou para página de lista - mostrando banner')
+        bannerElement.style.display = 'flex'
+      }
+    })
 
     window.addEventListener('beforeinstallprompt', (e) => {
       console.log('✅ beforeinstallprompt disparado - PWA pode ser instalado!')
@@ -47,25 +62,34 @@ export default defineNuxtPlugin(() => {
 
       console.log('🎉 Mostrando banner de instalação!')
 
-      const banner = document.createElement('div')
-      banner.style.cssText = 'position:fixed;bottom:20px;left:20px;right:20px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;padding:16px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.15);display:flex;align-items:center;justify-content:space-between;z-index:10000'
+      bannerElement = document.createElement('div')
+      bannerElement.style.cssText = 'position:fixed;bottom:20px;left:20px;right:20px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;padding:16px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.15);display:flex;align-items:center;justify-content:space-between;z-index:10000'
 
-      banner.innerHTML = '<div style="flex:1"><div style="font-weight:600;margin-bottom:4px">Instalar Hinário</div><div style="font-size:14px;opacity:0.9">Adicione à tela inicial</div></div><div style="display:flex;gap:8px"><button id="pwa-install-btn" style="background:white;color:#667eea;border:none;padding:8px 16px;border-radius:6px;font-weight:600;cursor:pointer;font-size:14px">Instalar</button><button id="pwa-dismiss-btn" style="background:rgba(255,255,255,0.2);color:white;border:none;padding:8px 16px;border-radius:6px;font-weight:600;cursor:pointer;font-size:14px">Agora não</button></div>'
+      bannerElement.innerHTML = '<div style="flex:1"><div style="font-weight:600;margin-bottom:4px">Instalar Hinário</div><div style="font-size:14px;opacity:0.9">Adicione à tela inicial</div></div><div style="display:flex;gap:8px"><button id="pwa-install-btn" style="background:white;color:#667eea;border:none;padding:8px 16px;border-radius:6px;font-weight:600;cursor:pointer;font-size:14px">Instalar</button><button id="pwa-dismiss-btn" style="background:rgba(255,255,255,0.2);color:white;border:none;padding:8px 16px;border-radius:6px;font-weight:600;cursor:pointer;font-size:14px">Agora não</button></div>'
 
-      document.body.appendChild(banner)
+      document.body.appendChild(bannerElement)
+
+      // Verifica se já está em página de detalhe ao criar o banner
+      const route = useRoute()
+      const isDetailPage = /\/(hinos|antifonas|ritos)\/[^/]+$/.test(route.path)
+      if (isDetailPage) {
+        bannerElement.style.display = 'none'
+      }
 
       document.getElementById('pwa-install-btn')?.addEventListener('click', async () => {
         if (deferredPrompt) {
           deferredPrompt.prompt()
           await deferredPrompt.userChoice
           deferredPrompt = null
-          banner.remove()
+          if (bannerElement) bannerElement.remove()
+          bannerElement = null
           localStorage.setItem('pwa-install-banner-shown', 'true')
         }
       })
 
       document.getElementById('pwa-dismiss-btn')?.addEventListener('click', () => {
-        banner.remove()
+        if (bannerElement) bannerElement.remove()
+        bannerElement = null
         localStorage.setItem('pwa-install-banner-shown', 'true')
       })
     }
