@@ -66,7 +66,6 @@ export default defineNuxtConfig({
       navigateFallbackAllowlist: [/.*/],
       globPatterns: ['**/*.{js,css,html,png,svg,ico,json,woff,woff2,ttf,eot}'],
       globIgnores: ['**/offline.html'],
-      globDirectory: '.output/public',
       cleanupOutdatedCaches: true,
       skipWaiting: true,
       clientsClaim: true,
