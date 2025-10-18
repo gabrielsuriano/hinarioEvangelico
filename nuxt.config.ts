@@ -12,7 +12,7 @@ export default defineNuxtConfig({
       routes: [
         '/',
         '/hinos',
-        '/antifonas', 
+        '/antifonas',
         '/ritos'
       ]
     }
@@ -77,8 +77,8 @@ export default defineNuxtConfig({
       runtimeCaching: [
         {
           // Páginas HTML - tenta rede primeiro, depois cache
-          urlPattern: ({ request, url }) => {
-            return request.destination === 'document' || 
+          urlPattern: ({ request, url }: { request: Request; url: URL }) => {
+            return request.destination === 'document' ||
                    url.pathname === '/' ||
                    url.pathname.startsWith('/hinos') ||
                    url.pathname.startsWith('/antifonas') ||
