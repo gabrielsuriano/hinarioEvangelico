@@ -2,6 +2,11 @@
   <ion-page>
     <ion-header>
       <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-button @click="router.push('/')">
+            <ion-icon slot="icon-only" :icon="arrowBack"></ion-icon>
+          </ion-button>
+        </ion-buttons>
         <ion-title>Hinos</ion-title>
         <ion-buttons slot="end">
           <ion-button @click="toggleTheme">
@@ -67,8 +72,9 @@ import {
   IonText,
   IonButtons,
   IonButton,
+  IonBackButton,
 } from '@ionic/vue'
-import { heart, heartOutline, settings, moon, sunny } from 'ionicons/icons'
+import { heart, heartOutline, settings, moon, sunny, arrowBack } from 'ionicons/icons'
 import { useThemeStore } from '~/stores/theme'
 import SettingsMenu from '~/components/SettingsMenu.vue'
 import type { Content } from '~/types/hymnal'
