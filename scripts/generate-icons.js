@@ -23,11 +23,12 @@ async function generateIcons() {
   for (const { size, name, maskable } of sizes) {
     try {
       if (maskable) {
-        // Para ícones maskable: cria canvas azul sólido + ícone reduzido no centro
-        const iconSize = Math.round(size * 0.75) // 75% do tamanho (safe zone)
+        // Para ícones maskable: reduz o SVG para 80% (safe zone)
+        // e adiciona padding azul ao redor
+        const iconSize = Math.round(size * 0.80) // 80% do tamanho (safe zone otimizada)
         const padding = Math.round((size - iconSize) / 2)
 
-        // 1. Cria um canvas azul sólido do tamanho final
+        // 1. Cria um canvas azul sólido QUADRADO
         const blueBackground = await sharp({
           create: {
             width: size,
@@ -37,13 +38,13 @@ async function generateIcons() {
           }
         }).png().toBuffer()
 
-        // 2. Redimensiona o ícone SVG
+        // 2. Redimensiona o SVG (que já é quadrado azul)
         const resizedIcon = await sharp(svgBuffer)
           .resize(iconSize, iconSize)
           .png()
           .toBuffer()
 
-        // 3. Compõe: fundo azul + ícone no centro
+        // 3. Compõe: fundo azul + ícone centralizado
         await sharp(blueBackground)
           .composite([{
             input: resizedIcon,
@@ -53,15 +54,15 @@ async function generateIcons() {
           .png()
           .toFile(join(publicDir, name))
 
-        console.log(`✅ ${name} (${size}x${size} - maskable, fundo azul sólido, ícone 75%)`)
+        console.log(`✅ ${name} (${size}x${size} - maskable, safe zone 80%)`)
       } else {
-        // Ícones normais mantêm o tamanho original
+        // Ícones normais: apenas redimensiona o SVG (já é quadrado azul)
         await sharp(svgBuffer)
           .resize(size, size)
           .png()
           .toFile(join(publicDir, name))
 
-        console.log(`✅ ${name} (${size}x${size})`)
+        console.log(`✅ ${name} (${size}x${size} - quadrado)`)
       }
     } catch (error) {
       console.error(`❌ Erro ao gerar ${name}:`, error.message)
