@@ -1,31 +1,13 @@
 <template>
   <ion-page>
-    <ion-header :translucent="true">
-      <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-button @click="router.push('/')">
-            <ion-icon slot="icon-only" :icon="arrowBack"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-        <ion-title>Hinos</ion-title>
-        <ion-buttons slot="end">
-          <ion-button @click="toggleTheme">
-            <ion-icon slot="icon-only" :icon="themeStore.isDark ? sunny : moon"></ion-icon>
-          </ion-button>
-          <ion-button @click="openSettings">
-            <ion-icon slot="icon-only" :icon="settings"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-      <ion-toolbar>
-        <ion-searchbar
-          v-model="searchText"
-          placeholder="Buscar por título, autor ou letra..."
-          animated
-          @ionClear="searchText = ''"
-        ></ion-searchbar>
-      </ion-toolbar>
-    </ion-header>
+    <AppHeader
+      title="Hinos"
+      show-back-button
+      show-search
+      v-model:search-value="searchText"
+      search-placeholder="Buscar por título, autor ou letra..."
+      @open-settings="openSettings"
+    />
 
     <ion-content :fullscreen="true">
       <ion-list v-if="filteredHymns.length > 0">
@@ -60,27 +42,19 @@
 <script setup lang="ts">
 import {
   IonPage,
-  IonHeader,
-  IonToolbar,
-  IonTitle,
   IonContent,
   IonList,
   IonItem,
   IonLabel,
   IonIcon,
-  IonSearchbar,
   IonText,
-  IonButtons,
-  IonButton,
-  IonBackButton,
 } from '@ionic/vue'
-import { heart, heartOutline, settings, moon, sunny, arrowBack } from 'ionicons/icons'
-import { useThemeStore } from '~/stores/theme'
+import { heart, heartOutline } from 'ionicons/icons'
 import SettingsMenu from '~/components/SettingsMenu.vue'
+import AppHeader from '~/components/AppHeader.vue'
 import type { Content } from '~/types/hymnal'
 
 const hymnalStore = useHymnalStore()
-const themeStore = useThemeStore()
 const router = useRouter()
 const searchText = ref('')
 const settingsMenu = ref()
@@ -118,10 +92,6 @@ const loadRemainingHymns = () => {
   displayedHymns.value = hymnalStore.hymns
   allHymnsLoaded.value = true
   console.log('✅ Todos os hinos carregados!')
-}
-
-const toggleTheme = () => {
-  themeStore.toggleTheme()
 }
 
 const openSettings = () => {

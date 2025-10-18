@@ -1,18 +1,9 @@
 <template>
   <ion-page>
-    <ion-header :translucent="true">
-      <ion-toolbar>
-        <ion-title>Hinário Evangélico</ion-title>
-        <ion-buttons slot="end">
-          <ion-button @click="toggleTheme">
-            <ion-icon slot="icon-only" :icon="themeStore.isDark ? sunny : moon"></ion-icon>
-          </ion-button>
-          <ion-button @click="openSettings">
-            <ion-icon slot="icon-only" :icon="settings"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
+    <AppHeader
+      title="Hinário Evangélico"
+      @open-settings="openSettings"
+    />
 
     <ion-content :fullscreen="true">
       <ion-list lines="full">
@@ -52,23 +43,17 @@
 <script setup lang="ts">
 import {
   IonPage,
-  IonHeader,
-  IonToolbar,
-  IonTitle,
   IonContent,
   IonList,
   IonItem,
   IonLabel,
   IonIcon,
-  IonButtons,
-  IonButton,
 } from '@ionic/vue'
-import { musicalNotesOutline, prismOutline, bookOutline, chevronForward, settings, moon, sunny } from 'ionicons/icons'
-import { useThemeStore } from '~/stores/theme'
+import { musicalNotesOutline, prismOutline, bookOutline, chevronForward } from 'ionicons/icons'
 import SettingsMenu from '~/components/SettingsMenu.vue'
+import AppHeader from '~/components/AppHeader.vue'
 
 const hymnalStore = useHymnalStore()
-const themeStore = useThemeStore()
 const router = useRouter()
 const settingsMenu = ref()
 
@@ -77,10 +62,6 @@ await hymnalStore.loadHymnal()
 
 const navigateTo = (path: string) => {
   router.push(path)
-}
-
-const toggleTheme = () => {
-  themeStore.toggleTheme()
 }
 
 const openSettings = () => {

@@ -1,26 +1,13 @@
 <template>
   <ion-page>
-    <ion-header :translucent="true">
-      <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-button @click="goBack">
-            <ion-icon slot="icon-only" :icon="arrowBack"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-        <ion-title>{{ content?.title }}</ion-title>
-        <ion-buttons slot="end">
-          <ion-button @click="hymnalStore.toggleFavorite(id)">
-            <ion-icon
-              slot="icon-only"
-              :icon="hymnalStore.isFavorite(id) ? heart : heartOutline"
-            ></ion-icon>
-          </ion-button>
-          <ion-button @click="openSettings">
-            <ion-icon slot="icon-only" :icon="settings"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
+    <AppHeader
+      :title="content?.title || 'Rito'"
+      show-back-button
+      show-favorite-button
+      :is-favorite="hymnalStore.isFavorite(id)"
+      @toggle-favorite="hymnalStore.toggleFavorite(id)"
+      @open-settings="openSettings"
+    />
 
     <ion-content :fullscreen="true" class="ion-padding">
       <div v-if="content">
@@ -46,16 +33,11 @@
 <script setup lang="ts">
 import {
   IonPage,
-  IonHeader,
-  IonToolbar,
-  IonTitle,
   IonContent,
-  IonButtons,
-  IonButton,
-  IonIcon,
   IonText,
 } from '@ionic/vue'
-import { heart, heartOutline, settings, arrowBack } from 'ionicons/icons'
+import SettingsMenu from '~/components/SettingsMenu.vue'
+import AppHeader from '~/components/AppHeader.vue'
 import type { Content } from '~/types/hymnal'
 
 const route = useRoute()
@@ -66,15 +48,6 @@ const settingsMenu = ref()
 
 const openSettings = () => {
   settingsMenu.value?.present()
-}
-
-const goBack = () => {
-  // Tenta voltar no histórico, se não houver histórico vai para a lista de ritos
-  if (window.history.length > 1) {
-    router.back()
-  } else {
-    router.push('/ritos')
-  }
 }
 
 // Carrega dados da store (funciona offline)
