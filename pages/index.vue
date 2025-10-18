@@ -44,7 +44,7 @@
         </ion-item>
       </ion-list>
     </ion-content>
-    
+
     <SettingsMenu ref="settingsMenu" />
   </ion-page>
 </template>
