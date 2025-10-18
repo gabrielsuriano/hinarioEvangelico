@@ -112,3 +112,36 @@ body.dark {
 
   --ion-card-background: #1e1e1e;
 }
+
+/* Efeito de transparência e blur no header */
+ion-header {
+  background: transparent !important;
+}
+
+ion-header::after {
+  background-image: none !important;
+  display: none !important;
+}
+
+/* Aplica transparência e blur diretamente no toolbar */
+ion-toolbar {
+  background: color-mix(in oklab, #fff 75%, transparent) !important;
+  backdrop-filter: blur(3px) !important;
+  -webkit-backdrop-filter: blur(3px) !important;
+}
+
+ion-header ion-toolbar {
+  --background: transparent !important;
+  --border-style: none !important;
+  --border-width: 0 !important;
+}
+
+/* Remove a borda do header */
+ion-toolbar.ion-color {
+  --border-color: transparent !important;
+}
+
+/* Tema Dark para o header */
+body.dark ion-toolbar {
+  background: color-mix(in oklab, #000 75%, transparent) !important;
+}
