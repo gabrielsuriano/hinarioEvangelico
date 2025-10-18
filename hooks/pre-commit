@@ -18,7 +18,7 @@ git add nuxt.config.ts 2>/dev/null || true
 
 echo "✅ Sincronização de versão OK!"
 
-# Verifica trailing spaces nos arquivos staged
+# Verifica e remove trailing spaces automaticamente
 echo "🧹 Verificando trailing spaces..."
 
 # Obtém lista de arquivos staged (apenas arquivos que existem)
@@ -30,21 +30,25 @@ if [ -n "$STAGED_FILES" ]; then
   for FILE in $STAGED_FILES; do
     # Verifica se o arquivo tem trailing spaces
     if grep -q '[[:space:]]$' "$FILE" 2>/dev/null; then
-      if [ "$HAS_TRAILING_SPACES" = false ]; then
-        echo "❌ Trailing spaces encontrados em:"
-        HAS_TRAILING_SPACES=true
-      fi
-      echo "   - $FILE"
+      HAS_TRAILING_SPACES=true
+      break
     fi
   done
 
   if [ "$HAS_TRAILING_SPACES" = true ]; then
-    echo ""
-    echo "💡 Execute 'node scripts/remove-trailing-spaces.js' para corrigir."
-    echo "   Ou adicione a flag --no-verify para ignorar esta verificação."
-    exit 1
-  fi
-fi
+    echo "🔧 Removendo trailing spaces automaticamente..."
+    node scripts/remove-trailing-spaces.js
 
-echo "✅ Nenhum trailing space encontrado!"
+    # Re-adiciona os arquivos staged que foram modificados
+    for FILE in $STAGED_FILES; do
+      git add "$FILE" 2>/dev/null || true
+    done
+
+    echo "✅ Trailing spaces removidos e arquivos atualizados!"
+  else
+    echo "✅ Nenhum trailing space encontrado!"
+  fi
+else
+  echo "✅ Nenhum arquivo elegível para verificação!"
+fi
 exit 0
