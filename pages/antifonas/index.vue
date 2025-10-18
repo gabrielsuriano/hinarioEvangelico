@@ -7,7 +7,7 @@
           <ion-button @click="toggleTheme">
             <ion-icon slot="icon-only" :icon="themeStore.isDark ? sunny : moon"></ion-icon>
           </ion-button>
-          <ion-button @click="presentActionSheet">
+          <ion-button @click="openSettings">
             <ion-icon slot="icon-only" :icon="settings"></ion-icon>
           </ion-button>
         </ion-buttons>
@@ -46,6 +46,7 @@
         <p class="ion-text-center">Nenhuma antifona encontrada.</p>
       </ion-text>
     </ion-content>
+    <SettingsMenu ref="settingsMenu" />
   </ion-page>
 </template>
 
@@ -64,19 +65,17 @@ import {
   IonText,
   IonButtons,
   IonButton,
-  actionSheetController,
-  toastController,
 } from '@ionic/vue'
-import { heart, heartOutline, settings, add, remove, text, moon, sunny, cloudDownloadOutline, refreshOutline } from 'ionicons/icons'
+import { heart, heartOutline, settings, moon, sunny } from 'ionicons/icons'
 import { useThemeStore } from '~/stores/theme'
-import { usePwaUpdate } from '~/composables/usePwaUpdate'
+import SettingsMenu from '~/components/SettingsMenu.vue'
 import type { Content } from '~/types/hymnal'
 
 const hymnalStore = useHymnalStore()
 const themeStore = useThemeStore()
 const router = useRouter()
 const searchText = ref('')
-const { updateAvailable, isNativeApp, checkForUpdate, applyUpdate, forceCheckUpdate, forceReload } = usePwaUpdate()
+const settingsMenu = ref()
 
 // Carrega dados do hinário
 await hymnalStore.loadHymnal()
@@ -85,102 +84,21 @@ const toggleTheme = () => {
   themeStore.toggleTheme()
 }
 
-const presentActionSheet = async () => {
-  const buttons: any[] = []
-  
-  if (updateAvailable.value && !isNativeApp) {
-    buttons.push({
-      text: 'Atualizar App',
-      icon: cloudDownloadOutline,
-      cssClass: 'update-button',
-      handler: () => {
-        applyUpdate()
-        return true
-      },
-    })
-  }
-  
-  if (navigator.onLine && !isNativeApp) {
-    buttons.push({
-      text: 'Verificar Atualizações',
-      icon: cloudDownloadOutline,
-      handler: async () => {
-        const hasUpdate = await forceCheckUpdate()
-        
-        if (hasUpdate) {
-          actionSheet.dismiss()
-          presentActionSheet()
-        } else {
-          const toast = await toastController.create({
-            message: 'Nenhuma atualização disponível',
-            duration: 2000,
-            position: 'bottom',
-            color: 'medium'
-          })
-          await toast.present()
-        }
-        return false // Mantém o menu aberto
-      },
-    })
-  }
-  
-  buttons.push(
-    {
-      text: 'Aumentar Fonte',
-      icon: add,
-      handler: () => {
-        hymnalStore.increaseFontSize()
-        return false // Mantém o menu aberto
-      },
-    },
-    {
-      text: 'Diminuir Fonte',
-      icon: remove,
-      handler: () => {
-        hymnalStore.decreaseFontSize()
-        return false // Mantém o menu aberto
-      },
-    },
-    {
-      text: 'Fonte Padrão',
-      icon: text,
-      handler: () => {
-        hymnalStore.resetFontSize()
-        return false // Mantém o menu aberto
-      },
-    },
-    {
-      text: 'Recarregar App',
-      icon: refreshOutline,
-      handler: () => {
-        forceReload()
-        return true
-      },
-    },
-    {
-      text: 'Cancelar',
-      role: 'cancel',
-    }
-  )
-  
-  const actionSheet = await actionSheetController.create({
-    header: 'Configurações',
-    buttons,
-  })
-  await actionSheet.present()
+const openSettings = () => {
+  settingsMenu.value?.present()
 }
 
 // SEO: Metadados para lista de antifonas
 useHead({
-  title: 'Antifonas - Hinário Evangélico Metodista',
+  title: 'Antifonas - Hinário Evangélico',
   meta: [
     {
       name: 'description',
-      content: 'Explore as antifonas do Hinário Evangélico Metodista. Textos litúrgicos para adoração.'
+      content: 'Explore as antifonas do Hinário Evangélico. Textos litúrgicos para adoração.'
     },
     {
       property: 'og:title',
-      content: 'Antifonas - Hinário Evangélico Metodista'
+      content: 'Antifonas - Hinário Evangélico'
     }
   ]
 })
@@ -189,7 +107,7 @@ const filteredAntiphons = computed(() => {
   if (!searchText.value) {
     return hymnalStore.antiphons
   }
-  
+
   const search = searchText.value.toLowerCase()
   return hymnalStore.antiphons.filter((antiphon: Content) => {
     // Busca em título e número
@@ -197,9 +115,9 @@ const filteredAntiphons = computed(() => {
       antiphon.title.toLowerCase().includes(search) ||
       antiphon.number?.toString().includes(search)
     )
-    
+
     if (basicMatch) return true
-    
+
     // Busca no conteúdo (texto da antífona)
     if (Array.isArray(antiphon.items)) {
       return antiphon.items.some((item: any) => {
@@ -212,7 +130,7 @@ const filteredAntiphons = computed(() => {
         return false
       })
     }
-    
+
     return false
   })
 })

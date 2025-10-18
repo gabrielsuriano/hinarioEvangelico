@@ -95,13 +95,13 @@ useHead(() => ({
       name: 'description',
       content: content.value?.title 
         ? `Antífona ${content.value.number}: ${content.value.title}` 
-        : 'Hinário Evangélico Metodista'
+        : 'Hinário Evangélico'
     },
     {
       name: 'keywords',
       content: content.value?.title 
-        ? `antífona ${content.value.number}, ${content.value.title}, hinário metodista, hinário evangélico` 
-        : 'antífonas, hinário, metodista, evangélico'
+        ? `antífona ${content.value.number}, ${content.value.title}, hinário evangélico` 
+        : 'antífonas, hinário, evangélico'
     },
     {
       property: 'og:title',
@@ -113,7 +113,7 @@ useHead(() => ({
       property: 'og:description',
       content: content.value?.title 
         ? `Antífona ${content.value.number}: ${content.value.title}` 
-        : 'Hinário Evangélico Metodista'
+        : 'Hinário Evangélico'
     },
     {
       property: 'og:type',

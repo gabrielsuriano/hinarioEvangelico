@@ -1,6 +1,6 @@
-# 🎵 Hinário Evangélico Metodista
+# 🎵 Hinário Evangélico
 
-Aplicação web, mobile e PWA do Hinário Evangélico Metodista.
+Aplicação web, mobile e PWA do Hinário Evangélico.
 
 ## 🚀 Início Rápido
 
@@ -140,4 +140,6 @@ Consulte os arquivos de documentação listados acima para mais detalhes.
 ---
 
 Desenvolvido com ❤️ usando Vue 3 + Nuxt 3 + Ionic
-Hinário Evangélico Metodista feito em Vue 3 + Nuxt + Ionic
+---
+
+Hinário Evangélico feito em Vue 3 + Nuxt + Ionic

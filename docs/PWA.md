@@ -1,4 +1,4 @@
-# PWA - Hinário Evangélico Metodista
+# PWA - Hinário Evangélico
 
 ## ✅ Configuração Final
 

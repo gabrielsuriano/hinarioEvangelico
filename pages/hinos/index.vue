@@ -7,7 +7,7 @@
           <ion-button @click="toggleTheme">
             <ion-icon slot="icon-only" :icon="themeStore.isDark ? sunny : moon"></ion-icon>
           </ion-button>
-          <ion-button @click="presentActionSheet">
+          <ion-button @click="openSettings">
             <ion-icon slot="icon-only" :icon="settings"></ion-icon>
           </ion-button>
         </ion-buttons>
@@ -47,6 +47,8 @@
         <p class="ion-text-center">Nenhum hino encontrado.</p>
       </ion-text>
     </ion-content>
+    
+    <SettingsMenu ref="settingsMenu" />
   </ion-page>
 </template>
 
@@ -65,19 +67,17 @@ import {
   IonText,
   IonButtons,
   IonButton,
-  actionSheetController,
-  toastController,
 } from '@ionic/vue'
-import { heart, heartOutline, settings, add, remove, text, moon, sunny, cloudDownloadOutline, refreshOutline } from 'ionicons/icons'
+import { heart, heartOutline, settings, moon, sunny } from 'ionicons/icons'
 import { useThemeStore } from '~/stores/theme'
-import { usePwaUpdate } from '~/composables/usePwaUpdate'
+import SettingsMenu from '~/components/SettingsMenu.vue'
 import type { Content } from '~/types/hymnal'
 
 const hymnalStore = useHymnalStore()
 const themeStore = useThemeStore()
 const router = useRouter()
 const searchText = ref('')
-const { updateAvailable, isNativeApp, checkForUpdate, applyUpdate, forceCheckUpdate, forceReload } = usePwaUpdate()
+const settingsMenu = ref()
 
 // Carrega dados do hinário
 await hymnalStore.loadHymnal()
@@ -86,106 +86,25 @@ const toggleTheme = () => {
   themeStore.toggleTheme()
 }
 
-const presentActionSheet = async () => {
-  const buttons: any[] = []
-  
-  if (updateAvailable.value && !isNativeApp) {
-    buttons.push({
-      text: 'Atualizar App',
-      icon: cloudDownloadOutline,
-      cssClass: 'update-button',
-      handler: () => {
-        applyUpdate()
-        return true
-      },
-    })
-  }
-  
-  if (navigator.onLine && !isNativeApp) {
-    buttons.push({
-      text: 'Verificar Atualizações',
-      icon: cloudDownloadOutline,
-      handler: async () => {
-        const hasUpdate = await forceCheckUpdate()
-        
-        if (hasUpdate) {
-          actionSheet.dismiss()
-          presentActionSheet()
-        } else {
-          const toast = await toastController.create({
-            message: 'Nenhuma atualização disponível',
-            duration: 2000,
-            position: 'bottom',
-            color: 'medium'
-          })
-          await toast.present()
-        }
-        return false // Mantém o menu aberto
-      },
-    })
-  }
-  
-  buttons.push(
-    {
-      text: 'Aumentar Fonte',
-      icon: add,
-      handler: () => {
-        hymnalStore.increaseFontSize()
-        return false // Mantém o menu aberto
-      },
-    },
-    {
-      text: 'Diminuir Fonte',
-      icon: remove,
-      handler: () => {
-        hymnalStore.decreaseFontSize()
-        return false // Mantém o menu aberto
-      },
-    },
-    {
-      text: 'Fonte Padrão',
-      icon: text,
-      handler: () => {
-        hymnalStore.resetFontSize()
-        return false // Mantém o menu aberto
-      },
-    },
-    {
-      text: 'Recarregar App',
-      icon: refreshOutline,
-      handler: () => {
-        forceReload()
-        return true
-      },
-    },
-    {
-      text: 'Cancelar',
-      role: 'cancel',
-    }
-  )
-  
-  const actionSheet = await actionSheetController.create({
-    header: 'Configurações',
-    buttons,
-  })
-  await actionSheet.present()
+const openSettings = () => {
+  settingsMenu.value?.present()
 }
 
 // SEO: Metadados para lista de hinos
 useHead({
-  title: 'Hinos - Hinário Evangélico Metodista',
+  title: 'Hinos - Hinário Evangélico',
   meta: [
     {
       name: 'description',
-      content: 'Explore os hinos do Hinário Evangélico Metodista. Busque por título, número, autor ou letra do hino.'
+      content: 'Explore os hinos do Hinário Evangélico. Busque por título, número, autor ou letra do hino.'
     },
     {
       property: 'og:title',
-      content: 'Hinos - Hinário Evangélico Metodista'
+      content: 'Hinos - Hinário Evangélico'
     },
     {
       property: 'og:description',
-      content: 'Explore os hinos do Hinário Evangélico Metodista'
+      content: 'Explore os hinos do Hinário Evangélico'
     }
   ]
 })
@@ -194,7 +113,7 @@ const filteredHymns = computed(() => {
   if (!searchText.value) {
     return hymnalStore.hymns
   }
-  
+
   const search = searchText.value.toLowerCase()
   return hymnalStore.hymns.filter((hymn: Content) => {
     // Busca em título e número
@@ -202,9 +121,9 @@ const filteredHymns = computed(() => {
       hymn.title.toLowerCase().includes(search) ||
       hymn.number?.toString().includes(search)
     )
-    
+
     if (basicMatch) return true
-    
+
     // Busca em autores (array)
     if (hymn.author && Array.isArray(hymn.author)) {
       const authorMatch = hymn.author.some((author: string) => 
@@ -212,7 +131,7 @@ const filteredHymns = computed(() => {
       )
       if (authorMatch) return true
     }
-    
+
     // Busca no conteúdo (letras dos hinos)
     if (Array.isArray(hymn.items)) {
       return hymn.items.some((item: any) => {
@@ -228,7 +147,7 @@ const filteredHymns = computed(() => {
         return false
       })
     }
-    
+
     return false
   })
 })
@@ -246,10 +165,5 @@ ion-label {
 ion-label h2,
 ion-label p {
   font-size: inherit !important;
-}
-
-:deep(.update-button) {
-  color: var(--ion-color-success) !important;
-  font-weight: 600 !important;
 }
 </style>

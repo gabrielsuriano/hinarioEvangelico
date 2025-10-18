@@ -2,7 +2,7 @@
   <ion-page>
     <ion-header>
       <ion-toolbar color="primary">
-        <ion-title>Hinário Evangélico Metodista</ion-title>
+        <ion-title>Hinário Evangélico</ion-title>
         <ion-buttons slot="end">
           <ion-button @click="toggleTheme">
             <ion-icon slot="icon-only" :icon="themeStore.isDark ? sunny : moon"></ion-icon>

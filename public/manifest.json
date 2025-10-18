@@ -1,7 +1,7 @@
 {
-  "name": "Hinário Evangélico Metodista",
+  "name": "Hinário Evangélico",
   "short_name": "Hinário",
-  "description": "Hinário Evangélico Metodista - Web, Mobile e PWA",
+  "description": "Hinário Evangélico - Web, Mobile e PWA",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

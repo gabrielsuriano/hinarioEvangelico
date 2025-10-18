@@ -114,13 +114,13 @@ useHead(() => ({
       name: 'description',
       content: content.value?.title 
         ? `Hino ${content.value.number}: ${content.value.title}${content.value.author && content.value.author.length > 0 ? ' - ' + content.value.author.join(', ') : ''}` 
-        : 'Hinário Evangélico Metodista'
+        : 'Hinário Evangélico'
     },
     {
       name: 'keywords',
       content: content.value?.title 
-        ? `hino ${content.value.number}, ${content.value.title}, hinário metodista, hinário evangélico${content.value.author && content.value.author.length > 0 ? ', ' + content.value.author.join(', ') : ''}` 
-        : 'hinário, metodista, evangélico'
+        ? `hino ${content.value.number}, ${content.value.title}, hinário evangélico${content.value.author && content.value.author.length > 0 ? ', ' + content.value.author.join(', ') : ''}` 
+        : 'hinário, evangélico'
     },
     {
       property: 'og:title',
@@ -132,7 +132,7 @@ useHead(() => ({
       property: 'og:description',
       content: content.value?.title 
         ? `Hino ${content.value.number}: ${content.value.title}` 
-        : 'Hinário Evangélico Metodista'
+        : 'Hinário Evangélico'
     },
     {
       property: 'og:type',

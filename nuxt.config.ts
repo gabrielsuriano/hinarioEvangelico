@@ -22,9 +22,9 @@ export default defineNuxtConfig({
     registerType: 'prompt', // Mudado de autoUpdate para prompt - não atualiza automaticamente
     includeAssets: ['favicon.png', 'icon.svg', '*.png'],
     manifest: {
-      name: 'Hinário Evangélico Metodista',
-      short_name: 'Hinário Metodista',
-      description: 'Hinário oficial da Igreja Metodista - Acesso offline completo',
+      name: 'Hinário Evangélico',
+      short_name: 'Hinário Evangélico',
+      description: 'Hinário  - Acesso offline completo disponível',
       theme_color: '#3880ff',
       background_color: '#ffffff',
       display: 'standalone',
@@ -252,11 +252,11 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Hinário Evangélico Metodista',
+      title: 'Hinário Evangélico',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
-        { name: 'description', content: 'Hinário Evangélico Metodista - Web, Mobile e PWA' },
+        { name: 'description', content: 'Hinário Evangélico - Web, Mobile e PWA' },
         { name: 'format-detection', content: 'telephone=no' },
         { name: 'msapplication-tap-highlight', content: 'no' },
         { name: 'apple-mobile-web-app-capable', content: 'yes' },

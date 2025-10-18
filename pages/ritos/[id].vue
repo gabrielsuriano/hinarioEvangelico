@@ -95,13 +95,13 @@ useHead(() => ({
       name: 'description',
       content: content.value?.title 
         ? `Rito ${content.value.number}: ${content.value.title}` 
-        : 'Hinário Evangélico Metodista'
+        : 'Hinário Evangélico'
     },
     {
       name: 'keywords',
       content: content.value?.title 
-        ? `rito ${content.value.number}, ${content.value.title}, hinário metodista, hinário evangélico` 
-        : 'ritos, hinário, metodista, evangélico'
+        ? `rito ${content.value.number}, ${content.value.title}, hinário evangélico` 
+        : 'ritos, hinário, evangélico'
     },
     {
       property: 'og:title',
@@ -113,7 +113,7 @@ useHead(() => ({
       property: 'og:description',
       content: content.value?.title 
         ? `Rito ${content.value.number}: ${content.value.title}` 
-        : 'Hinário Evangélico Metodista'
+        : 'Hinário Evangélico'
     },
     {
       property: 'og:type',

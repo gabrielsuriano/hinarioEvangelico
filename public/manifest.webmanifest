@@ -1,7 +1,7 @@
 {
-  "name": "Hinário Evangélico Metodista",
-  "short_name": "Hinário Metodista",
-  "description": "Hinário oficial da Igreja Metodista - Acesso offline completo",
+  "name": "Hinário Evangélico",
+  "short_name": "Hinário Evangélico",
+  "description": "Hinário - Acesso offline completo",
   "theme_color": "#3880ff",
   "background_color": "#ffffff",
   "display": "standalone",

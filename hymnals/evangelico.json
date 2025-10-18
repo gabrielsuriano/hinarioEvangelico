@@ -1,7 +1,7 @@
 {
-  "id": "hinario-evangelico-metodista",
-  "name": "Hinário Evangélico Metodista",
-  "description": "Hinário oficial da Igreja Metodista",
+  "id": "hinario-evangelico",
+  "name": "Hinário Evangélico",
+  "description": "Hinário Evangélico",
   "contents": [
     {
       "id": "hino-001",
