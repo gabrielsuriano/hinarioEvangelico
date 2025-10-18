@@ -16,7 +16,7 @@
 
     <ion-content :fullscreen="true">
       <ion-list lines="full">
-        <ion-item button @click="navigateTo('/hinos')">
+        <ion-item v-if="hymnalStore.hymns.length > 0" button @click="navigateTo('/hinos')">
           <ion-icon slot="start" :icon="musicalNotesOutline"></ion-icon>
           <ion-label>
             <h2>Hinos</h2>
@@ -25,7 +25,7 @@
           <ion-icon slot="end" :icon="chevronForward"></ion-icon>
         </ion-item>
 
-        <ion-item button @click="navigateTo('/antifonas')">
+        <ion-item v-if="hymnalStore.antiphons.length > 0" button @click="navigateTo('/antifonas')">
           <ion-icon slot="start" :icon="prismOutline"></ion-icon>
           <ion-label>
             <h2>Antifonas</h2>
@@ -34,7 +34,7 @@
           <ion-icon slot="end" :icon="chevronForward"></ion-icon>
         </ion-item>
 
-        <ion-item button @click="navigateTo('/ritos')">
+        <ion-item v-if="hymnalStore.rituals.length > 0" button @click="navigateTo('/ritos')">
           <ion-icon slot="start" :icon="bookOutline"></ion-icon>
           <ion-label>
             <h2>Ritos</h2>
